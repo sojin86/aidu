@@ -117,8 +117,6 @@
 #content01 main #photo_4 {
     background: url(../img/image/photo_4.png);
 }
-
-/* section */
 #content01 section {
     border-bottom: 1px solid #dddddd;
     padding-bottom: 120px;
@@ -295,18 +293,18 @@
 }
 
 /* date_div */
-.tittle_box .section_div_box .date_div {
+.date_div {
     display: inline-block;
     position: absolute;
     bottom: 30px;
     right: 20px;
 }
-.tittle_box .section_div_box .date_div > span {
+.date_div > span {
     font-size: 16px;
     color: #9cacb1;
     vertical-align: middle;
 }
-.tittle_box .section_div_box .date_div > button {
+.date_div > button {
     width: 60px;
     height: 30px;
     border: 1px solid #a7c1bc;

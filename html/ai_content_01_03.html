@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_03_AI교육컨텐츠_온라인패키지_메인</title>
+    <link rel="stylesheet" href="../css/ai_content_01_03.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../iconfont/iconfont_gnb.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="../js/jquery-3.6.0.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+
+        // header 위 nav
+        var header = $('header');
+        var MainBtn = $(".hd_nav_bt")
+        var toggleBtn = $(".header_nav_wrap > ul > li > ul")
+        // header 마우스 오버시
+        MainBtn.on('mouseenter', function(){
+          if (header.hasClass('close')){
+              header.addClass('hover');
+              header.removeClass('close');
+          }
+          if (toggleBtn.hasClass('togglebtn')){
+              toggleBtn.addClass('open');
+          }
+        });
+        // header 마우스 오버 아닐시
+        header.on('mouseleave', function(){
+            if (header.hasClass('hover')){
+                header.removeClass('hover');
+                header.addClass('close');
+            }
+            if (toggleBtn.hasClass('open')){
+                toggleBtn.removeClass('open');
+                toggleBtn.addClass('togglebtn');
+          }
+        });
+        
+        // 별 버튼 클릭
+        var star_bt = $(".star_icon")
+        star_bt.click(function(){
+            var st_btn = $(this);
+            st_btn.toggleClass("green_star_icon");
+        });       
+              
+        // up bt (top으로 올라가는 버튼)
+        var TopBt = $('.up_bt_div');
+        var delay = 500;
+        TopBt.on('click', function(){
+            $('html, body').stop().animate({scrollTop: 0}, delay);
+        });
+
+
+
+
+
+
+
+    });
+</script>
+<body>
+    <header class="close">
+        <div class="header_line"></div>
+        <div class="wrap">
+            <div class="header_wrap">
+                <a href="main_pg.html" class="main_logo"></a>
+                <div class="header_nav_wrap">
+                    <ul>
+                        <li>
+                            <button class="hd_nav_bt">
+                                <a href="explain_pg.html">AIDU 소개</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="hd_nav_bt">
+                                <a href="my_project_01.html">나의 프로젝트</a>
+                            </button>
+                            <ul class="togglebtn">
+                                <li><a href="my_project_01.html">나의 프로젝트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="hd_nav_bt">
+                                <a href="ai_content_01_01.html" class="hd_click_green">AI 교육 컨텐츠</a>
+                            </button>
+                            <ul class="togglebtn">
+                                <li><a href="ai_content_01_02.html">기업 사례 교육</a></li>
+                                <li><a href="ai_content_01_05.html">기업 사례 실습</a></li>
+                                <li><a href="ai_content_01_04.html" class="hd_click_green">온라인 패키지</a></li>
+                                <li><a href="ai_content_01_06.html">AI 문제집</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="hd_nav_bt">
+                                <a href="confirm_01.html">AI 자격인증</a>
+                            </button>
+                            <ul class="togglebtn">
+                                <li><a href="confirm_01.html">AI 자격인증 소개</a></li>
+                                <li><a href="confirm_02.html">시험 접수</a></li>
+                                <li><a href="confirm_03.html">시험 응시</a></li>
+                                <li><a href="confirm_07.html">시험결과 조회</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user_login">
+                    <a href="login_01.html">로그인</a>
+                    <span>|</span>
+                    <a href="join_01.html">회원가입</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <div class="main_tittle">
+                <h1>온라인 패키지</h1>
+                <p>AI의 핵심을 차근 차근 배우는 온라인 강좌를 만나보세요.</p>
+            </div>
+            <div class="main_one_line">
+                <div class="main_two_tittle">
+                    <h5>추천 강좌</h5>
+                </div>
+                <div class="main_content">
+                    <div class="main_photo_box main_right", onclick="location.href='ai_content_01_04.html';">
+                        <div class="main_photo_1"></div>
+                        <div class="main_letter_box">
+                        <p>파이썬 입문_개요 및 소개</p>
+                        </div>
+                        <div class="number_div">
+                            <div class="eyes_icon"></div>
+                            <span>215</span>
+                            <div class="ht_icon"></div>
+                            <span>13</span>
+                            <div class="talk_icon"></div>
+                            <span>5</span>
+                        </div>
+                     </div>
+                     <div class="main_photo_box main_right",  onclick="location.href='ai_content_01_04.html';">
+                        <div class="main_photo_1" id="big_photo_2"></div>
+                        <div class="main_letter_box">
+                            <p>파이썬 중급 02</p>
+                        </div>
+                        <div class="number_div">
+                            <div class="eyes_icon"></div>
+                            <span>215</span>
+                            <div class="ht_icon"></div>
+                            <span>13</span>
+                            <div class="talk_icon"></div>
+                            <span>5</span>
+                        </div>
+                    </div>
+                    <div class="main_photo_box main_right",  onclick="location.href='ai_content_01_04.html';">
+                        <div class="main_photo_1" id="big_photo_3"></div>
+                        <div class="main_letter_box">
+                             <p>가입자 해지예측 01</p>
+                        </div>
+                        <div class="number_div">
+                            <div class="eyes_icon"></div>
+                            <span>215</span>
+                            <div class="ht_icon"></div>
+                            <span>13</span>
+                            <div class="talk_icon"></div>
+                            <span>5</span>
+                        </div>
+                    </div>
+            
+                    <div class="main_photo_box",  onclick="location.href='ai_content_01_04.html';">
+                        <div class="main_photo_1" id="big_photo_4"></div>
+                        <div class="main_letter_box">
+                            <p>파이썬 고급 01</p>
+                        </div>
+                        <div class="number_div">
+                            <div class="eyes_icon"></div>
+                            <span>215</span>
+                            <div class="ht_icon"></div>
+                            <span>13</span>
+                            <div class="talk_icon"></div>
+                            <span>5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="search_box_div">
+                <h4>패키지 강좌</h4>
+                <div class="search_div">
+                   <input type="search" placeholder="검색어를 입력해주세요." class="search_bar">
+                    <div class="search_bt">
+                        <button>
+                            <i class="ambicon-026_search"></i>
+                        </button>
+                    </div>
+                    <div class="save_bt">
+                        <button><a href="ai_content_01_10.html">등록</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section>
+        <div class="wrap">
+            <div class="section_wrap">
+                <div class="section_photo_box">
+                    <div class="photo_1"></div>
+                    <div class="tittle_box">
+                        <p>Python for Everyone:탄탄하게 핵심만, 파이썬 기초</p>
+                        <div class="like_bt">
+                            <button class="star_icon"></button>
+                        </div>
+                        <div class="section_div_box">
+                            <div class="name_div">
+                                <i class="ambicon-033_human"></i>
+                                <span>홍길*</span>
+                            </div>
+                            <div class="sc_number_div">
+                                <div class="eyes_icon_sc"></div>
+                                <span>215</span>
+                                <div class="ht_icon_sc"></div>
+                                <span>100</span>
+                                <div class="talk_icon_sc"></div>
+                                <span>55</span>
+                            </div>
+                            <div class="sc_time_div">
+                                <div class="time_icon_sc"></div>
+                                <span>1시간 20분</span>
+                            </div>
+                        </div>
+                        <div class="sc_text_div">
+                            <div class="sc_text_box">
+                                <span>총 10강좌</span>
+                            </div>
+                            <p>#Python 처음이라면</p>
+                        </div>
+                        <div class="date_div">
+                            <span>2021-02-20</span>
+                            <button>수정</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="section_photo_box">
+                    <div class="photo_1" id="photo_2"></div>
+                    <div class="tittle_box">
+                        <p>Python 프로그래밍 기본 문법</p>
+                        <div class="like_bt">
+                            <button class="star_icon green_star_icon"></button>
+                        </div>
+                        <div class="section_div_box">
+                            <div class="name_div">
+                                <i class="ambicon-033_human"></i>
+                                <span>홍길*</span>
+                            </div>
+                            <div class="sc_number_div">
+                                <div class="eyes_icon_sc"></div>
+                                <span>215</span>
+                                <div class="ht_icon_sc"></div>
+                                <span>100</span>
+                                <div class="talk_icon_sc"></div>
+                                <span>55</span>
+                            </div>
+                            <div class="sc_time_div">
+                                <div class="time_icon_sc"></div>
+                                <span>1시간 20분</span>
+                            </div>
+                        </div>
+                        <div class="sc_text_div">
+                            <div class="sc_text_box">
+                                <span>총 10강좌</span>
+                            </div>
+                            <p>#Python 기본문법 #Python #기본 문법을 알아보자</p>
+                        </div>
+                        <div class="date_div">
+                            <span>2021-02-20</span>
+                            <button>수정</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="section_photo_box">
+                    <div class="photo_1" id="photo_3"></div>
+                    <div class="tittle_box">
+                        <p>Python 프로그래밍 입문</p>
+                        <div class="like_bt">
+                            <button class="star_icon"></button>
+                        </div>
+                        <div class="section_div_box">
+                            <div class="name_div">
+                                <i class="ambicon-033_human"></i>
+                                <span>홍길*</span>
+                            </div>
+                            <div class="sc_number_div">
+                                <div class="eyes_icon_sc"></div>
+                                <span>215</span>
+                                <div class="ht_icon_sc"></div>
+                                <span>100</span>
+                                <div class="talk_icon_sc"></div>
+                                <span>55</span>
+                            </div>
+                            <div class="sc_time_div">
+                                <div class="time_icon_sc"></div>
+                                <span>1시간 20분</span>
+                            </div>
+                        </div>
+                        <div class="sc_text_div">
+                            <div class="sc_text_box">
+                                <span>총 10강좌</span>
+                            </div>
+                            <p>#Python 프로그래밍 #입문자용</p>
+                        </div>
+                        <div class="date_div">
+                            <span>2021-02-20</span>
+                            <button>수정</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="section_photo_box">
+                    <div class="photo_1" id="photo_4"></div>
+                    <div class="tittle_box">
+                        <p>Python for Everyone:탄탄하게 핵심만</p>
+                        <div class="like_bt">
+                            <button class="star_icon green_star_icon"></button>
+                        </div>
+                        <div class="section_div_box">
+                            <div class="name_div">
+                                <i class="ambicon-033_human"></i>
+                                <span>홍길*</span>
+                            </div>
+                            <div class="sc_number_div">
+                                <div class="eyes_icon_sc"></div>
+                                <span>215</span>
+                                <div class="ht_icon_sc"></div>
+                                <span>100</span>
+                                <div class="talk_icon_sc"></div>
+                                <span>55</span>
+                            </div>
+                            <div class="sc_time_div">
+                                <div class="time_icon_sc"></div>
+                                <span>1시간 20분</span>
+                            </div>
+                        </div>
+                        <div class="sc_text_div">
+                            <div class="sc_text_box">
+                                <span>총 10강좌</span>
+                            </div>
+                            <p>#Python 처음이라면 #기초 #핵심</p>
+                        </div>
+                        <div class="date_div">
+                            <span>2021-02-20</span>
+                            <button>수정</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="up_bt_div">
+                <button>
+                    <i class="ambicon-009_arrow2_up"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <div class="footer_wrap" id="ft_line">
+                <div class="ft_main_tittle">
+                    <a href="board_01.html">자유게시판</a>
+                    <span>|</span>
+                    <a href="Q&A_01.html">Q&A</a>
+                    <span>|</span>
+                    <a href="notice_01.html">공지사항/뉴스</a>
+                </div>
+            </div>
+        </div>
+        <div class="ft_line"></div>
+        <div class="wrap">
+            <div class="footer_wrap" >
+                <div class="ft_second_tittle">
+                    <a href="provision_01.html">플랫폼 이용약관</a>
+                    <span>|</span>
+                    <a href="provision_02.html">개인정보취급방침</a>
+                    <span>|</span>
+                    <a href="provision_03.html">청소년보호정책</a>
+                    <div class="footer_logo"></div>
+                </div>
+                <div class="ft_last_tittle">
+                    <p>㈜케이티 대표이사 구현모 사업자등록번호:102-81-42945 통신판매업신고: 2002-경기성남-0048</p>
+                    <p>경기도 성남시 분당구 불정로 90(정자동)</p>
+                    <p>Copyrightⓒkt corp.All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
