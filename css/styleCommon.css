@@ -10,12 +10,25 @@
     margin-bottom: 15px;
     letter-spacing: -2px;
 }
+.main_tittle > h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0c323d;
+    display: inline-block;
+    margin-right: 10px;
+}
+.main_tittle > span {
+    font-size: 18px;
+    color: #9cacb1;
+}
+
 .main_tittle > p {
     color: #9cacb1;
     text-align: center;
     font-size: 22px;
     letter-spacing: -1px;
 }
+
 /* -----------------------------main_photo----------------------------- */
 .main_photo_wrap {
     min-height: 360px;
@@ -169,6 +182,7 @@
 .sc_type_01 .section_content .section_photo_box #big_photo_4 {
     background: url(../img/image/big_photo_4.png);
 }
+
 /* -----------------------------sc_type_02----------------------------- */
 .sc_type_02 {
     position: relative;
@@ -235,7 +249,7 @@
     font-size: 16px;
     color: #499ed5;
 }
-.sc_type_02 .sc_text_div .sc_text_div > p {
+.sc_type_02 .sc_text_div > p {
     display: inline-block;
     font-size: 16px;
     color: #397fd4;
@@ -276,7 +290,6 @@
     font-size: 16px;
     color: #48656d;
 }
-
 .sc_type_02 .section_photo_box .tittle_box .section_div_box .sc_time_div {
     display: inline-block;
     margin-left: 60px;
@@ -374,6 +387,7 @@
 .save_bt > button > a {
     color: #fff;
 }
+
 /* ------------------------------number_div---------------------------- */
 .number_div {
     display: flex;
@@ -387,29 +401,19 @@
     font-size: 16px;
     color: #48656d;
 }
-/* ------------------------------time_div---------------------------- */
-.sc_text_div {
+
+/* right_pg */
+.right_pg {
     display: inline-block;
-    margin-top: 22px;
     position: absolute;
-    bottom: 30px;
+    top: 30px;
+    right: 0;
 }
-.sc_text_box {
-    display: inline-block;
-    width: 75px;
-    height: 30px;
-    background-color: #dbecf7;
-    border-radius: 5px;
-    text-align: center;
-    padding: 3px 0px 3px 0px;
-    margin-right: 20px;
-}
-.sc_text_box > span {
+.right_pg > a {
     font-size: 16px;
-    color: #499ed5;
+    color: #9cacb1;
 }
-.sc_text_div > p {
-    display: inline-block;
+.right_pg > span {
     font-size: 16px;
-    color: #397fd4;
+    color: #9cacb1;
 }

@@ -5,44 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>01_04_AI교육컨텐츠_온라인패키지_강좌상세</title>
-    <link rel="stylesheet" href="../css/ai_content_01_04.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../iconfont/iconfont.css">
-    <link rel="stylesheet" href="../iconfont/iconfont_gnb.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/styleCommon.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet"
+    />
     <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/common.js"></script>
 </head>
 <script>
     $(document).ready(function(){
-
-        // header 위 nav
-        var header = $('header');
-        var MainBtn = $(".hd_nav_bt")
-        var toggleBtn = $(".header_nav_wrap > ul > li > ul")
-        // header 마우스 오버시
-        MainBtn.on('mouseenter', function(){
-          if (header.hasClass('close')){
-              header.addClass('hover');
-              header.removeClass('close');
-          }
-          if (toggleBtn.hasClass('togglebtn')){
-              toggleBtn.addClass('open');
-          }
-        });
-        // header 마우스 오버 아닐시
-        header.on('mouseleave', function(){
-            if (header.hasClass('hover')){
-                header.removeClass('hover');
-                header.addClass('close');
-            }
-            if (toggleBtn.hasClass('open')){
-                toggleBtn.removeClass('open');
-                toggleBtn.addClass('togglebtn');
-          }
-        });
-
         // 별 버튼 클릭
         var star_bt = $(".star_icon")
         star_bt.click(function(){
@@ -56,8 +33,6 @@
             video_bt_this.addClass("video_bt")
         })
 
-
-        
         // ... 버튼 클릭
         $(document).on('click', '.maru_icon', function(){
             var maru_bt = $(this).parent('.line_bt').siblings('.maru_div');
@@ -100,13 +75,6 @@
         var modal_2_heart_bt = $(".modal_heart_bt")
         modal_2_heart_bt.click(function(){
             modal_2_heart_bt.toggleClass("pink_heart_icon")
-        });
-
-        // up bt (top으로 올라가는 버튼)
-        var TopBt = $('.up_bt_div');
-        var delay = 500;
-        TopBt.on('click', function(){
-            $('html, body').stop().animate({scrollTop: 0}, delay);
         });
     });
 </script>
