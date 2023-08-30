@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>01_08_AI기업사례실습_등록/수정</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/common.css" />
+        <link rel="stylesheet" href="../css/styleCommon.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="../js/jquery-3.6.0.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <script>
+        $(document).ready(function () {
+            // 별 버튼 클릭
+            var star_bt = $('.star_icon');
+            star_bt.click(function () {
+                var st_btn = $(this);
+                st_btn.toggleClass('green_star_icon');
+            });
+
+            // 하트 버튼 클릭
+            var heart_bt = $('.heart_icon');
+            heart_bt.click(function () {
+                var ht_btn = $(this);
+                ht_btn.toggleClass('pink_heart_icon');
+            });
+            // select_box_1
+            $(document).on('click', '.select1', function () {
+                var boxObj1 = $(this).parent().siblings('.options').children('ul');
+                boxObj1.show();
+                $(this).addClass('open');
+            });
+            $('body').click(function (e) {
+                if ($('.select1').hasClass('open')) {
+                    $('.select1_ul').hide();
+                    $('.select1').removeClass('open');
+                }
+            });
+            $('.options > ul > li > button').click(function () {
+                var changeText = $(this).html();
+                var Selected_1 = $(this).closest('.options').siblings('.selected_1');
+                var checkText = $(this).closest('.options').siblings('.selected_1').children('.select1');
+
+                Selected_1.find('.select1').html(changeText);
+                checkText.css('color', '#0c323d');
+                $(this).closest('ul').hide();
+            });
+        });
+    </script>
+    <body id="content08">
+        <header class="close">
+            <div class="header_line"></div>
+            <div class="wrap">
+                <div class="header_wrap">
+                    <a href="main_pg.html" class="main_logo"></a>
+                    <div class="header_nav_wrap">
+                        <ul>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="explain_pg.html">AIDU 소개</a>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="my_project_01.html">나의 프로젝트</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="my_project_01.html">나의 프로젝트</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="ai_content_01_01.html" class="hd_click_green">AI 교육 컨텐츠</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="ai_content_01_02.html">기업 사례 교육</a></li>
+                                    <li><a href="ai_content_01_05.html" class="hd_click_green">기업 사례 실습</a></li>
+                                    <li><a href="ai_content_01_04.html">온라인 패키지</a></li>
+                                    <li><a href="ai_content_01_06.html">AI 문제집</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="confirm_01.html">AI 자격인증</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="confirm_01.html">AI 자격인증 소개</a></li>
+                                    <li><a href="confirm_02.html">시험 접수</a></li>
+                                    <li><a href="confirm_03.html">시험 응시</a></li>
+                                    <li><a href="confirm_07.html">시험결과 조회</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user_login">
+                        <a href="login_01.html">로그인</a>
+                        <span>|</span>
+                        <a href="join_01.html">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="wrap">
+                <div class="right_pg">
+                    <a href="ai_content_01_05.html">기업사례 실습</a>
+                    <span>></span>
+                    <a href="ai_content_01_08.html">등록/수정</a>
+                </div>
+                <div class="main_tittle type01">
+                    <h2>AI 기업사례 실습</h2>
+                    <span>AI를 업무에 활용한 실제 실무사례를 실습형으로 학습해보세요.</span>
+                </div>
+            </div>
+        </main>
+        <section>
+            <div class="wrap">
+                <div class="section_table">
+                    <div class="table_cont">
+                        <table class="table_4">
+                            <colgroup>
+                                <col width="15%" />
+                                <col width="80%" />
+                            </colgroup>
+                            <thead class="t_h">
+                                <tr>
+                                    <th>추천강좌</th>
+                                    <td>
+                                        <label class="cb_2">
+                                            <input type="checkbox" />
+                                            <span class="cb_2_text">추천 강좌 지정</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </thead>
+
+                            <tbody class="t_b">
+                                <tr>
+                                    <th>과제명</th>
+                                    <td>
+                                        <input type="text" placeholder="과제명을 입력해주세요." class="input_type_01" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>한 줄 설명</th>
+                                    <td>
+                                        <input type="text" placeholder="설명을 입력해주세요." class="input_type_01" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>특징</th>
+                                    <td>
+                                        <input type="text" class="input_type_01" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>모델 구분</th>
+                                    <td>
+                                        <div class="section_bt_box">
+                                            <div class="selected_1">
+                                                <span class="select1" id="select1"
+                                                    >선택하세요<i class="ambicon-003_arrow_down" id="down_icon1"></i
+                                                ></span>
+                                            </div>
+                                            <div class="options">
+                                                <ul class="select1_ul" id="select1_ul">
+                                                    <li>
+                                                        <button>선택하세요</button>
+                                                    </li>
+                                                    <li>
+                                                        <button>Clustering(군집)</button>
+                                                    </li>
+                                                    <li>
+                                                        <button>Anomaly detection(이상탐지)</button>
+                                                    </li>
+                                                    <li>
+                                                        <button>Classification(분류)</button>
+                                                    </li>
+                                                    <li>
+                                                        <button>Optimization(최적화)</button>
+                                                    </li>
+                                                    <li>
+                                                        <button>Recommendation(추천)</button>
+                                                    </li>
+                                                    <li>
+                                                        <button>Regression(회귀)</button>
+                                                    </li>
+                                                    <li>
+                                                        <button>Text Analysis(텍스트 분석)</button>
+                                                    </li>
+                                                    <li>
+                                                        <button>Etc.(기타)</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>데이터 구분</th>
+                                    <td>
+                                        <div class="section_bt_box">
+                                            <div class="selected_1">
+                                                <span class="select1" id="select1"
+                                                    >선택하세요<i class="ambicon-003_arrow_down" id="down_icon1"></i
+                                                ></span>
+                                            </div>
+                                            <div class="options">
+                                                <ul class="select1_ul" id="select1_ul">
+                                                    <li>
+                                                        <button>선택</button>
+                                                    </li>
+                                                    <li>
+                                                        <button>Tabular</button>
+                                                    </li>
+                                                    <li>
+                                                        <button>이미지</button>
+                                                    </li>
+                                                    <li>
+                                                        <button>텍스트</button>
+                                                    </li>
+                                                    <li>
+                                                        <button>음성</button>
+                                                    </li>
+                                                    <li>
+                                                        <button>영상</button>
+                                                    </li>
+                                                    <li>
+                                                        <button>기타</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>학습 방법</th>
+                                    <td>
+                                        <input type="text" class="input_type_01" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>소스 코드</th>
+                                    <td>
+                                        <label class="file_1">
+                                            <input type="file" id="input-file" />
+                                            <span>파일 선택</span>
+                                        </label>
+                                        <span class="no_file">선택된 파일 없음</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>동영상 가이드</th>
+                                    <td>
+                                        <label class="file_1">
+                                            <input type="file" id="input-file" />
+                                            <span>파일 선택</span>
+                                        </label>
+                                        <span class="no_file">선택된 파일 없음</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>게시 대상</th>
+                                    <td>
+                                        <label class="rd_1">
+                                            <input type="radio" name="radio" checked />
+                                            <span class="rd_1_text">전체공개</span>
+                                        </label>
+
+                                        <label class="rd_1">
+                                            <input type="radio" name="radio" />
+                                            <span class="rd_1_text">비공개</span>
+                                        </label>
+
+                                        <label class="rd_1">
+                                            <input type="radio" name="radio" />
+                                            <span class="rd_1_text">부분 공개</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>작성자</th>
+                                    <td>
+                                        <input type="text" class="input_type_01" placeholder="홍길동" disabled />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap">
+                <div class="save_box_div">
+                    <button>임시저장</button>
+                    <button>취소</button>
+                    <button>자가학습서 등록</button>
+                </div>
+            </div>
+            <div class="up_bt_div">
+                <button>
+                    <i class="ambicon-009_arrow2_up"></i>
+                </button>
+            </div>
+        </section>
+
+        <footer>
+            <div class="wrap">
+                <div class="footer_wrap" id="ft_line">
+                    <div class="ft_main_tittle">
+                        <a href="board_01.html">자유게시판</a>
+                        <span>|</span>
+                        <a href="Q&A_01.html">Q&A</a>
+                        <span>|</span>
+                        <a href="notice_01.html">공지사항/뉴스</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ft_line"></div>
+            <div class="wrap">
+                <div class="footer_wrap">
+                    <div class="ft_second_tittle">
+                        <a href="provision_01.html">플랫폼 이용약관</a>
+                        <span>|</span>
+                        <a href="provision_02.html">개인정보취급방침</a>
+                        <span>|</span>
+                        <a href="provision_03.html">청소년보호정책</a>
+                        <div class="footer_logo"></div>
+                    </div>
+                    <div class="ft_last_tittle">
+                        <p>㈜케이티 대표이사 구현모 사업자등록번호:102-81-42945 통신판매업신고: 2002-경기성남-0048</p>
+                        <p>경기도 성남시 분당구 불정로 90(정자동)</p>
+                        <p>Copyrightⓒkt corp.All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

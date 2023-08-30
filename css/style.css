@@ -71,3 +71,56 @@ section {
 #content_06 .main_bt .cb_1:nth-child(8) .cb_1_text::before {
     content: '기타';
 }
+
+/* ------------------------------content_07---------------------------- */
+#content_07 .section_wrap {
+    padding: 00px 20px 0px 20px;
+    position: relative;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 40px;
+}
+#content_07 .section_wrap > .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#content_07 .section_wrap .sc_bt_div {
+    display: inline-block;
+}
+#content_07 .section_wrap .sc_bt_div .gray_box {
+    padding: 20px 30px 20px 30px;
+    border: 1px solid #dddddd;
+    margin-right: -4px;
+    border-radius: 2px;
+    background-color: #f3f3f3;
+    margin-bottom: -1px;
+    color: #667d85;
+    font-size: 16px;
+}
+#content_07 .section_wrap .sc_bt_div .gray_box.white_box {
+    background-color: #fff;
+    color: #0c323d;
+    border-bottom: 1px solid #fff;
+}
+
+/* table 사용법 */
+.table_2_content {
+    border: 3px solid #85989e;
+    height: 400px;
+    margin-top: 40px;
+    display: none;
+}
+
+.table_3_content {
+    border: 3px solid #2dbab2;
+    height: 400px;
+    margin-top: 40px;
+    display: none;
+}
+
+.table_4_content {
+    border: 3px solid #397fd4;
+    height: 400px;
+    margin-top: 40px;
+    display: none;
+}
