@@ -33,7 +33,7 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* body */
+/* ------------------------------body---------------------------- */
 body {
     scrollbar-face-color: #b0b0b0;
     scrollbar-highlight-color: #a3a3a3;
@@ -49,13 +49,13 @@ body {
     padding-top: 90px !important;
 }
 
-/* wrap */
+/* ------------------------------wrap---------------------------- */
 .wrap {
     max-width: 1320px;
     margin: 0 auto;
 }
 
-/* header */
+/* ------------------------------header---------------------------- */
 header {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -117,7 +117,7 @@ header {
     font-size: 16px;
     color: #45666b;
 }
-/* login & join */
+/* ------------------------------login & join---------------------------- */
 .user_login {
     float: right;
 }
@@ -142,7 +142,7 @@ header {
     color: #2dbab2;
 }
 
-/* footer */
+/* ------------------------------footer---------------------------- */
 footer {
     padding-bottom: 60px;
 }
@@ -162,7 +162,6 @@ footer {
     color: #dddddd;
     padding: 40px 40px;
 }
-/* ft_second_tittle */
 .ft_second_tittle {
     padding: 20px 0px 10px 0px;
     position: relative;
@@ -176,7 +175,6 @@ footer {
     color: #a5acaf;
     padding: 20px 20px;
 }
-/* ft_last_tittle */
 .ft_last_tittle > p {
     font-size: 14px;
     color: #a5acaf;
@@ -190,31 +188,13 @@ footer {
     top: 26px;
 }
 
-/* main */
+/* ------------------------------main---------------------------- */
 main {
     background-color: #fff;
     border-bottom: 1px solid #dddddd;
 }
-/* main  tittle*/
-.main_tittle {
-    padding-bottom: 40px;
-}
-.main_tittle > h1 {
-    color: #0c323d;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    letter-spacing: -2px;
-}
-.main_tittle > p {
-    color: #9cacb1;
-    text-align: center;
-    font-size: 22px;
-    letter-spacing: -1px;
-}
 
-/* button */
+/* ------------------------------button---------------------------- */
 /* ↑ 버튼 */
 .up_bt_div {
     float: right;
@@ -232,7 +212,7 @@ main {
     color: #163a45;
 }
 
-/* icon */
+/* ------------------------------icon---------------------------- */
 .icon_rightArrow_black {
     width: 30px;
     height: 30px;
@@ -250,7 +230,7 @@ main {
     background-image: url(../img/icon/ico_search_type01.png);
     background-repeat: no-repeat;
     background-size: 20px auto;
-    background-position: 6px 6px;
+    background-position: 7px 7px;
 }
 
 .eyes_icon {
@@ -277,14 +257,12 @@ main {
     background-repeat: no-repeat;
     margin-top: 3px;
 }
-.number_div > span {
-    vertical-align: top;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 16px;
-    color: #48656d;
+.time_icon_sc {
+    width: 27px;
+    height: 24px;
+    display: inline-block;
+    background: url(../img/icon/time_gray.png);
 }
-
 .heart_icon {
     width: 30px;
     height: 30px;
@@ -308,56 +286,15 @@ main {
     background: url(../img/icon/star_green.png);
 }
 
-/* search_div */
-.search_div {
-    float: right;
+/* -----------------------------color----------------------------- */
+.bg_blue_01 {
+    background-color: #499ed5 !important;
 }
-.search_bar {
-    width: 500px;
-    height: 50px;
-    background-color: #fff;
-    border-radius: 30px;
-    border: 2px solid #dddddd;
-    padding: 0px 30px 0px 30px;
-    font-size: 17px;
-    color: #000;
+.bg_green_01 {
+    background-color: #3dae92 !important;
 }
-.search_bar::-webkit-input-placeholder {
-    color: #9cacb1;
-}
-.search_bar:focus {
-    outline: 2px solid #3dae92;
-    border: 0px solid;
-}
-.search_bt {
-    display: inline-block;
-    vertical-align: top;
-    padding: 0px 5px 0px 5px;
-}
-.search_bt > button {
-    background-color: #667d85;
-    width: 50px;
-    height: 50px;
-    border-radius: 30px;
-}
-.search_bt > button > i {
-    font-size: 18px;
-    color: #fff;
-}
-.save_bt {
-    display: inline-block;
-    vertical-align: top;
-}
-.save_bt > button {
-    width: 80px;
-    height: 50px;
-    background-color: #2cbbb7;
-    border-radius: 40px;
-    font-size: 17px;
-    color: #fff;
-}
-.save_bt > button > a {
-    color: #fff;
+.bg_green_02 {
+    background-color: #2cbbb7 !important;
 }
 
 /* script css 모음 */
