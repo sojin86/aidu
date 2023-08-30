@@ -402,7 +402,7 @@
     color: #48656d;
 }
 
-/* right_pg */
+/* ------------------------------right_pg---------------------------- */
 .right_pg {
     display: inline-block;
     position: absolute;
@@ -416,4 +416,26 @@
 .right_pg > span {
     font-size: 16px;
     color: #9cacb1;
+}
+/* ------------------------------main_footer---------------------------- */
+.main_footer {
+    display: flex;
+    justify-content: space-between;
+}
+.main_footer .main_ft_div {
+    display: inline-block;
+    min-height: 50px;
+    padding: 10px 0px 10px 0px;
+}
+.main_footer .main_ft_div > p {
+    display: inline-block;
+    font-size: 17px;
+    color: #0c323d;
+    margin-right: 30px;
+}
+.main_footer .main_ft_div > button {
+    font-size: 17px;
+    color: #6d848c;
+    margin-right: 10px;
+    vertical-align: baseline;
 }

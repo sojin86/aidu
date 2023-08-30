@@ -32,3 +32,42 @@ section {
 #content05 .sc_type_02:nth-child(4) .section_photo_box .photo_1 {
     background: url(../img/image/photo_02_4.png);
 }
+
+/* ------------------------------content_06---------------------------- */
+#content_06 .main_bt {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+#content_06 .main_bt > button {
+    background-color: #f3f3f3;
+    padding: 15px 30px 15px 30px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #0c323d;
+}
+#content_06 .main_bt .cb_1:nth-child(2) .cb_1_text::before {
+    content: '텍스트분석';
+}
+#content_06 .main_bt .cb_1:nth-child(3) .cb_1_text::before {
+    content: '군집';
+}
+
+#content_06 .main_bt .cb_1:nth-child(4) .cb_1_text::before {
+    content: '분류';
+}
+
+#content_06 .main_bt .cb_1:nth-child(5) .cb_1_text::before {
+    content: '최적화';
+}
+#content_06 .main_bt .cb_1:nth-child(6) .cb_1_text::before {
+    content: '추천';
+}
+#content_06 .main_bt .cb_1:nth-child(7) .cb_1_text::before {
+    content: '회귀';
+}
+#content_06 .main_bt .cb_1:nth-child(8) .cb_1_text::before {
+    content: '기타';
+}
