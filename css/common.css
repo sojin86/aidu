@@ -214,7 +214,8 @@ main {
 }
 
 .save_box_div {
-    float: right;
+    display: flex;
+    justify-content: end;
     margin-top: 10px;
 }
 .save_box_div > button {

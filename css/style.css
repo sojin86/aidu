@@ -6,6 +6,13 @@ section {
     margin-bottom: 90px;
 }
 
+/* ------------------------------content01---------------------------- */
+#content01 main {
+    padding-bottom: 50px;
+}
+#content01 section {
+    margin-top: 50px;
+}
 /* ------------------------------content02---------------------------- */
 #content02 .sc_type_02 .section_photo_box:hover {
     border: 3px solid #2cbbb7;
@@ -20,6 +27,35 @@ section {
 }
 #content03 .sc_type_02:nth-child(4) .section_photo_box .photo_1 {
     background: url(../img/image/photo_02_4.png);
+}
+/* ------------------------------content04---------------------------- */
+#content04 main {
+    margin-top: 100px;
+}
+#content04 main .main_content_left {
+    display: inline-block;
+}
+#content04 main .main_content_left .main_content_tittle {
+    display: flex;
+    min-width: 810px;
+    margin-bottom: 20px;
+}
+#content04 main .main_content_left .main_content_tittle .main_tittle_icon {
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    background: url(../img/icon/icon_01_03.png);
+    margin-right: 15px;
+}
+#content04 main .main_content_left .main_content_tittle > span {
+    display: inline-block;
+    font-size: 26px;
+    color: #0c323d;
+    font-weight: bold;
+    vertical-align: top;
+}
+#content04 main .main_content_left .like_bt {
+    margin-top: 7px;
 }
 
 /* ------------------------------content05---------------------------- */
