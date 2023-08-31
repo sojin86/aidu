@@ -26,56 +26,17 @@
             var st_btn = $(this);
             st_btn.toggleClass("green_star_icon");
         });  
-        // 강좌 보기 버튼 클릭
-        var video_bt = $(".video_bt_white")
-        video_bt.click(function(){
-            var video_bt_this = $(this);
-            video_bt_this.addClass("video_bt")
-        })
-
-        // ... 버튼 클릭
-        $(document).on('click', '.maru_icon', function(){
-            var maru_bt = $(this).parent('.line_bt').siblings('.maru_div');
-            maru_bt.show();
-            maru_bt.addClass('open');
-        });
-        $('body').click(function(e){
-            if($('.maru_div').hasClass('open')){
-                $('.maru_div').hide();
-                $('.maru_icon').removeClass('open');
-            }
-        });
-
 
         // 팝업 1 
         $(".video_bt_white").click(function(){
-            var PopUpbt_1 = $(this);
-
-            PopUpbt_1.click(function(){
-                $(".modal_1").fadeIn();
-                $('body').css("overflow", "hidden");
-            });
+            $(".modal_1").fadeIn();
+            $('body').css("overflow", "hidden");
         });
         $(".cancel_1").click(function(){
             $(".modal_1").fadeOut();
             $('body').css("overflow", "scroll");
         });
 
-        // 팝업 2 
-        $(".modal_1_video").click(function(){
-            $(".modal_2").fadeIn();
-            $('body').css("overflow", "hidden");
-       
-        });
-        $(".cancel_2").click(function(){
-            $(".modal_2").fadeOut();
-            $('body').css("overflow", "scroll");
-        });        
-        
-        var modal_2_heart_bt = $(".modal_heart_bt")
-        modal_2_heart_bt.click(function(){
-            modal_2_heart_bt.toggleClass("pink_heart_icon")
-        });
     });
 </script>
 <body id="content04">
@@ -182,11 +143,11 @@
             <div class="section_wrap">
                 <div class="left_line"></div>
                 <div class="left_circle">
-                    <div class="circle_blue" id="cb_1"></div>
-                    <div class="circle_blue" id="cb_2"></div>
-                    <div class="circle_blue" id="cb_3"></div>
-                    <div class="circle_blue" id="cb_4"></div>
-                    <div class="circle_blue" id="cb_5"></div>
+                    <div class="circle_blue"></div>
+                    <div class="circle_blue"></div>
+                    <div class="circle_blue"></div>
+                    <div class="circle_blue"></div>
+                    <div class="circle_blue"></div>
                 </div>
                 <div class="section_content gray_line" id="content_1">
                     <div class="section_content_left">
@@ -196,7 +157,7 @@
                             <span>소요시간 10분</span>
                             <div class="eyes_icon"></div>
                             <span>215</span>
-                            <div class="heart_icon"></div>
+                            <div class="heart_icon_02"></div>
                             <span>100</span>
                             <button>수정</button>
                         </div>
@@ -216,7 +177,7 @@
                             <span>소요시간 10분</span>
                             <div class="eyes_icon"></div>
                             <span>215</span>
-                            <div class="heart_icon"></div>
+                            <div class="heart_icon_02"></div>
                             <span>100</span>
                             <button>수정</button>
                         </div>
@@ -236,7 +197,7 @@
                             <span>소요시간 10분</span>
                             <div class="eyes_icon"></div>
                             <span>215</span>
-                            <div class="heart_icon"></div>
+                            <div class="heart_icon_02"></div>
                             <span>100</span>
                             <button>수정</button>
                         </div>
@@ -256,7 +217,7 @@
                             <span>소요시간 10분</span>
                             <div class="eyes_icon"></div>
                             <span>215</span>
-                            <div class="heart_icon"></div>
+                            <div class="heart_icon_02"></div>
                             <span>100</span>
                             <button>수정</button>
                         </div>
@@ -276,7 +237,7 @@
                             <span>소요시간 10분</span>
                             <div class="eyes_icon"></div>
                             <span>215</span>
-                            <div class="heart_icon"></div>
+                            <div class="heart_icon_02"></div>
                             <span>100</span>
                             <button>수정</button>
                         </div>
@@ -289,89 +250,83 @@
                     </div>
                 </div>
             </div>
-            <div class="section_content_bt">
+            <div class="save_box_div">
                 <button class="bt_1"><a href="ai_content_01_03.html">목록</a></button>
                 <button class="bt_2"><a href="ai_content_01_11.html">등록</a></button>
             </div>
-            <div class="section_content_footer">
-                <p>댓글 <span>(11)</span></p>
-                <div class="sc_ft_textbar">
-                    <input type="text" placeholder="AIDU 학습서에 대한 다양한 의견을 나누세요.">
-                    <div class="sc_ft_bt_div">
-                        <button>등록</button>
-                    </div>
-                </div>
-                <div class="sc_ft_one_line gray_line">
-                    <div class="user_img"></div>
-                    <p>홍길*</p>
-                    <div class="user_content">
-                        <span>유익한 글 잘봤습니다. 추후 2020년 까지의 데이터로 주기성을 띄는 데이터를 확보한 뒤 이를 예측에 활용하면 더 의미있는 결과를 얻을 수 있을 것으로 보입니다.</span>
-                    </div>
-                    <div class="line_bt div_right"> 
-                        <span>2021-02-15</span>
-                        <button>답글</button>
-                    </div>
-                </div>
-                <div class="sc_ft_one_line">
-                    <div class="user_img" id="img_2"></div>
-                    <p>케이*</p>
-                    <div class="user_content">
-                        <span>온도, 습도와 같이 계절성이 좀 더 짙은 데이터 에서는 Prophet의 예측이 많이 빗나가 보입니다. <br>
-                        Prophet의 모델을 만들 때 yearly_seasonality로 연주기성을 부여했으나, 1년이 되지 않은 데이러를 입력했기 때문에 보여집니다. <br>
-                        이 점을 개선한다면 좋을 것 같습니다.
-                        </span>
-                    </div>
-                    <div class="line_bt"> 
-                        <span>2021-02-15</span>
-                        <button>답글</button>
-                        <div class="maru_icon">
-                            <button>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </button>
+            <div class="section_content_bt">
+            </div>
+            <div class="comments_list">
+                    <p>댓글 <span>(11)</span></p>
+                    <div class="sc_ft_textbar">
+                        <input type="text" placeholder="AIDU 학습서에 대한 다양한 의견을 나누세요." />
+                        <div class="sc_ft_bt_div">
+                            <button>등록</button>
                         </div>
                     </div>
-                    <div class="maru_div">
-                        <button class="revice_bt">수정</button>
-                        <button class="delete_bt">삭제</button>
-                    </div>
-                </div>
-                <div class="sc_ft_gray_line">
-                    <div class="gray_line_left">
-                        <div class="comment_icon"></div>
-                        <div class="user_img" id="img_3"></div>
-                    </div>
-                    <textarea name="text" class="text_type_1" placeholder="댓글 입력"></textarea>
-                    <div class="sc_ft_gray_line_right">
-                        <button class="gray_line_bt_1">등록</button>
-                        <button class="gray_line_bt_2">취소</button>
-                    </div>
-                </div>
-                <div class="sc_ft_gray_line">
-                    <div class="gray_line_left">
-                        <div class="comment_icon"></div>
-                        <div class="user_img" id="img_4"></div>
-                    </div>
-                    <div class="gray_line_letter">
+                    <div class="sc_ft_one_line gray_line">
+                        <div class="user_img"></div>
                         <p>홍길*</p>
-                        <span>댓글 감사합니다. 참고하여 좀 더 보안해보도록 하겠습니다.</span>
+                        <div class="user_content">
+                            <span
+                                >유익한 글 잘봤습니다. 추후 2020년 까지의 데이터로 주기성을 띄는 데이터를 확보한 뒤 이를
+                                예측에 활용하면 더 의미있는 결과를 얻을 수 있을 것으로 보입니다.</span
+                            >
+                        </div>
+                        <div class="line_bt">
+                            <span>2021-02-15</span>
+                            <button>답글</button>
+                        </div>
                     </div>
-                    <div class="sc_ft_gray_line_right">
-                        <span>2021-02-15</span>
+                    <div class="sc_ft_one_line">
+                        <div class="user_img" id="img_2"></div>
+                        <p>케이*</p>
+                        <div class="user_content">
+                            <span
+                                >온도, 습도와 같이 계절성이 좀 더 짙은 데이터 에서는 Prophet의 예측이 많이 빗나가
+                                보입니다. <br />
+                                Prophet의 모델을 만들 때 yearly_seasonality로 연주기성을 부여했으나, 1년이 되지 않은
+                                데이러를 입력했기 때문에 보여집니다. <br />
+                                이 점을 개선한다면 좋을 것 같습니다.
+                            </span>
+                        </div>
+                        <div class="line_bt">
+                            <span>2021-02-15</span>
+                            <button>답글</button>
+                        </div>
+                    </div>
+                    <div class="sc_ft_gray_line">
+                        <div class="gray_line_left">
+                            <div class="comment_icon"></div>
+                            <div class="user_img" id="img_3"></div>
+                        </div>
+                        <textarea name="text" class="text_type_1" placeholder="댓글 영역"></textarea>
+                        <div class="sc_ft_gray_line_right">
+                            <button class="gray_line_bt_1">등록</button>
+                            <button class="gray_line_bt_2">취소</button>
+                        </div>
+                    </div>
+                    <div class="sc_ft_gray_line">
+                        <div class="gray_line_left">
+                            <div class="comment_icon"></div>
+                            <div class="user_img" id="img_4"></div>
+                        </div>
+                        <div class="gray_line_letter">
+                            <p>홍길*</p>
+                            <span>댓글 감사합니다. 참고하여 좀 더 보안해보도록 하겠습니다.</span>
+                        </div>
+                        <div class="sc_ft_gray_line_right">
+                            <span>2021-02-15</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-
             <div class="up_bt_div">
                 <button>
-                    <i class="ambicon-009_arrow2_up"></i>
+                    <i class="icon_rightArrow_black"></i>
                 </button>
             </div>
         </div>
     </section>
-
     <footer>
         <div class="wrap">
             <div class="footer_wrap" id="ft_line">
@@ -412,7 +367,7 @@
                     <h3>타이틀 영역</h3>
                 </div>
                 <div class="modal_1_hd_right">
-                    <button class="cancel_1"><i class="ambicon-015_mark_times"></i></button>
+                    <button class="cancel_1"><i class="icon_close_b"></i></button>
                 </div>
             </div>
             <div class="modal_1_section">
@@ -479,13 +434,13 @@
                                 <span>자료받기</span>
                             </button>
                             <div class="modal_1_icon_box">
-                                <div class="modal_1_heart"></div>
+                                <div class="heart_s"></div>
                                 <span class="modal_1_right">100</span>
-                                <div class="modal_1_star"></div>
+                                <div class="star_s"></div>
                                 <span class="modal_1_right">87</span>
-                                <div class="modal_1_talk"></div>
+                                <div class="talk_s"></div>
                                 <span class="modal_1_right">126</span>
-                                <div class="modal_1_eyes"></div>
+                                <div class="eyes_s"></div>
                                 <span>215</span>
                             </div>
                         </div>
@@ -497,49 +452,6 @@
                 </div>
             </div>
             <div class="modal_1_footer"></div>
-        </div>
-    </div>
-
-    <!-- 팝업창 2 -->
-    <div class="modal_2" id="modla_2">
-        <div class="modal_content_2">
-            <div class="modal_2_header">
-                <div class="modal_2_hd_left">
-                    <h3>온라인 패키지</h3>
-                </div>
-                <div class="modal_2_hd_right">
-                    <button class="cancel_2"><i class="ambicon-015_mark_times"></i></button>
-                </div>
-            </div>
-            <div class="modal_2_section"> 
-                <div class="modal_2_sc_left">
-                    <span>2.실습준비</span>
-                </div>
-                <div class="modal_2_sc_right">
-                    <button class="modal_heart_bt pink_heart_icon"></button>
-                </div>
-                <div class="modal_2_video_div">
-                    <div class="modal_2_video"></div>
-                </div>
-            </div>
-            <div class="modal_2_footer">
-                <div class="modal_2_ft_link">
-                    <div class="modal_2_ft_left">
-                        <button>1.실습 과정 소개</button>
-                    </div>
-                    <div class="modal_2_ft_right">
-                        <button>3.실습#1.데이터수집</button>
-                    </div>
-                </div>
-                <div class="modal_2_ft_bt">
-                    <div class="modla_2_ft_bt_left">
-                        <button>이전 강좌</button>
-                    </div>
-                    <div class="modla_2_ft_bt_right">
-                        <button>다음 강좌</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </body>

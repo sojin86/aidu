@@ -234,11 +234,13 @@ main {
     padding: 10px 0px 10px 0px;
 }
 
-.save_box_div > button:nth-child(3) {
+.save_box_div > button:last-child {
     background-color: #2cbbb7;
     color: #fff;
 }
-
+.save_box_div > button:last-child a {
+    color: #fff;
+}
 .copy_div {
     display: inline-block;
 }
@@ -628,6 +630,14 @@ input[type='file'] {
     background: url(../img/icon/heart_gray.png);
     vertical-align: top;
 }
+.heart_icon_02 {
+    width: 27px;
+    height: 24px;
+    display: inline-block;
+    background: url(../img/icon/heart_gray_s.png);
+    background-repeat: no-repeat;
+    margin-top: 5px;
+}
 .star_icon {
     width: 30px;
     height: 30px;
@@ -643,6 +653,46 @@ input[type='file'] {
 }
 .green_star_icon {
     background: url(../img/icon/star_green.png);
+}
+.heart_s {
+    width: 19px;
+    height: 17px;
+    background: url(../img/icon/heart_s.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-top: 2px;
+}
+.star_s {
+    width: 19px;
+    height: 17px;
+    background: url(../img/icon/star_s.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-top: 2px;
+}
+.talk_s {
+    width: 19px;
+    height: 17px;
+    background: url(../img/icon/talk_s.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-top: 2px;
+}
+.eyes_s {
+    width: 19px;
+    height: 17px;
+    background: url(../img/icon/eyes_s.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-top: 2px;
+}
+.icon_close_b {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-image: url(../img/icon/icon_close_b.png);
+    background-repeat: no-repeat;
+    background-size: 30px auto;
 }
 
 /* -----------------------------color----------------------------- */

@@ -212,7 +212,6 @@
     letter-spacing: -1px;
 }
 .sc_type_01 .section_header .section_bt {
-    display: inline-block;
     float: right;
 }
 .sc_type_01 .section_header .section_bt > button {
@@ -568,7 +567,7 @@
     margin-top: 10px;
 }
 
-/* comments_list */
+/* ------------------------------comments_list---------------------------- */
 .comments_list {
     padding: 50px 0px 0px 0px;
     margin-bottom: 90px;
@@ -595,7 +594,6 @@
     border: 0px solid;
 }
 .comments_list .sc_ft_textbar .sc_ft_bt_div {
-    display: inline-block;
     width: 100px;
     height: 60px;
     vertical-align: top;
@@ -733,4 +731,195 @@
 .comments_list .sc_ft_gray_line .gray_line_letter > span {
     font-size: 15px;
     color: #48656d;
+}
+
+/* ------------------------------modal_1---------------------------- */
+.modal_1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 3;
+    /* display: none; */
+}
+.modal_content_1 {
+    background-color: #fff;
+    width: 90%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 92%;
+}
+.modal_1_header {
+    border-bottom: 1px solid #dddddd;
+    width: 100%;
+    padding: 30px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+}
+.modal_1_hd_left {
+    display: inline-block;
+}
+.modal_1_hd_left > h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0c323d;
+}
+.modal_1_hd_right {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+.cancel_1 {
+    font-size: 40px;
+}
+.cancel_1 > i {
+    vertical-align: top;
+}
+.modal_1_section {
+    position: relative;
+    height: 100%;
+}
+.modal_1_nav {
+    display: inline-block;
+    width: 29%;
+    min-height: calc(100vh + 50px);
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.modal_1_aside {
+    width: 360px;
+    padding: 0px 0px 0px 30px;
+}
+.modal_1_aside_one_line {
+    padding: 30px 0px 30px 0px;
+    position: relative;
+    border-left: 3px solid #a4ceea;
+}
+.maru_blue {
+    width: 10px;
+    height: 10px;
+    background-color: #499ed5;
+    font-size: 2px;
+    border-radius: 10px;
+    position: absolute;
+    top: 33px;
+    left: -7px;
+}
+.modal_1_aside_one_line > p {
+    font-size: 18px;
+    color: #0c323d;
+    font-weight: 500;
+    margin-left: 25px;
+    line-height: 12px;
+}
+.modal_1_2line {
+    margin-top: 10px;
+    display: inline-block;
+}
+.modal_time_icon {
+    width: 14px;
+    height: 14px;
+    background: url(../img/icon/time_s_gray.png);
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 4px;
+}
+.modal_1_2line > span {
+    font-size: 14px;
+    color: #48656d;
+    vertical-align: top;
+}
+/* 예외 1번 동그라미 선 */
+#first_aside {
+    padding: 30px 0px 0px 30px;
+}
+#first_aside_content {
+    padding: 0px 0px 30px 0px;
+}
+#first_maru {
+    top: 0px;
+}
+#last_aside {
+    height: 0px;
+}
+#last_aside_content {
+    padding: 0px 0px 50px 30px;
+}
+/* 오른쪽 동영상 */
+.modal_1_article {
+    padding: 30px 30px 0px 30px;
+    float: right;
+    width: 71%;
+}
+.modal_1_sc_hd {
+    display: inline-block;
+    width: 100%;
+}
+.modal_1_sc_left {
+    display: inline-block;
+}
+.modal_1_sc_left > p {
+    font-size: 24px;
+    color: #0c323d;
+    font-weight: 500;
+    display: inline-block;
+}
+.modal_1_sc_right {
+    float: right;
+}
+.modal_1_sc_right > button {
+    border: 1px solid #a7c1bc;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    float: right;
+}
+.modal_1_sc_right > button > i {
+    font-size: 15px;
+    color: #0c323d;
+}
+.modal_1_sc_right > button > span {
+    font-size: 14px;
+    color: #0c323d;
+}
+.modal_1_icon_box {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.modal_1_icon_box > span {
+    font-size: 14px;
+    color: #48656d;
+    margin-top: -2px;
+    margin-left: 5px;
+}
+.modal_1_right {
+    margin-right: 25px;
+}
+.modal_1_sc_video {
+    width: 71%;
+    float: right;
+    padding: 0px 30px 100px 30px;
+}
+.modal_1_video {
+    background: url(../img/image/modal_video_1.png);
+    min-width: 100%;
+    min-height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
