@@ -776,9 +776,17 @@ input[type='file'] {
     float: left;
 }
 .pencil_g {
+    width: 80px;
+    height: 86px;
+    display: inline-block;
+    float: left;
     background: url(../img/icon/pencil_g.png);
 }
 .pencil_r {
+    width: 80px;
+    height: 86px;
+    display: inline-block;
+    float: left;
     background: url(../img/icon/pencil_r.png);
 }
 
