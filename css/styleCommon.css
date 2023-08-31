@@ -579,7 +579,7 @@
     margin-left: 10px;
 }
 
-/* ------------------------------ection_1 table---------------------------- */
+/* ------------------------------section_1 table---------------------------- */
 .section_table {
     background-color: #fff;
     padding: 0px 0px;
@@ -614,20 +614,44 @@
 }
 .section_table .table_4 td > p {
     font-size: 14px;
-    color: #397fd4;
-    margin-top: 10px;
+    font-weight: 700;
 }
-.section_table .table_content {
-    padding: 30px 20px 0px 20px;
-    min-height: 300px;
-    border-bottom: 1px solid #dddddd;
+.section_table .table_4 td > p.blue {
+    margin-top: 10px;
+    color: #397fd4;
+    font-weight: 400;
 }
 .section_table .table_content > p {
     font-size: 15px;
     color: #0c323d;
     line-height: 28px;
 }
+.section_table .table_4 .t_h .table_icon_font {
+    color: #397fd4;
+    vertical-align: top;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.table_1_footer {
+    margin-top: 20px;
+}
+.table_1_footer > h5 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #48656d;
+    margin-bottom: 10px;
+}
+.table_1_footer > p {
+    font-size: 15px;
+    color: #667d85;
+}
 
+.table_1_footer > p:nth-child(2) {
+    margin-bottom: 10px;
+}
+
+/* ------------------------------section_2_table---------------------------- */
 .section_2_table {
     background-color: #fff;
     padding: 0px 0px;

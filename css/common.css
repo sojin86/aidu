@@ -763,9 +763,15 @@ input[type='file'] {
     background: url(../img/icon/s_logo_b.png);
 }
 .s_logo_g {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
     background: url(../img/icon/s_logo_g.png);
 }
 .s_logo_r {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
     background: url(../img/icon/s_logo_r.png);
 }
 .pencil_b {
@@ -789,6 +795,12 @@ input[type='file'] {
     float: left;
     background: url(../img/icon/pencil_r.png);
 }
+.kt_icon {
+    width: 26px;
+    height: 21px;
+    display: inline-block;
+    background: url(../img/icon/kt_icon.png);
+}
 
 /* -----------------------------color----------------------------- */
 .bg_blue_01 {
@@ -799,6 +811,12 @@ input[type='file'] {
 }
 .bg_green_02 {
     background-color: #2cbbb7 !important;
+}
+.color_green {
+    color: #019677 !important;
+}
+.color_red {
+    color: #d6394e !important;
 }
 .border0 {
     border: 0 solid !important;

@@ -343,4 +343,24 @@ section {
     display: none;
 }
 
-/* ------------------------------confirm01---------------------------- */
+/* ------------------------------confirm08---------------------------- */
+#confirm08 .main_hd {
+    margin-top: 90px;
+}
+#confirm08 .main_hd_1 {
+    margin-bottom: 20px;
+}
+#confirm08 .main_hd_2 {
+    margin-bottom: 40px;
+}
+#confirm08 .main_hd_2 > h3 {
+    font-size: 36px;
+    color: #0c323d;
+    font-weight: bold;
+}
+#confirm08 .main_hd_2P > p {
+    font-size: 28px;
+    color: #0c323d;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
