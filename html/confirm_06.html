@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI자격인증05</title>
+    <link rel="stylesheet" href="../css/confirm_04.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../iconfont/iconfont_gnb.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="../js/jquery-3.6.0.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+
+        // header 위 nav
+        var header = $('header');
+        var MainBtn = $(".hd_nav_bt")
+        var toggleBtn = $(".header_nav_wrap > ul > li > ul")
+        // header 마우스 오버시
+        MainBtn.on('mouseenter', function(){
+          if (header.hasClass('hd_close')){
+              header.addClass('hover');
+              header.removeClass('hd_close');
+          }
+          if (toggleBtn.hasClass('togglebtn')){
+              toggleBtn.addClass('open');
+          }
+        });
+        // header 마우스 오버 아닐시
+        header.on('mouseleave', function(){
+            if (header.hasClass('hover')){
+                header.removeClass('hover');
+                header.addClass('hd_close');
+            }
+            if (toggleBtn.hasClass('open')){
+                toggleBtn.removeClass('open');
+                toggleBtn.addClass('togglebtn');
+          }
+        });
+
+        // 별 버튼 클릭
+        var star_bt = $(".star_icon")
+        star_bt.click(function(){
+            var st_btn = $(this);
+            st_btn.toggleClass("green_star_icon");
+        });  
+
+        // 하트 버튼 클릭
+        var heart_bt = $(".heart_icon")
+        heart_bt.click(function(){
+            var ht_btn = $(this);
+            ht_btn.toggleClass("pink_heart_icon");
+        });
+        
+        // up bt (top으로 올라가는 버튼)
+        var TopBt = $('.up_bt_div');
+        var delay = 500;
+        TopBt.on('click', function(){
+            $('html, body').stop().animate({scrollTop: 0}, delay);
+        });
+    });
+</script>
+<body>
+    <header class="hd_close">
+        <div class="header_line"></div>
+        <div class="wrap">
+            <div class="header_wrap">
+                <a href="main_pg.html" class="main_logo"></a>
+                <div class="header_nav_wrap">
+                    <ul>
+                        <li>
+                            <button class="hd_nav_bt">
+                                <a href="explain_pg.html">AIDU 소개</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="hd_nav_bt">
+                                <a href="my_project_01.html">나의 프로젝트</a>
+                            </button>
+                            <ul class="togglebtn">
+                                <li><a href="#">나의 프로젝트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="hd_nav_bt">
+                                <a href="ai_content_01_01.html">AI 교육 컨텐츠</a>
+                            </button>
+                            <ul class="togglebtn">
+                                <li><a href="ai_content_01_02.html">기업 사례 교육</a></li>
+                                <li><a href="ai_content_01_05.html">기업 사례 실습</a></li>
+                                <li><a href="ai_content_01_03.html">온라인 패키지</a></li>
+                                <li><a href="ai_content_01_06.html">AI 문제집</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="hd_nav_bt">
+                                <a href="confirm_01.html" class="hd_click_green">AI 자격인증</a>
+                            </button>
+                            <ul class="togglebtn">
+                                <li><a href="confirm_01.html">AI 자격인증 소개</a></li>
+                                <li><a href="confirm_02.html">시험 접수</a></li>
+                                <li><a href="confirm_03.html" class="hd_click_green">시험 응시</a></li>
+                                <li><a href="confirm_07.html">시험결과 조회</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user_login">
+                    <a href="login_01.html">로그인</a>
+                    <span>|</span>
+                    <a href="join_01.html">회원가입</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <div class="main_right">
+                <a href="confirm_03.html">자격인증 응시</a>
+                <span>></span>
+                <a href="confirm_05.html">시험장</a>
+            </div>
+            <div class="main_content">
+                <div class="main_hd">
+                    <h3>자격인증 응시</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section>
+        <div class="wrap">
+            <div class="section_content">
+                <div class="sc_hd">
+                    <button class="click_bt mg_rg_25">본인 인증</button>
+                    <button class="click_bt mg_rg_25">안내사항 확인 및 동의</button>
+                    <button class="click_bt sp_click_bt">시험 응시</button>
+                </div>
+                <div class="sc_hd_line">
+                    <i></i>
+                </div>
+            </div>
+            <div class="sc_content-2">
+                <div class="section_1_table">
+                    <div class="table_cont"> 
+                        <table class="table_1">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="80%">
+                            </colgroup>
+                            <thead class="sc_1_t_h">
+                                <tr>
+                                    <th>자격유형</th>
+                                    <td>AI Associate</td>
+                                </tr>
+                            </thead>
+        
+                            <tbody class="sc_1_t_b">
+                                <tr>
+                                    <th>시험명</th>
+                                    <td>2021년 제1회 KT AI 자격인증 시험</td>
+                                </tr>
+                                <tr>
+                                    <th>응시자</th>
+                                    <td>홍길*</td>
+                                </tr>
+                                <tr>
+                                    <th>휴대전화번호</th>
+                                    <td>010-1234-1234</td>
+                                </tr>
+                                <tr>
+                                    <th>이메일</th>
+                                    <td>hong@kt.com</td>
+                                </tr>
+                                <tr>
+                                    <th>문제 Set</th>
+                                    <td>A형</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="sc_content-2_bt">
+                    <button class="bt_type_3"><a href="confirm_05.html">이전</a></button>
+                </div>
+            </div>
+            <div class="section_2_table">
+                <div class="table_cont"> 
+                    <table class="table_2">
+                        <colgroup>
+                            <col width="15%">
+                            <col width="15%">
+                            <col width="15%">
+                            <col width="15%">
+                        </colgroup>
+                        <thead class="sc_2_t_h">
+                            <tr>
+                                <th>시험 시작</th>
+                                <th>시험 종료 (남은시간)</th>
+                                <th>시험장</th>
+                                <th>시험종료</th>
+                            </tr>
+                        </thead>
+    
+                        <tbody class="sc_2_t_b">
+                            <tr>
+                                <td>10:00:00</td>
+                                <td>00:60:00</td>
+                                <td><button class="bt_type_4"><a href="#">입장</a></button></td>
+                                <td><button class="bt_type_5"><a href="#">제출하기</a></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+           
+
+        <div class="up_bt_div">
+            <button>
+                <i class="ambicon-009_arrow2_up"></i>
+            </button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="wrap">
+            <div class="footer_wrap" id="ft_line">
+                <div class="ft_main_tittle">
+                    <a href="board_01.html">자유게시판</a>
+                    <span>|</span>
+                    <a href="Q&A_01.html">Q&A</a>
+                    <span>|</span>
+                    <a href="notice_01.html">공지사항/뉴스</a>
+                </div>
+            </div>
+        </div>
+        <div class="ft_line"></div>
+        <div class="wrap">
+            <div class="footer_wrap" >
+                <div class="ft_second_tittle">
+                    <a href="provision_01.html">플랫폼 이용약관</a>
+                    <span>|</span>
+                    <a href="provision_02.html">개인정보취급방침</a>
+                    <span>|</span>
+                    <a href="provision_03.html">청소년보호정책</a>
+                    <div class="footer_logo"></div>
+                </div>
+                <div class="ft_last_tittle">
+                    <p>㈜케이티 대표이사 구현모 사업자등록번호:102-81-42945 통신판매업신고: 2002-경기성남-0048</p>
+                    <p>경기도 성남시 분당구 불정로 90(정자동)</p>
+                    <p>Copyrightⓒkt corp.All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

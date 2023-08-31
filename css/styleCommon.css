@@ -527,6 +527,9 @@
     margin-right: 10px;
     vertical-align: baseline;
 }
+.main_footer .main_ft_div > button:nth-child(n + 2) {
+    margin-left: 10px;
+}
 
 /* ------------------------------ection_1 table---------------------------- */
 .section_table {
@@ -565,6 +568,48 @@
     font-size: 14px;
     color: #397fd4;
     margin-top: 10px;
+}
+.section_table .table_content {
+    padding: 30px 20px 0px 20px;
+    min-height: 300px;
+    border-bottom: 1px solid #dddddd;
+}
+.section_table .table_content > p {
+    font-size: 15px;
+    color: #0c323d;
+    line-height: 28px;
+}
+
+.section_2_table {
+    background-color: #fff;
+    padding: 0px 0px;
+    border-top: 1px solid #85989e;
+}
+.section_2_table .table_2 {
+    width: 100%;
+}
+.section_2_table .table_2 .sc_2_t_h > tr > th {
+    border-bottom: 0.5px solid #85989e;
+    padding: 18px 20px 18px 20px;
+    font-size: 17px;
+    color: #0c323d;
+    font-weight: 500;
+    text-align: center;
+}
+
+.section_2_table .table_2 .sc_2_t_b > tr {
+    cursor: pointer;
+}
+.section_2_table .table_2 .sc_2_t_b > tr > td {
+    color: #48656d;
+    font-size: 16px;
+    padding: 15px 20px 15px 20px;
+    line-height: 30px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+}
+.section_2_table .table_2 .sc_2_t_b > tr > td > a {
+    color: #48656d;
 }
 
 /* ------------------------------comments_list---------------------------- */
@@ -742,7 +787,7 @@
     top: 0;
     left: 0;
     z-index: 3;
-    /* display: none; */
+    display: none;
 }
 .modal_content_1 {
     background-color: #fff;
@@ -843,7 +888,6 @@
     color: #48656d;
     vertical-align: top;
 }
-/* 예외 1번 동그라미 선 */
 #first_aside {
     padding: 30px 0px 0px 30px;
 }
@@ -859,7 +903,6 @@
 #last_aside_content {
     padding: 0px 0px 50px 30px;
 }
-/* 오른쪽 동영상 */
 .modal_1_article {
     padding: 30px 30px 0px 30px;
     float: right;
@@ -922,4 +965,27 @@
     min-height: 450px;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+/* ------------------------------table_num---------------------------- */
+.table_num {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.table_num_bt {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    color: #a0b0b6;
+}
+.table_num_bt:nth-child(1) {
+    margin-right: 20px;
+}
+.table_num_bt:nth-child(6) {
+    margin-right: 20px;
+}
+.table_sp_color {
+    color: #0c323d;
+    font-weight: bold;
 }

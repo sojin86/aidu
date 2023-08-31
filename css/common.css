@@ -253,6 +253,24 @@ main {
     border-radius: 30px;
     margin-top: -35px;
 }
+.bt_type_1 {
+    width: 100px;
+    height: 50px;
+    background-color: #2cbbb7;
+    font-size: 17px;
+    border-radius: 5px;
+}
+.bt_type_1 > a {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0px 8px 0px;
+    color: #fff;
+}
+.table_footer_bt {
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+}
 
 /* ------------------------------check box---------------------------- */
 .cb_1 {
@@ -694,6 +712,24 @@ input[type='file'] {
     background-repeat: no-repeat;
     background-size: 30px auto;
 }
+.down_icon {
+    background: url(../img/icon/down_icon.png);
+    width: 9px;
+    height: 7px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: -2px;
+}
+.up_icon {
+    background: url(../img/icon/up_icon.png);
+    width: 9px;
+    height: 7px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: -2px;
+}
 
 /* -----------------------------color----------------------------- */
 .bg_blue_01 {
@@ -707,6 +743,9 @@ input[type='file'] {
 }
 .border0 {
     border: 0 solid !important;
+}
+.text_left {
+    text-align: left !important;
 }
 
 /* script css 모음 */

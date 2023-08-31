@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI자격인증개요-08</title>
+    <link rel="stylesheet" href="../css/confirm_08.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../iconfont/iconfont_gnb.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="../js/jquery-3.6.0.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+
+        // header 위 nav
+        var header = $('header');
+        var MainBtn = $(".hd_nav_bt")
+        var toggleBtn = $(".header_nav_wrap > ul > li > ul")
+        // header 마우스 오버시
+        MainBtn.on('mouseenter', function(){
+          if (header.hasClass('hd_close')){
+              header.addClass('hover');
+              header.removeClass('hd_close');
+          }
+          if (toggleBtn.hasClass('togglebtn')){
+              toggleBtn.addClass('open');
+          }
+        });
+        // header 마우스 오버 아닐시
+        header.on('mouseleave', function(){
+            if (header.hasClass('hover')){
+                header.removeClass('hover');
+                header.addClass('hd_close');
+            }
+            if (toggleBtn.hasClass('open')){
+                toggleBtn.removeClass('open');
+                toggleBtn.addClass('togglebtn');
+          }
+        });
+
+        // up bt (top으로 올라가는 버튼)
+        var TopBt = $('.up_bt_div');
+        var delay = 500;
+        TopBt.on('click', function(){
+            $('html, body').stop().animate({scrollTop: 0}, delay);
+        });
+    });
+</script>
+<body>
+    <header class="hd_close">
+        <div class="header_line"></div>
+        <div class="wrap">
+            <div class="header_wrap">
+                <a href="main_pg.html" class="main_logo"></a>
+                <div class="header_nav_wrap">
+                    <ul>
+                        <li>
+                            <button class="hd_nav_bt">
+                                <a href="explain_pg.html">AIDU 소개</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="hd_nav_bt">
+                                <a href="my_project_01.html">나의 프로젝트</a>
+                            </button>
+                            <ul class="togglebtn">
+                                <li><a href="#">나의 프로젝트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="hd_nav_bt">
+                                <a href="ai_content_01_01.html">AI 교육 컨텐츠</a>
+                            </button>
+                            <ul class="togglebtn">
+                                <li><a href="ai_content_01_02.html">기업 사례 교육</a></li>
+                                <li><a href="ai_content_01_05.html">기업 사례 실습</a></li>
+                                <li><a href="ai_content_01_03.html">온라인 패키지</a></li>
+                                <li><a href="ai_content_01_06.html">AI 문제집</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="hd_nav_bt">
+                                <a href="confirm_01.html" class="hd_click_green">AI 자격인증</a>
+                            </button>
+                            <ul class="togglebtn">
+                                <li><a href="confirm_01.html">AI 자격인증 소개</a></li>
+                                <li><a href="confirm_02.html">시험 접수</a></li>
+                                <li><a href="confirm_03.html">시험 응시</a></li>
+                                <li><a href="confirm_07.html">시험결과 조회</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user_login">
+                    <a href="login_01.html">로그인</a>
+                    <span>|</span>
+                    <a href="join_01.html">회원가입</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <div class="main_hd">
+                <div class="main_hd_1">
+                    <i class="kt_icon"></i>
+                </div>
+                <div class="main_hd_2">
+                    <h3>AIFB 자격인증 개요</h3>
+                </div>
+            </div>
+
+            <div class="main_1_table">
+                <div class="main_table_1">
+                    <div class="table_cont_1"> 
+                        <table class="table_1">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="20%">
+                            </colgroup>
+                            <thead class="table_1_th">
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <i class="table_icon"></i>
+                                        <span class="table_icon_font">AIFB Basic</span>
+                                    </td>
+                                    <td>
+                                        <i class="table_icon table_icon_2"></i>
+                                        <span class="table_icon_font green_color">AIFB Associate</span>
+                                    </td>
+                                    <td>
+                                        <i class="table_icon table_icon_3"></i>
+                                        <span class="table_icon_font red_color">AIFB Professional</span>
+                                    </td>
+                                </tr>
+                            </thead>
+        
+                            <tbody class="table_1_tb">
+                                <tr>
+                                    <th><span>응시자격</span></th>
+                                    <td>
+                                        <span>
+                                            제한없음 <br>※ 비전문가 추천
+                                        </span> 
+                                    </td>
+                                    <td>
+                                        <span>
+                                            제한없음 <br>※ AI입문자 추천
+                                        </span> 
+                                    </td>
+                                    <td>
+                                        <span>
+                                            제한없음 <br>※ Associate 취득자 추천
+                                        </span> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span>출제내용</span></th>
+                                    <td>
+                                        <p>GUI 기반 데이터 분석 및 AI모델링 역량</p>
+                                        <span>
+                                            AI 적용 프로세스를 이해하고  특정 데이터 형식
+                                            (Tabular)에 대해 코딩없이 GUI 기반으로 데이터 분석과 
+                                            AI모델링을 할 수 있는 역량을 평가
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <p>데이터 분석/처리 및 AI모델링 역량</p>
+                                        <span>
+                                            특정 데이터 형식(Tabular)에 대해 분석/처리 후 일부  
+                                            알고리즘을 활용하여 AI 모델링 할 수 있는 역량을 평가
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <p>AI모델 고도화/최적화 역량</p>
+                                        <span>
+                                            목표 성능 달성을 위해 다양한 데이터(Tabular, Text, 
+                                            Image)를 분석/처리 후 최적의 알고리즘을 적용하여 
+                                            AI 모델링 할 수 있는 역량을 평가      
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span>평가범위</span></th>
+                                    <td>
+                                        <p>탐색적 데이터 분석</p>
+                                        <span>
+                                            - 데이터의 구성 확인, 상관분석 <br>
+                                            - 데이터 시각화    
+                                        </span>
+                                        <p>머신러닝 모델링</p>
+                                        <span>
+                                            - GUI 기반 머신러닝 모델링   
+                                        </span>
+                                        <p>모델 성능평가</p>
+                                        <span>
+                                            - 모델 성능평가 및 시뮬레이션   
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <p>탐색적 데이터 분석</p>
+                                        <span>
+                                            - 필요한 라이브러리 설치<br>
+                                            - Tabular(시계열 제외) 데이터 로딩 <br>
+                                            - 데이터의 구성 확인, 상관분석 <br>
+                                            - 데이터 시각화 
+                                        </span>
+                                        <p>데이터 전처리</p>
+                                        <span>
+                                            - GUI 기반 머신러닝 모델링   
+                                        </span>
+                                        <p>모델 성능평가</p>
+                                        <span>
+                                            - 데이터 결측치 처리 <br>
+                                            - 라벨 인코딩, 원핫 인코딩 <br>
+                                            - x,y 데이터 분리 <br>
+                                            - 데이터 정규분포화, 표준화 <br> 
+                                        </span>
+                                        <p>머신러닝/딥러닝 모델링</p>
+                                        <span>
+                                            - scikit-learn, TensorFlow 등을 활용하여 문제에 
+                                            제시된 예측/분류를 위해 머신러닝/딥러닝 모델링
+                                        </span>
+                                        <p>모델 성능평가</p>
+                                        <span>
+                                            - 모델 성능평가 및 그래프 출력
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <p>다양한 데이터 분석 및 처리</p>
+                                        <span>
+                                            - Tabular(시계열 포함) <br>
+                                            - Text(한글,영문 Text) <br>
+                                            - Image(영상 제외)   
+                                        </span>
+                                        <p>머신러닝/딥러닝 모델링</p>
+                                        <span>
+                                            - scikit-learn, TensorFlow, Pytorch, 기타 오픈소스를 
+                                            활용하여 문제에 제시된 예측/분류/추천을 위해 
+                                            머신러닝/딥러닝 모델링 
+                                        </span>
+                                        <p>머신러닝/딥러닝 최적화/고도화</p>
+                                        <span>
+                                            - 목표 성능 달성을 위한 모델 최적화/고도화   
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span>프레임워크</span></th>
+                                    <td><span>-</span></td>
+                                    <td><span> TensorFlow, scikit-learn</span></td>
+                                    <td><span>TensorFlow, scikit-learn, 기타 오픈소스</span></td>
+                                </tr>
+                                <tr>
+                                    <th><span>평가Tool</span></th>
+                                    <td><span>AIDU에서 AIDU ez활용하여 응시</span></td>
+                                    <td><span>AIDU에서 JupyterLab활용하여 응시</span></td>
+                                    <td><span>AIDU에서 JupyterLab활용하여 응시(GPU제공)</span></td>
+                                </tr>
+                                <tr>
+                                    <th><span>평가방식</span></th>
+                                    <td><span>온라인 CBT 방식</span></td>
+                                    <td><span>온라인 CBT 방식, 오픈북 테스트</span></td>
+                                    <td><span>온라인 CBT 방식, 오픈북 테스트</span></td>
+                                </tr>
+                                <tr>
+                                    <th><span>시험구성</span></th>
+                                    <td>10문항 / 60분 <br>
+                                        80점 이상 합격<br>
+                                        실기평가 100%
+                                    </td>
+                                    <td>12문항 / 90분 <br>
+                                        80점 이상 합격 <br>
+                                        실기평가 100%
+                                    </td>
+                                    <td>3문항 / 180분 <br>
+                                        80점 이상 합격 <br>
+                                        실기평가 100%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span>응시료</span></th>
+                                    <td>40,000원/1회</td>
+                                    <td>70,000원/1회</td>
+                                    <td>100,000원/1회</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="table_1_footer">
+                <h5>시험응시 유의사항</h5>
+                <p>※ 시험 응시를 위해서는 휴대폰 본인확인이 필요합니다.</p>
+                <p>※ 시험응시는 Chrome 브라우저로만 가능합니다. (타 브라우저 미지원)</p>
+            </div>
+            <div class="main_hd">
+                <div class="main_hd_2">
+                    <h3>AIFB 자격인증 민간자격관련 안내사항</h3>
+                </div>
+                <div class="main_hd_2P">
+                    <p>자격정보</p>
+                </div>
+            </div>
+
+            <div class="main_2_table">
+                <div class="main_table_2">
+                    <div class="table_cont_2"> 
+                        <table class="table_2">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="20%">
+                                <col width="15%">
+                                <col width="20%">
+                            </colgroup>
+                            <thead class="table_2_th">
+                                <tr>
+                                    <th>자격명</th>
+                                    <td >AIFB (Artificial Fundamentals for Business)</td>
+                                </tr>
+                            </thead>
+                            <tbody class="table_2_tb">
+                                <tr>
+                                    <th rowspan="2">등급명</th>
+                                    <td rowspan="2">Basic, Associate, Professional</td>
+                                </tr>
+                                <tr class="border_color">
+                                    <th>자격의 종류</th>
+                                    <td>등록민간자격</td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">등록번호</th>
+                                    <td rowspan="2">등록번호: 제2021-xxxxxx호</td>
+                                </tr>
+                                <tr class="border_color">
+                                    <th>자격발급기관</th>
+                                    <td>(주)케이티, 한국표준협회 공동발급</td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">총비용 및 <br>
+                                        세부내역별 비용</th>
+                                    <td rowspan="2">
+                                        자격별 응시료 (자격발급비 포함) <br>
+                                        - <span class="blue_color">Basic</span> : 40,000원 <br>
+                                        - <span class="green_color_1">Associate</span> : 60,000원 <br>
+                                        - <span class="red_color_1">Professional</span> : 90,000원 
+                                    </td>
+                                </tr>
+                                <tr class="border_color">
+                                    <th>세부내역별 <br>
+                                        비용 환불규정</th>
+                                    <td>접수 취소에 따른 환불 기준 <br>
+                                        - 시험일 기준 30일전까지 : 응시료 100% 반환 <br>
+                                        - 시험일 기준 5일전까지 : 응시료 50% 반환 <br>
+                                        - 시험일 기준 4일 이내 : 응시료 반환 불가
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main_hd">
+                <div class="main_hd_2P">
+                    <p>자격관리운영(발급)기관 정보</p>
+                </div>
+            </div>
+
+            <div class="main_2_table">
+                <div class="main_table_2">
+                    <div class="table_cont_2"> 
+                        <table class="table_2">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="20%">
+                                <col width="15%">
+                                <col width="20%">
+                            </colgroup>
+                            <thead class="table_2_th">
+                                <tr>
+                                    <th rowspan="2">기간명</th>
+                                    <td rowspan="2">㈜케이티</td>
+                                </tr>
+                                <tr class="border_color">
+                                    <th>대표자</th>
+                                    <td>구현모</td>
+                                </tr>
+                            </thead>
+                            <tbody class="table_2_tb">
+                                <tr>
+                                    <th rowspan="2">연락처</th>
+                                    <td rowspan="2">00-0000-0000</td>
+                                </tr>
+                                <tr class="border_color">
+                                    <th>이메일</th>
+                                    <td>ktaidu@kt.com</td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">소재지</th>
+                                    <td rowspan="2">
+                                        경기도 성남시 분당구 불정로 90 (정자동)
+                                    </td>
+                                </tr>
+                                <tr class="border_color">
+                                    <th>홈페이지</th>
+                                    <td>https://corp.kt.com/
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="main_hd">
+                <div class="main_hd_2P">
+                    <p>(공동 발급기관) 자격관리〮운영(발급)기관 정보</p>
+                </div>
+            </div>
+
+            <div class="main_2_table">
+                <div class="main_table_2">
+                    <div class="table_cont_2"> 
+                        <table class="table_2">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="20%">
+                                <col width="15%">
+                                <col width="20%">
+                            </colgroup>
+                            <thead class="table_2_th">
+                                <tr>
+                                    <th rowspan="2">기간명</th>
+                                    <td rowspan="2">한국표준협회</td>
+                                </tr>
+                                <tr class="border_color">
+                                    <th>대표자</th>
+                                    <td>홍길동</td>
+                                </tr>
+                            </thead>
+                            <tbody class="table_2_tb">
+                                <tr>
+                                    <th rowspan="2">연락처</th>
+                                    <td rowspan="2">00-0000-0000</td>
+                                </tr>
+                                <tr class="border_color">
+                                    <th>이메일</th>
+                                    <td>AIDU@kt.com</td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">소재지</th>
+                                    <td rowspan="2">
+                                        주소 주소
+                                    </td>
+                                </tr>
+                                <tr class="border_color">
+                                    <th>홈페이지</th>
+                                    <td>https://corp.kt.com/
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="table_2_footer">
+                <h5></h5>
+                <p>※ 위 “AIFB” 자격은 자격기본법 규정에 따라 등록한 민간자격으로, 국가로부터 인정받은 공인자격이 아닙니다.</p>
+                <p>※ 민간자격 등록 및 공인 제도에 대한 상세내용은 민간자격정보서비스<span class="blue_link">(www.pqi.or.kr)</span>의 ‘민간자격 소개’ 란을 참조해 주십시오.</p>
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+    </main>
+
+    <section>
+        <div class="wrap">
+
+            
+        </div>
+        <div class="up_bt_div">
+            <button>
+                <i class="ambicon-009_arrow2_up"></i>
+            </button>
+        </div>
+    </section>
+    <footer>
+        <div class="wrap">
+            <div class="footer_wrap" id="ft_line">
+                <div class="ft_main_tittle">
+                    <a href="board_01.html">자유게시판</a>
+                    <span>|</span>
+                    <a href="Q&A_01.html">Q&A</a>
+                    <span>|</span>
+                    <a href="notice_01.html">공지사항/뉴스</a>
+                </div>
+            </div>
+        </div>
+        <div class="ft_line"></div>
+        <div class="wrap">
+            <div class="footer_wrap" >
+                <div class="ft_second_tittle">
+                    <a href="provision_01.html">플랫폼 이용약관</a>
+                    <span>|</span>
+                    <a href="provision_02.html">개인정보취급방침</a>
+                    <span>|</span>
+                    <a href="provision_03.html">청소년보호정책</a>
+                    <div class="footer_logo"></div>
+                </div>
+                <div class="ft_last_tittle">
+                    <p>㈜케이티 대표이사 구현모 사업자등록번호:102-81-42945 통신판매업신고: 2002-경기성남-0048</p>
+                    <p>경기도 성남시 분당구 불정로 90(정자동)</p>
+                    <p>Copyrightⓒkt corp.All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- 팝업창 1 -->
+    <div class="modal_1 close" id="modal_1">
+        <div class="modal_content_1">
+            <div class="modal_1_hd">
+                <h3>자격 인증결과 확인 </h3>
+                <div class="modal_1_hd-1">
+                    <div class="modal_1_hd-input">
+                        <input type="text" class="input_type_1" placeholder="등록하신 이메일 주소를  입력하세요.">
+                        <input type="text" class="input_type_1" placeholder="등록하신 휴대전화번호를 입력하세요.">
+                        <div class="modal_1_hd-bt">
+                            <button class="bt_type_4">본인인증 </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal_1_section">
+                <div class="section_1_table">
+                    <div class="table_cont"> 
+                        <table class="table_1">
+                            <colgroup>
+                                <col width="30%">
+                                <col width="60%">
+                            </colgroup>
+                            <thead class="sc_1_t_h">
+                                <tr>
+                                    <th>자격유형</th>
+                                    <td>AI Associate / AI Business</td>
+                                </tr>
+                            </thead>
+        
+                            <tbody class="sc_1_t_b">
+                                <tr>
+                                    <th>시험명</th>
+                                    <td>2021년 제1회 KT AI 자격인증 시험</td>
+                                </tr>
+                                <tr>
+                                    <th>응시자</th>
+                                    <td>홍길동</td>
+                                </tr>
+                                <tr>
+                                    <th>결과</th>
+                                    <td>축하합니다. <br>
+                                        <span>합격</span> 하셨습니다.</td>
+                                </tr>
+                                <tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal_1_footer">
+                <button class="bt_type_5">자격증 발급 신청 </button>
+                <button class="bt_type_6 popup1Close">닫기</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

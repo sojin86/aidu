@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>01_11_온라인패키지-1_등록/수정</title>
+        <title>자유게시판_등록/수정_03</title>
         <link rel="stylesheet" href="../css/reset.css" />
         <link rel="stylesheet" href="../css/common.css" />
         <link rel="stylesheet" href="../css/styleCommon.css" />
@@ -33,6 +33,27 @@
                 var ht_btn = $(this);
                 ht_btn.toggleClass('pink_heart_icon');
             });
+            // select_box_1
+            $(document).on('click', '.select1', function () {
+                var boxObj1 = $(this).parent().siblings('.options').children('ul');
+                boxObj1.show();
+                $(this).addClass('open');
+            });
+            $('body').click(function (e) {
+                if ($('.select1').hasClass('open')) {
+                    $('.select1_ul').hide();
+                    $('.select1').removeClass('open');
+                }
+            });
+            $('.options > ul > li > button').click(function () {
+                var changeText = $(this).html();
+                var Selected_1 = $(this).closest('.options').siblings('.selected_1');
+                var checkText = $(this).closest('.options').siblings('.selected_1').children('.select1');
+
+                Selected_1.find('.select1').html(changeText);
+                checkText.css('color', '#0c323d');
+                $(this).closest('ul').hide();
+            });
         });
     </script>
     <body>
@@ -58,12 +79,12 @@
                             </li>
                             <li>
                                 <button class="hd_nav_bt">
-                                    <a href="ai_content_01_01.html" class="hd_click_green">AI 교육 컨텐츠</a>
+                                    <a href="ai_content_01_01.html">AI 교육 컨텐츠</a>
                                 </button>
                                 <ul class="togglebtn">
                                     <li><a href="ai_content_01_02.html">기업 사례 교육</a></li>
                                     <li><a href="ai_content_01_05.html">기업 사례 실습</a></li>
-                                    <li><a href="ai_content_01_04.html" class="hd_click_green">온라인 패키지</a></li>
+                                    <li><a href="ai_content_01_04.html">온라인 패키지</a></li>
                                     <li><a href="ai_content_01_06.html">AI 문제집</a></li>
                                 </ul>
                             </li>
@@ -90,16 +111,14 @@
         </header>
         <main class="border0">
             <div class="wrap">
-                <div class="wrap">
-                    <div class="right_pg">
-                        <a href="ai_content_01_03.html">온라인 패키지</a>
-                        <span>></span>
-                        <a href="ai_content_01_08.html">등록/수정</a>
-                    </div>
-                    <div class="main_tittle type01">
-                        <h2>온라인 패키지</h2>
-                        <span>AIDU를 활용한 다양한 사례를 학습해보세요.</span>
-                    </div>
+                <div class="right_pg">
+                    <a href="board_01.html">자유게시판</a>
+                    <span>></span>
+                    <a href="board_03.html">등록/수정</a>
+                </div>
+                <div class="main_tittle type01">
+                    <h2>자유게시판</h2>
+                    <span>AIDU 사용에 대한 자유로운 의견을 나누세요. </span>
                 </div>
             </div>
         </main>
@@ -114,54 +133,32 @@
                             </colgroup>
                             <thead class="t_h">
                                 <tr>
-                                    <th>강좌명<span>*</span></th>
+                                    <th>제목</th>
                                     <td>
-                                        <input type="text" class="input_type_01" placeholder="강좌명을 입력해주세요." />
+                                        <input
+                                            type="text"
+                                            class="input_type_01"
+                                            placeholder="질문 제목을 입력하세요."
+                                        />
                                     </td>
                                 </tr>
                             </thead>
 
                             <tbody class="t_b">
                                 <tr>
-                                    <th>동영상</th>
+                                    <th>내용</th>
+                                    <td>
+                                        <input type="text" class="input_type_01" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>첨부파일</th>
                                     <td>
                                         <label class="file_1">
                                             <input type="file" id="input-file" />
                                             <span>파일 선택</span>
                                         </label>
                                         <span class="no_file">선택된 파일 없음</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>소요시간</th>
-                                    <td>
-                                        <input type="text" placeholder="00:20" class="input_type_01" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>강의순번</th>
-                                    <td>
-                                        <div class="section_bt_box">
-                                            <div class="selected_1">
-                                                <a href="#" class="select1" id="select1"
-                                                    ><span>선택하세요</span
-                                                    ><i class="ambicon-003_arrow_down" id="down_icon1"></i
-                                                ></a>
-                                            </div>
-                                            <div class="options">
-                                                <ul class="select1_ul" id="select1_ul">
-                                                    <li>
-                                                        <button>선택</button>
-                                                    </li>
-                                                    <li>
-                                                        <button>1</button>
-                                                    </li>
-                                                    <li>
-                                                        <button>2</button>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -181,9 +178,8 @@
             </div>
             <div class="wrap">
                 <div class="save_box_div">
-                    <button>임시저장</button>
-                    <button>취소</button>
-                    <button>자가학습서 등록</button>
+                    <button><a href="board_01.html" class="black_color">취소</a></button>
+                    <button class="bt_type_color_green"><a href="board_01.html" class="white_color">등록</a></button>
                 </div>
             </div>
             <div class="up_bt_div">
