@@ -460,6 +460,153 @@
     margin-top: 15px;
 }
 
+/* -----------------------------sc_type_04----------------------------- */
+.sc_type_04 {
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+.sc_type_04 .sc_content_tittle {
+    border-bottom: 2px solid #0c323d;
+    padding-bottom: 20px;
+}
+.sc_type_04 .sc_content_tittle > p {
+    font-size: 24px;
+    color: #0c323d;
+    font-weight: 500;
+}
+
+/* -----------------------------sc_type_05----------------------------- */
+.sc_type_05 {
+    position: relative;
+}
+.section_content {
+    border-bottom: 1px solid #dddddd;
+    padding: 40px 20px 30px 20px;
+    position: relative;
+    cursor: pointer;
+}
+.section_content > h5 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0c323d;
+}
+.section_content > p {
+    font-size: 16px;
+    color: #667d85;
+    margin-top: 15px;
+}
+.content_green_box {
+    padding: 5px 30px 5px 30px;
+    font-size: 15px;
+    color: #3dae92;
+    border-radius: 20px;
+    background-color: #ebf5f4;
+    margin-top: 15px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.content_blue_box {
+    padding: 5px 30px 5px 30px;
+    font-size: 15px;
+    color: #397fd4;
+    border-radius: 20px;
+    background-color: #ebf2fa;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.section_content_top_right {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+}
+.pencil_icon {
+    width: 17px;
+    height: 18px;
+    background: url(../img/icon/pencil.png);
+    margin-right: 18px;
+    display: inline-block;
+    vertical-align: top;
+}
+.cancel_icon {
+    width: 17px;
+    height: 18px;
+    background: url(../img/icon/cancel.png);
+    display: inline-block;
+}
+
+.section_content_bottom_right {
+    float: right;
+    margin-top: 20px;
+}
+.section_content_bottom_right > span {
+    font-size: 14px;
+    color: #b2c2c7;
+}
+
+/* -----------------------------login_content_div----------------------------- */
+.login_content_div .login_ckbox_1 {
+    padding: 30px 30px 30px 30px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.login_ckbox_1 > p {
+    font-size: 20px;
+    color: #0c323d;
+    font-weight: 500;
+}
+
+.login_ckbox_1 > button {
+    float: right;
+    font-size: 28px;
+    color: #0c323d;
+    transition: all ease 0.3s;
+    margin-top: -35px;
+}
+
+.login_ckbox_1 > button > i {
+    color: #0c323d;
+    font-weight: bold;
+}
+
+.close_div_1 {
+    border-bottom: 1px solid #dddddd;
+    padding: 25px 40px 0px 40px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+.close_div_1 > p {
+    font-size: 18px;
+    color: #0c323d;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.close_div_1 > span {
+    font-size: 16px;
+    color: #48656d;
+    display: inline-block;
+    line-height: 35px;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+}
+
+.agree_down_bt {
+    transform: rotate(0deg);
+}
+.agree_up_bt {
+    transform: rotate(180deg);
+}
+
+.agree_up_div {
+    background-color: #fff;
+    cursor: pointer;
+}
+.agree_down_div {
+    background-color: #fff;
+    cursor: pointer;
+}
+
 /* ------------------------------search_div---------------------------- */
 .search_box_div {
     display: flex;
@@ -578,6 +725,10 @@
 .main_footer .main_ft_div > button:nth-child(n + 2) {
     margin-left: 10px;
 }
+.main_footer .main_ft_div > button.sp_bt {
+    color: #0c323d;
+    font-weight: 700;
+}
 
 /* ------------------------------section_1 table---------------------------- */
 .section_table {
@@ -620,6 +771,10 @@
     margin-top: 10px;
     color: #397fd4;
     font-weight: 400;
+}
+.section_table .table_content {
+    padding: 20px 20px 100px;
+    border-bottom: 1px solid #e2e2e2e2;
 }
 .section_table .table_content > p {
     font-size: 15px;
@@ -848,6 +1003,39 @@
 .comments_list .sc_ft_gray_line .gray_line_letter > span {
     font-size: 15px;
     color: #48656d;
+}
+
+/* ------------------------------main_bt_div---------------------------- */
+.main_bt_div {
+    background-color: #f3f3f3;
+}
+
+.bt_type_1 {
+    width: 437px;
+    height: 60px;
+    background-color: #f3f3f3;
+    font-size: 20px;
+    color: #667d85;
+}
+.bt_type_1 > a {
+    color: #667d85;
+    display: inline-block;
+    width: 100%;
+    padding: 14px 0px 14px 0px;
+}
+.bt_type_2 {
+    width: 437px;
+    height: 60px;
+    background-color: #fff;
+    font-size: 20px;
+    color: #0c323d;
+    border: 2px solid #2cbbb7;
+}
+.bt_type_2 > a {
+    color: #0c323d;
+    display: inline-block;
+    width: 100%;
+    padding: 14px 0px 14px 0px;
 }
 
 /* ------------------------------modal_1---------------------------- */

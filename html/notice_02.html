@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>공지사항 상세_02</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/common.css" />
+        <link rel="stylesheet" href="../css/styleCommon.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="../js/jquery-3.6.0.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <script>
+        $(document).ready(function () {
+            // 별 버튼 클릭
+            var star_bt = $('.star_icon');
+            star_bt.click(function () {
+                var st_btn = $(this);
+                st_btn.toggleClass('green_star_icon');
+            });
+            // 하트 버튼 클릭
+            var heart_bt = $('.heart_icon');
+            heart_bt.click(function () {
+                var ht_btn = $(this);
+                ht_btn.toggleClass('pink_heart_icon');
+            });
+            $('.select1').click(function () {
+                var boxobj1 = $('.select1_ul');
+                if (boxobj1.hasClass('close')) {
+                    boxobj1.removeClass('close');
+                    boxobj1.addClass('open');
+                }
+            });
+            // 검색 선택 버튼
+            var page_change = $('.sc_bt_div > button');
+            page_change.click(function () {
+                var page_change_this = $(this);
+
+                page_change_this.siblings('button').removeClass('white_box');
+                page_change_this.addClass('white_box');
+            });
+            $('#bt_1').click(function () {
+                $('.section_table').removeClass('close');
+                $('.section_table').addClass('open');
+                $('.table_2_content').removeClass('open');
+                $('.table_3_content').removeClass('open');
+                $('.table_4_content').removeClass('open');
+            });
+            $('#bt_2').click(function () {
+                $('.section_table').addClass('close');
+                $('.table_2_content').addClass('open');
+                $('.table_3_content').removeClass('open');
+                $('.table_4_content').removeClass('open');
+            });
+            $('#bt_3').click(function () {
+                $('.section_table').addClass('close');
+                $('.table_3_content').addClass('open');
+                $('.table_2_content').removeClass('open');
+                $('.table_4_content').removeClass('open');
+            });
+            $('#bt_4').click(function () {
+                $('.section_table').addClass('close');
+                $('.table_4_content').addClass('open');
+                $('.table_2_content').removeClass('open');
+                $('.table_3_content').removeClass('open');
+            });
+        });
+    </script>
+    <body>
+        <header class="close">
+            <div class="header_line"></div>
+            <div class="wrap">
+                <div class="header_wrap">
+                    <a href="main_pg.html" class="main_logo"></a>
+                    <div class="header_nav_wrap">
+                        <ul>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="explain_pg.html">AIDU 소개</a>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="my_project_01.html">나의 프로젝트</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="my_project_01.html">나의 프로젝트</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="ai_content_01_01.html">AI 교육 컨텐츠</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="ai_content_01_02.html">기업 사례 교육</a></li>
+                                    <li><a href="ai_content_01_05.html">기업 사례 실습</a></li>
+                                    <li><a href="ai_content_01_04.html">온라인 패키지</a></li>
+                                    <li><a href="ai_content_01_06.html">AI 문제집</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="confirm_01.html">AI 자격인증</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="confirm_01.html">AI 자격인증 소개</a></li>
+                                    <li><a href="confirm_02.html">시험 접수</a></li>
+                                    <li><a href="confirm_03.html">시험 응시</a></li>
+                                    <li><a href="confirm_04.html">시험결과 조회</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user_login">
+                        <a href="login_01.html">로그인</a>
+                        <span>|</span>
+                        <a href="join_01.html">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="border0">
+            <div class="wrap">
+                <div class="right_pg">
+                    <a href="notice_01.html">공지사항</a>
+                    <span>></span>
+                    <a href="notice_02.html">상세</a>
+                </div>
+                <div class="main_wrap">
+                    <div class="main_tittle type01">
+                        <h2>공지사항</h2>
+                        <span>AIDU 사용과 관련한 문의사항을 남겨주세요.</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section>
+            <div class="wrap">
+                <div class="section_table">
+                    <div class="table_cont">
+                        <table class="table_4">
+                            <colgroup>
+                                <col width="17%" />
+                                <col width="30%" />
+                                <col width="15%" />
+                                <col width="30%" />
+                            </colgroup>
+                            <thead class="t_h">
+                                <tr>
+                                    <th>제목</th>
+                                    <td>공지사항 제목입니다.</td>
+                                </tr>
+                            </thead>
+
+                            <tbody class="t_b">
+                                <tr>
+                                    <th rowspan="2">작성자</th>
+                                    <td rowspan="2">홍길*</td>
+                                </tr>
+                                <tr>
+                                    <th>작성일</th>
+                                    <td>2021-02-27</td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">첨부파일</th>
+                                    <td rowspan="2">Sample.zip <span>(123 kb)</span></td>
+                                </tr>
+                                <tr>
+                                    <th>조회수</th>
+                                    <td>93</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="table_content">
+                            <p>
+                                데이터를 데이터 종류별로 다른 폴더로 나눈 다음 합치고, 다시 지역별로 구분하여 5분 간격의
+                                데이터와 1일 간격의 데이터의 두가지 종류로 만들 것이다. <br />
+                                우선 다음의 코드로 필요한 라이브러리들을 불러온다. <br />
+                                <br />
+                                그리고 아래 코드로 각 데이터의 종류에 따라 다른 폴더로 구분할 것이다.
+                            </p>
+                        </div>
+                        <div class="save_box_div">
+                            <button class="gray_bt green_bt">
+                                <a href="notice_01.html" class="white_color">목록</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table_2_content"></div>
+
+                <div class="table_3_content"></div>
+
+                <div class="table_4_content"></div>
+            </div>
+
+            <div class="wrap">
+                <div class="comments_list">
+                    <p>댓글 <span>(11)</span></p>
+                    <div class="sc_ft_textbar">
+                        <input type="text" placeholder="AIDU 학습서에 대한 다양한 의견을 나누세요." />
+                        <div class="sc_ft_bt_div">
+                            <button>등록</button>
+                        </div>
+                    </div>
+                    <div class="sc_ft_one_line gray_line">
+                        <div class="user_img"></div>
+                        <p>홍길*</p>
+                        <div class="user_content">
+                            <span
+                                >유익한 글 잘봤습니다. 추후 2020년 까지의 데이터로 주기성을 띄는 데이터를 확보한 뒤 이를
+                                예측에 활용하면 더 의미있는 결과를 얻을 수 있을 것으로 보입니다.</span
+                            >
+                        </div>
+                        <div class="line_bt">
+                            <span>2021-02-15</span>
+                            <button>답글</button>
+                        </div>
+                    </div>
+                    <div class="sc_ft_one_line">
+                        <div class="user_img" id="img_2"></div>
+                        <p>케이*</p>
+                        <div class="user_content">
+                            <span
+                                >온도, 습도와 같이 계절성이 좀 더 짙은 데이터 에서는 Prophet의 예측이 많이 빗나가
+                                보입니다. <br />
+                                Prophet의 모델을 만들 때 yearly_seasonality로 연주기성을 부여했으나, 1년이 되지 않은
+                                데이러를 입력했기 때문에 보여집니다. <br />
+                                이 점을 개선한다면 좋을 것 같습니다.
+                            </span>
+                        </div>
+                        <div class="line_bt">
+                            <span>2021-02-15</span>
+                            <button>답글</button>
+                        </div>
+                    </div>
+                    <div class="sc_ft_gray_line">
+                        <div class="gray_line_left">
+                            <div class="comment_icon"></div>
+                            <div class="user_img" id="img_3"></div>
+                        </div>
+                        <textarea name="text" class="text_type_1" placeholder="댓글 영역"></textarea>
+                        <div class="sc_ft_gray_line_right">
+                            <button class="gray_line_bt_1">등록</button>
+                            <button class="gray_line_bt_2">취소</button>
+                        </div>
+                    </div>
+                    <div class="sc_ft_gray_line">
+                        <div class="gray_line_left">
+                            <div class="comment_icon"></div>
+                            <div class="user_img" id="img_4"></div>
+                        </div>
+                        <div class="gray_line_letter">
+                            <p>홍길*</p>
+                            <span>댓글 감사합니다. 참고하여 좀 더 보안해보도록 하겠습니다.</span>
+                        </div>
+                        <div class="sc_ft_gray_line_right">
+                            <span>2021-02-15</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="up_bt_div">
+                    <button>
+                        <i class="icon_rightArrow_black"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="wrap">
+                <div class="footer_wrap" id="ft_line">
+                    <div class="ft_main_tittle">
+                        <a href="board_01.html">자유게시판</a>
+                        <span>|</span>
+                        <a href="Q&A_01.html">Q&A</a>
+                        <span>|</span>
+                        <a href="notice_01.html">공지사항/뉴스</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ft_line"></div>
+            <div class="wrap">
+                <div class="footer_wrap">
+                    <div class="ft_second_tittle">
+                        <a href="provision_01.html">플랫폼 이용약관</a>
+                        <span>|</span>
+                        <a href="provision_02.html">개인정보취급방침</a>
+                        <span>|</span>
+                        <a href="provision_03.html">청소년보호정책</a>
+                        <div class="footer_logo"></div>
+                    </div>
+                    <div class="ft_last_tittle">
+                        <p>㈜케이티 대표이사 구현모 사업자등록번호:102-81-42945 통신판매업신고: 2002-경기성남-0048</p>
+                        <p>경기도 성남시 분당구 불정로 90(정자동)</p>
+                        <p>Copyrightⓒkt corp.All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

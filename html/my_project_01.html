@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>나의 프로젝트_01</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/common.css" />
+        <link rel="stylesheet" href="../css/styleCommon.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="../js/jquery-3.6.0.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <script>
+        $(document).ready(function () {
+            // 검색 선택 버튼
+            var page_change = $('.section_main_bt > button');
+            page_change.click(function () {
+                var page_change_this = $(this);
+
+                page_change_this.siblings('button').removeClass('blue_main_bt');
+                page_change_this.addClass('blue_main_bt');
+            });
+            $('#bt_1').click(function () {
+                $('.section_content_1').removeClass('none');
+                $('.section_content_1').addClass('open');
+
+                $('.section_content_2').addClass('none');
+            });
+            $('#bt_2').click(function () {
+                $('.section_content_1').addClass('none');
+
+                $('.section_content_2').removeClass('none');
+                $('.section_content_2').addClass('open');
+            });
+            // 팝업 1
+            $('.made_bt > button').click(function () {
+                $('.modal_1').fadeIn();
+                $('body').css('overflow', 'hidden');
+            });
+            $('.pencil_icon').click(function () {
+                $('.modal_1').fadeIn();
+                $('body').css('overflow', 'hidden');
+            });
+            $('.modal_1_check_bt').click(function () {
+                $('.modal_1').fadeOut();
+                $('body').css('overflow', 'scroll');
+            });
+            $('.modal_1_cancel_bt').click(function () {
+                $('.modal_1').fadeOut();
+                $('body').css('overflow', 'scroll');
+            });
+        });
+    </script>
+    <body id="myProject01">
+        <header class="close">
+            <div class="header_line"></div>
+            <div class="wrap">
+                <div class="header_wrap">
+                    <a href="main_pg.html" class="main_logo"></a>
+                    <div class="header_nav_wrap">
+                        <ul>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="explain_pg.html">AIDU 소개</a>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="my_project_01.html" class="hd_click_green">나의 프로젝트</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="my_project_01.html" class="hd_click_green">나의 프로젝트</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="ai_content_01_01.html">AI 교육 컨텐츠</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="ai_content_01_02.html">기업 사례 교육</a></li>
+                                    <li><a href="ai_content_01_05.html">기업 사례 실습</a></li>
+                                    <li><a href="ai_content_01_03.html">온라인 패키지</a></li>
+                                    <li><a href="ai_content_01_06.html">AI 문제집</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="confirm_01.html">AI 자격인증</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="confirm_01.html">AI 자격인증 소개</a></li>
+                                    <li><a href="confirm_02.html">시험 접수</a></li>
+                                    <li><a href="confirm_03.html">시험 응시</a></li>
+                                    <li><a href="confirm_07.html">시험결과 조회</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user_login" , onclick="location.href='my_page_01.html';">
+                        <span>홍길동</span>
+                        <button class="under_bt">
+                            <i class="ambicon-003_arrow_down"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="border0">
+            <div class="wrap">
+                <div class="main_wrap">
+                    <div class="main_tittle">
+                        <h1>나의 프로젝트</h1>
+                        <p>나의 프로젝트를 생성하여 다양한 AI 사례 분석을 시작합니다.</p>
+                    </div>
+                    <div class="search_div">
+                        <input type="search" placeholder="검색어를 입력해주세요." class="search_bar" />
+                        <div class="save_bt">
+                            <button><a href="#">검색</a></button>
+                        </div>
+                        <div class="made_bt">
+                            <button>
+                                <a href="#"><i class="ambicon-013_mark_plus"></i>프로젝트 만들기</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section>
+            <div class="wrap">
+                <div class="section_main_bt">
+                    <button class="gray_main_bt blue_main_bt" id="bt_1">내가 만든 프로젝트 (4)</button>
+                    <button class="gray_main_bt" id="bt_2">내가 참여한 프로젝트 (2)</button>
+                </div>
+                <div class="section_content_1">
+                    <div class="sc_type_05">
+                        <div class="section_content" , onclick="location.href='my_project_02.html';">
+                            <h5>기본 프로젝트</h5>
+                            <p>언제 어디서나 AIDU를 통해 AI 모델을 만들어보세요.</p>
+                            <span class="content_green_box">Jupyterlab 실행</span>
+                            <span class="content_blue_box">AIDU ez 실행</span>
+                            <div class="section_content_bottom_right">
+                                <span>Created 2021-02-20 18:22:07</span>
+                            </div>
+                        </div>
+                        <div class="section_content_top_right">
+                            <button class="pencil_icon"></button>
+                            <button class="cancel_icon"></button>
+                        </div>
+                    </div>
+                    <div class="sc_type_05">
+                        <div class="section_content" , onclick="location.href='my_project_02.html';">
+                            <h5>파이썬 프로그래밍 분석</h5>
+                            <p>
+                                파이썬은 어떤 장점이 있어 사람들에게 관심을 받을까? 먼저 파이썬은 문법이 간결하고 표현
+                                구조가 인간의 사고 체계와 닮아있다...
+                            </p>
+                            <span class="content_green_box">Jupyterlab 실행</span>
+                            <span class="content_blue_box">AIDU ez 실행</span>
+                            <div class="section_content_bottom_right">
+                                <span>Created 2021-02-20 18:22:07</span>
+                            </div>
+                        </div>
+                        <div class="section_content_top_right">
+                            <button class="pencil_icon"></button>
+                            <button class="cancel_icon"></button>
+                        </div>
+                    </div>
+                    <div class="sc_type_05">
+                        <div class="section_content" , onclick="location.href='my_project_02.html';">
+                            <h5>파이썬 프로그래밍 분석</h5>
+                            <p>
+                                파이썬은 어떤 장점이 있어 사람들에게 관심을 받을까? 먼저 파이썬은 문법이 간결하고 표현
+                                구조가 인간의 사고 체계와 닮아있다...
+                            </p>
+                            <span class="content_green_box">Jupyterlab 실행</span>
+                            <span class="content_blue_box">AIDU ez 실행</span>
+                            <div class="section_content_bottom_right">
+                                <span>Created 2021-02-20 18:22:07</span>
+                            </div>
+                        </div>
+                        <div class="section_content_top_right">
+                            <button class="pencil_icon"></button>
+                            <button class="cancel_icon"></button>
+                        </div>
+                    </div>
+                    <div class="sc_type_05">
+                        <div class="section_content" , onclick="location.href='my_project_02.html';">
+                            <h5>파이썬 프로그래밍 분석</h5>
+                            <p>
+                                파이썬은 어떤 장점이 있어 사람들에게 관심을 받을까? 먼저 파이썬은 문법이 간결하고 표현
+                                구조가 인간의 사고 체계와 닮아있다...
+                            </p>
+                            <span class="content_green_box">Jupyterlab 실행</span>
+                            <span class="content_blue_box">AIDU ez 실행</span>
+                            <div class="section_content_bottom_right">
+                                <span>Created 2021-02-20 18:22:07</span>
+                            </div>
+                        </div>
+                        <div class="section_content_top_right">
+                            <button class="pencil_icon"></button>
+                            <button class="cancel_icon"></button>
+                        </div>
+                    </div>
+                    <div class="sc_type_05">
+                        <div class="section_content" , onclick="location.href='my_project_02.html';">
+                            <h5>파이썬 프로그래밍 분석</h5>
+                            <p>
+                                파이썬은 어떤 장점이 있어 사람들에게 관심을 받을까? 먼저 파이썬은 문법이 간결하고 표현
+                                구조가 인간의 사고 체계와 닮아있다...
+                            </p>
+                            <span class="content_green_box">Jupyterlab 실행</span>
+                            <span class="content_blue_box">AIDU ez 실행</span>
+                            <div class="section_content_bottom_right">
+                                <span>Created 2021-02-20 18:22:07</span>
+                            </div>
+                        </div>
+                        <div class="section_content_top_right">
+                            <button class="pencil_icon"></button>
+                            <button class="cancel_icon"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="section_content_2 open none">
+                    <div class="section_content">
+                        <h5>인증시험 테스트</h5>
+                        <p>인증시험 테스트</p>
+                        <span class="content_green_box">Jupyterlab 실행</span>
+                        <span class="content_blue_box">AIDU ez 실행</span>
+                        <div class="section_content_bottom_right">
+                            <span>Created 2021-02-20 18:22:07</span>
+                        </div>
+                    </div>
+                    <div class="section_content">
+                        <h5>testmaster의 프로젝트</h5>
+                        <p>testmaster의 프로젝트</p>
+                        <span class="content_green_box">Jupyterlab 실행</span>
+                        <span class="content_blue_box">AIDU ez 실행</span>
+                        <div class="section_content_bottom_right">
+                            <span>Created 2021-02-20 18:22:07</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="up_bt_div">
+                <button>
+                    <i class="ambicon-009_arrow2_up"></i>
+                </button>
+            </div>
+        </section>
+
+        <footer>
+            <div class="wrap">
+                <div class="footer_wrap" id="ft_line">
+                    <div class="ft_main_tittle">
+                        <a href="board_01.html">자유게시판</a>
+                        <span>|</span>
+                        <a href="Q&A_01.html">Q&A</a>
+                        <span>|</span>
+                        <a href="notice_01.html">공지사항/뉴스</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ft_line"></div>
+            <div class="wrap">
+                <div class="footer_wrap">
+                    <div class="ft_second_tittle">
+                        <a href="provision_01.html">플랫폼 이용약관</a>
+                        <span>|</span>
+                        <a href="provision_02.html">개인정보취급방침</a>
+                        <span>|</span>
+                        <a href="provision_03.html">청소년보호정책</a>
+                        <div class="footer_logo"></div>
+                    </div>
+                    <div class="ft_last_tittle">
+                        <p>㈜케이티 대표이사 구현모 사업자등록번호:102-81-42945 통신판매업신고: 2002-경기성남-0048</p>
+                        <p>경기도 성남시 분당구 불정로 90(정자동)</p>
+                        <p>Copyrightⓒkt corp.All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--팝업창 -->
+        <div class="modal_1" id="modla_1">
+            <div class="modal_content_1">
+                <div class="modal_1_header">
+                    <h2>프로젝트 생성/수정</h2>
+                </div>
+
+                <div class="modal_1_section">
+                    <p>프로젝트 명 <span>*</span></p>
+                    <input type="text" placeholder="프로젝트명을 입력해주세요." /> <br />
+                    <span>※ 프로젝트 명/설명을 정확히 입력해주세요.</span>
+                    <p>프로젝트 설명</p>
+                    <textarea
+                        name="modal_content"
+                        class="modal_textarea"
+                        placeholder="언제 어디서나 AIDU를 통해 AI 모델을 만들어보세요."
+                    ></textarea>
+                    <p>프로젝트 오너</p>
+                    <input type="text" disabled placeholder="홍길동" />
+                </div>
+                <div class="modal_1_footer">
+                    <div class="modal_1_ft_bt">
+                        <button class="modal_1_check_bt">확인</button>
+                        <button class="modal_1_cancel_bt">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

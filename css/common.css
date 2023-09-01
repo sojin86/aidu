@@ -118,9 +118,10 @@ header {
     font-size: 16px;
     color: #45666b;
 }
-/* ------------------------------login & join---------------------------- */
 .user_login {
     float: right;
+    display: inline-block;
+    margin-top: -6px;
 }
 .user_login > a {
     display: inline-block;
@@ -132,7 +133,7 @@ header {
 .user_login > span {
     margin: 5px 5px;
     color: #667d85;
-    vertical-align: top;
+    vertical-align: middle;
     display: inline-block;
     font-size: 15px;
 }
@@ -253,6 +254,35 @@ main {
     border-radius: 30px;
     margin-top: -35px;
 }
+.made_bt {
+    display: inline-block;
+}
+.made_bt > button {
+    padding: 12px 30px 12px 30px;
+    background-color: #397fd4;
+    border-radius: 40px;
+    font-size: 20px;
+    color: #fff;
+}
+.made_bt > button > a {
+    color: #fff;
+}
+.made_bt > button > a > i {
+    margin-right: 10px;
+}
+.gray_main_bt {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #dddddd;
+    background-color: #f3f3f3;
+    font-size: 20px;
+    color: #667d85;
+}
+.blue_main_bt {
+    background-color: #0c323d;
+    color: #fff;
+}
+
 /* ------------------------------bt_type---------------------------- */
 .bt_type_1 {
     width: 100px;
@@ -291,6 +321,33 @@ main {
     height: 60px;
     border-radius: 5px;
     pointer-events: none;
+}
+.bt_type_5 {
+    width: 437px;
+    height: 60px;
+    background-color: #f3f3f3;
+    font-size: 20px;
+    color: #667d85;
+}
+.bt_type_5 > a {
+    color: #667d85;
+    display: inline-block;
+    width: 100%;
+    padding: 14px 0px 14px 0px;
+}
+.bt_type_6 {
+    width: 437px;
+    height: 60px;
+    background-color: #fff;
+    font-size: 20px;
+    color: #0c323d;
+    border: 2px solid #2cbbb7;
+}
+.bt_type_6 > a {
+    color: #0c323d;
+    display: inline-block;
+    width: 100%;
+    padding: 14px 0px 14px 0px;
 }
 .table_footer_bt {
     display: inline-block;
@@ -801,10 +858,40 @@ input[type='file'] {
     display: inline-block;
     background: url(../img/icon/kt_icon.png);
 }
+.confirm_icon_1 {
+    display: inline-block;
+    width: 68px;
+    height: 64px;
+    background: url(../img/icon/confirm_icon_1.png);
+}
+.confirm_icon_2 {
+    background: url(../img/icon/confirm_icon_2.png);
+}
+.confirm_icon_3 {
+    background: url(../img/icon/confirm_icon_3.png);
+}
+.confirm_icon_4 {
+    background: url(../img/icon/confirm_icon_4.png);
+}
+.l_logo_b {
+    width: 50px;
+    height: 51px;
+    background: url(../img/icon/l_logo_b.png);
+    display: inline-block;
+}
+.l_logo_g {
+    background-image: url(../img/icon/l_logo_g.png);
+}
+.l_logo_r {
+    background-image: url(../img/icon/l_logo_r.png);
+}
 
 /* -----------------------------color----------------------------- */
 .bg_blue_01 {
     background-color: #499ed5 !important;
+}
+.bg_blue_02 {
+    background-color: #29a6c5 !important;
 }
 .bg_green_01 {
     background-color: #3dae92 !important;
@@ -812,12 +899,39 @@ input[type='file'] {
 .bg_green_02 {
     background-color: #2cbbb7 !important;
 }
+.bg_green_03 {
+    background-color: #c4e6e0 !important;
+}
+.bg_green_04 {
+    background-color: #34b772 !important;
+}
+.bg_red_01 {
+    background-color: #f6d2d7 !important;
+}
+
+.bd_blue-2 {
+    border-color: #499ed5 !important;
+}
+.bd_blue-3 {
+    border-color: #29a6c5 !important;
+}
+.bd_green-2 {
+    border-color: #2cbbb7 !important;
+}
+.bd_green-3 {
+    border-color: #3dae92 !important;
+}
+.bd_green-4 {
+    border-color: #34b772 !important;
+}
+
 .color_green {
     color: #019677 !important;
 }
 .color_red {
     color: #d6394e !important;
 }
+
 .border0 {
     border: 0 solid !important;
 }
