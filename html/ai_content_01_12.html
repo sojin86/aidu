@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>01_12_AI문제집_강좌상세</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/common.css" />
+        <link rel="stylesheet" href="../css/styleCommon.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="../js/jquery-3.6.0.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <script>
+        $(document).ready(function () {
+            // 별 버튼 클릭
+            var star_bt = $('.star_icon');
+            star_bt.click(function () {
+                var st_btn = $(this);
+                st_btn.toggleClass('green_star_icon');
+            });
+            // 하트 버튼 클릭
+            var heart_bt = $('.heart_icon');
+            heart_bt.click(function () {
+                var ht_btn = $(this);
+                ht_btn.toggleClass('pink_heart_icon');
+            });
+
+            // 클릭시 버튼 색 변경
+            var page_change = $('.sc_bt_div > button');
+            page_change.click(function () {
+                var page_change_this = $(this);
+
+                page_change_this.siblings('button').removeClass('white_box');
+                page_change_this.addClass('white_box');
+            });
+
+            // 클릭 박스
+            $('.sc_bt_div .gray_box').on('click', function () {
+                // console.log($(this).index());
+                // console.log(this).index();
+                var ind = $('.sc_bt_div .gray_box').index(this);
+
+                $('.click_box').siblings().removeClass('show');
+                $('.click_box').eq(ind).addClass('show');
+
+                if ($('.section_table').hasClass('open')) {
+                    $('.section_table').removeClass('open');
+                    $('.section_table').addClass('none');
+                }
+            });
+
+            // select_box_1
+            $(document).on('click', '.select2', function () {
+                var boxObj1 = $(this).parent().siblings('.options').children('ul');
+                boxObj1.show();
+                $(this).addClass('open');
+            });
+
+            $('body').click(function (e) {
+                if ($('.select2').hasClass('open')) {
+                    $('.select2_ul').hide();
+                    $('.select2').removeClass('open');
+                }
+            });
+
+            $('.options > ul > li > button').click(function () {
+                var changeText = $(this).html();
+                var Selected_2 = $(this).closest('.options').siblings('.selected_2');
+                var checkText = $(this).closest('.options').siblings('.selected_2').children('.select2');
+
+                Selected_2.find('.select2').html(changeText);
+                checkText.css('color', '#0c323d');
+                $(this).closest('ul').hide();
+            });
+        });
+    </script>
+    <body id="content_12">
+        <header class="close">
+            <div class="header_line"></div>
+            <div class="wrap">
+                <div class="header_wrap">
+                    <a href="main_pg.html" class="main_logo"></a>
+                    <div class="header_nav_wrap">
+                        <ul>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="explain_pg.html">AIDU 소개</a>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="my_project_01.html">나의 프로젝트</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="my_project_01.html">나의 프로젝트</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="ai_content_01_01.html" class="hd_click_green">AI 교육 컨텐츠</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="ai_content_01_02.html">기업 사례 교육</a></li>
+                                    <li><a href="ai_content_01_05.html" class="hd_click_green">기업 사례 실습</a></li>
+                                    <li><a href="ai_content_01_04.html">온라인 패키지</a></li>
+                                    <li><a href="ai_content_01_06.html">AI 문제집</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="confirm_01.html">AI 자격인증</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="confirm_01.html">AI 자격인증 소개</a></li>
+                                    <li><a href="confirm_02.html">시험 접수</a></li>
+                                    <li><a href="confirm_03.html">시험 응시</a></li>
+                                    <li><a href="confirm_04.html">시험결과 조회</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user_login">
+                        <a href="login_01.html">로그인</a>
+                        <span>|</span>
+                        <a href="join_01.html">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="border0">
+            <div class="wrap">
+                <div class="right_pg">
+                    <a href="ai_content_01_05.html">기업사례 실습</a>
+                    <span>></span>
+                    <a href="ai_content_01_07.html">상세</a>
+                </div>
+                <div class="main_wrap">
+                    <div class="main_tittle_02">
+                        <div class="main_photo_box">
+                            <div class="photo_1"></div>
+                            <div class="tittle_box">
+                                <div class="tittle_bt_box">
+                                    <span>분류</span>
+                                    <span>추천</span>
+                                </div>
+                                <div class="tit_list">
+                                    <p>제주도 공기질 데이터를 통한 미세먼지 예측 모델</p>
+                                    <div class="like_bt">
+                                        <button class="heart_icon pink_heart_icon"></button>
+                                        <button class="star_icon"></button>
+                                    </div>
+                                </div>
+                                <div class="main_div_box">
+                                    <div class="number_div">
+                                        <div class="eyes_icon"></div>
+                                        <span>215</span>
+                                        <div class="ht_icon"></div>
+                                        <span>100</span>
+                                        <div class="talk_icon"></div>
+                                        <span>55</span>
+                                        <div class="share_icon"></div>
+                                        <span>3</span>
+                                        <span>개발도구: Juptyerlab</span>
+                                    </div>
+                                    <div class="hastag_div">
+                                        <span>#test #jeju #air data #fine dust #expectation #model</span>
+                                        <div class="date_div">
+                                            <span>2021-02-20</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section>
+            <div class="wrap">
+                <div class="section_table">
+                    <div class="table_cont"> 
+                        <table class="table_4">
+                            <colgroup>
+                                <col width="17%">
+                                <col width="30%">
+                                <col width="15%">
+                                <col width="30%">
+                            </colgroup>
+                            <thead class="t_h">
+                                <tr>
+                                    <th>제목</th>
+                                    <td>제주도 공기질 데이터를 통한 미세먼지 예측 모델</td>
+                                </tr>
+                            </thead>
+        
+                            <tbody class="t_b">
+                                <tr>
+                                    <th rowspan="2">유형</th>
+                                    <td rowspan="2">Clustering (군집)</td>
+                                </tr>
+                                <tr>
+                                    <th>개발도구</th>
+                                    <td>AIDU Jupyter</td>
+                                </tr>
+                                <tr>
+                                    <th>첨부파일</th>
+                                    <td>Sample.zip <span>(123 kb)</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="table_content">
+                            <p>
+                                여기서 사용할 칼럼만 뽑자면 아래와 같다. <br>
+                                통계 산출 시간 : 시간별 통계값을 구분하기 위함 <br>
+                                측정장비위치 코드 : 여러 장비를 위치별로 구분하기 위함 <br>
+                                데이터종류 코드 : 공기질 데이터는 총 5가지로 온도, 습도, 미세먼지, 초미세먼지, 소음의 값을 가진다. 이들을 구별하기 위함 <br>
+                                평균값 : 5분 사이에 이상치가 섞여 있을 수 있으므로 이를 피하기 위함 <br>
+                            </p>
+                        </div>
+                        <div class="save_box_div">
+                            <button>수정</button>
+                            <button>삭제</button>
+                            <button>목록</button>
+                        </div>
+                    </div>
+
+                    <div class="comments_list">
+                        <p>댓글 <span>(11)</span></p>
+                        <div class="sc_ft_textbar">
+                            <input type="text" placeholder="AIDU 학습서에 대한 다양한 의견을 나누세요." />
+                            <div class="sc_ft_bt_div">
+                                <button>등록</button>
+                            </div>
+                        </div>
+                        <div class="sc_ft_one_line gray_line">
+                            <div class="user_img"></div>
+                            <p>홍길*</p>
+                            <div class="user_content">
+                                <span
+                                    >유익한 글 잘봤습니다. 추후 2020년 까지의 데이터로 주기성을 띄는 데이터를 확보한 뒤 이를
+                                    예측에 활용하면 더 의미있는 결과를 얻을 수 있을 것으로 보입니다.</span
+                                >
+                            </div>
+                            <div class="line_bt">
+                                <span>2021-02-15</span>
+                                <button>답글</button>
+                            </div>
+                        </div>
+                        <div class="sc_ft_one_line">
+                            <div class="user_img" id="img_2"></div>
+                            <p>케이*</p>
+                            <div class="user_content">
+                                <span
+                                    >온도, 습도와 같이 계절성이 좀 더 짙은 데이터 에서는 Prophet의 예측이 많이 빗나가
+                                    보입니다. <br />
+                                    Prophet의 모델을 만들 때 yearly_seasonality로 연주기성을 부여했으나, 1년이 되지 않은
+                                    데이러를 입력했기 때문에 보여집니다. <br />
+                                    이 점을 개선한다면 좋을 것 같습니다.
+                                </span>
+                            </div>
+                            <div class="line_bt">
+                                <span>2021-02-15</span>
+                                <button>답글</button>
+                            </div>
+                        </div>
+                        <div class="sc_ft_gray_line">
+                            <div class="gray_line_left">
+                                <div class="comment_icon"></div>
+                                <div class="user_img" id="img_3"></div>
+                            </div>
+                            <textarea name="text" class="text_type_1" placeholder="댓글 영역"></textarea>
+                            <div class="sc_ft_gray_line_right">
+                                <button class="gray_line_bt_1">등록</button>
+                                <button class="gray_line_bt_2">취소</button>
+                            </div>
+                        </div>
+                        <div class="sc_ft_gray_line">
+                            <div class="gray_line_left">
+                                <div class="comment_icon"></div>
+                                <div class="user_img" id="img_4"></div>
+                            </div>
+                            <div class="gray_line_letter">
+                                <p>홍길*</p>
+                                <span>댓글 감사합니다. 참고하여 좀 더 보안해보도록 하겠습니다.</span>
+                            </div>
+                            <div class="sc_ft_gray_line_right">
+                                <span>2021-02-15</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="up_bt_div">
+                        <button>
+                            <i class="icon_rightArrow_black"></i>
+                        </button>
+                    </div>
+                </div>
+        </section>
+
+        <footer>
+            <div class="wrap">
+                <div class="footer_wrap" id="ft_line">
+                    <div class="ft_main_tittle">
+                        <a href="board_01.html">자유게시판</a>
+                        <span>|</span>
+                        <a href="Q&A_01.html">Q&A</a>
+                        <span>|</span>
+                        <a href="notice_01.html">공지사항/뉴스</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ft_line"></div>
+            <div class="wrap">
+                <div class="footer_wrap">
+                    <div class="ft_second_tittle">
+                        <a href="provision_01.html">플랫폼 이용약관</a>
+                        <span>|</span>
+                        <a href="provision_02.html">개인정보취급방침</a>
+                        <span>|</span>
+                        <a href="provision_03.html">청소년보호정책</a>
+                        <div class="footer_logo"></div>
+                    </div>
+                    <div class="ft_last_tittle">
+                        <p>㈜케이티 대표이사 구현모 사업자등록번호:102-81-42945 통신판매업신고: 2002-경기성남-0048</p>
+                        <p>경기도 성남시 분당구 불정로 90(정자동)</p>
+                        <p>Copyrightⓒkt corp.All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
