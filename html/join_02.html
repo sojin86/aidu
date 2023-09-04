@@ -1,129 +1,160 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입-약간동의</title>
-    <link rel="stylesheet" href="../css/join_02.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../iconfont/iconfont.css">
-    <link rel="stylesheet" href="../iconfont/iconfont_gnb.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <script src="../js/jquery-3.6.0.js"></script>
-</head>
-<script>
-    $(document).ready(function(){
-        // 화살표 방향 동의div 열림 닫힘
-        var agree_up_down_bt = $(".agree_up_down_bt")
-        agree_up_down_bt.click(function(){
-            var down_bt = $(this);
-            var down_div = $(this).parent('.login_ckbox_1').siblings('.close_div_1')
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>회원가입-약간동의</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/common.css" />
+        <link rel="stylesheet" href="../css/styleCommon.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="../js/jquery-3.6.0.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <script>
+        $(document).ready(function () {
+            // 화살표 방향 동의div 열림 닫힘
+            var agree_up_down_bt = $('.agree_up_down_bt');
+            agree_up_down_bt.click(function () {
+                var down_bt = $(this);
+                var down_div = $(this).parent('.login_ckbox_2').siblings('.close_div_2');
 
-            down_bt.on('click', function(){
-
-                if(down_bt.hasClass('agree_down_bt')){
-                    down_div.removeClass('close');
+                if (down_bt.hasClass('agree_down_bt')) {
+                    down_div.removeClass('none');
                     down_div.addClass('open');
-                    down_bt.removeClass('agree_down_bt')
-                    down_bt.addClass('agree_up_bt')
-                } else if(down_bt.hasClass('agree_up_bt')){
+                    down_bt.removeClass('agree_down_bt');
+                    down_bt.addClass('agree_up_bt');
+                } else if (down_bt.hasClass('agree_up_bt')) {
                     down_div.removeClass('open');
-                    down_div.addClass('close');
-                    down_bt.removeClass('agree_up_bt')
-                    down_bt.addClass('agree_down_bt')
+                    down_div.addClass('none');
+                    down_bt.removeClass('agree_up_bt');
+                    down_bt.addClass('agree_down_bt');
                 }
             });
-        }); 
-        // 전체동의 체크박스
-        $(".check_all").on("click", function(){
-            $(this).parents('.login_white_box').find('.check_box').prop("checked", $(this).is(":checked"))
+            // 전체동의 체크박스
+            $('.check_all').on('click', function () {
+                $(this).parents('.login_white_box').find('.check_box').prop('checked', $(this).is(':checked'));
+            });
         });
-        
-    });
+    </script>
+    <body id="join_02" style="background-color: #f5f5f5">
+        <header class="hd_type_01">
+            <div class="hd_main_logo">
+                <a href="main_pg.html" class="main_logo"></a>
+            </div>
+        </header>
 
-
-</script>
-<body>
-    <header>
-        <div class="hd_main_logo">
-            <a href="main_pg.html" class="main_logo"></a>
-        </div>
-    </header>
-
-    <section>
-        <div class="login_white_box">
-            <div class="login_white_box_hd">
-                <label class="cb_1">
-                    <input type="checkbox" class="check_all">
-                    <span class="cb_1_text">AIDU 서비스 약관에 모두 동의합니다.</span>
-                </label> <br>
+        <section>
+            <div class="login_white_box">
+                <div class="login_white_box_hd">
+                    <label class="cb_2">
+                        <input type="checkbox" class="check_all" />
+                        <span class="cb_2_text">AIDU 서비스 약관에 모두 동의합니다.</span>
+                    </label>
+                    <br />
+                </div>
+                <div class="login_span-1">
+                    <span
+                        >전체동의는 필수 및 선택정보에 대한 동의도 포함되어 있으며, 개별적으로도 동 의를 선택하실 수
+                        있습니다. 선택항목에 대한 동의를 거부하시는 경우에도 서비스는 이용이 가능합니다.</span
+                    >
+                </div>
+                <div class="login_content_div">
+                    <div class="login_ckbox_2">
+                        <label class="cb_2">
+                            <input type="checkbox" class="check_box" checked />
+                            <span class="cb_2_text text_1">[필수] AIDU 이용약관 동의</span>
+                        </label>
+                        <button class="agree_up_down_bt agree_up_bt"><i class="ambicon-003_arrow_down"></i></button>
+                    </div>
+                    <div class="close_div_2">
+                        <span
+                            >제 1 조 (목적) 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하
+                            서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 본 약관은
+                            주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에
+                            있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 동의 본 약관은 주식회사 케이티(이하
+                            회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의
+                            권리, 의무 및 기타 조건 등을 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련
+                            서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을
+                            동의</span
+                        >
+                    </div>
+                </div>
+                <div class="login_content_div">
+                    <div class="login_ckbox_2">
+                        <label class="cb_2">
+                            <input type="checkbox" class="check_box" />
+                            <span class="cb_2_text text_1">[필수] 개인정보 수집 및 이용 동의</span>
+                        </label>
+                        <button class="agree_up_down_bt agree_down_bt"><i class="ambicon-003_arrow_down"></i></button>
+                    </div>
+                    <div class="close_div_2 none">
+                        <span
+                            >제 1 조 (목적) 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하
+                            서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 본 약관은
+                            주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에
+                            있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 동의 본 약관은 주식회사 케이티(이하
+                            회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의
+                            권리, 의무 및 기타 조건 등을 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련
+                            서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을
+                            동의</span
+                        >
+                    </div>
+                </div>
+                <div class="login_content_div">
+                    <div class="login_ckbox_2">
+                        <label class="cb_2">
+                            <input type="checkbox" class="check_box" />
+                            <span class="cb_2_text text_1">[필수] 개인정보 처리 위탁 동의</span>
+                        </label>
+                        <button class="agree_up_down_bt agree_down_bt"><i class="ambicon-003_arrow_down"></i></button>
+                    </div>
+                    <div class="close_div_2 none">
+                        <span
+                            >제 1 조 (목적) 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하
+                            서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 본 약관은
+                            주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에
+                            있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 동의 본 약관은 주식회사 케이티(이하
+                            회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의
+                            권리, 의무 및 기타 조건 등을 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련
+                            서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을
+                            동의</span
+                        >
+                    </div>
+                </div>
+                <div class="login_content_div">
+                    <div class="login_ckbox_2">
+                        <label class="cb_2">
+                            <input type="checkbox" class="check_box" />
+                            <span class="cb_2_text text_1">[선택] 이벤트·뉴스 정보 수신 동의</span>
+                        </label>
+                        <button class="agree_up_down_bt agree_down_bt"><i class="ambicon-003_arrow_down"></i></button>
+                    </div>
+                    <div class="close_div_2 none">
+                        <span
+                            >제 1 조 (목적) 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하
+                            서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 본 약관은
+                            주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에
+                            있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 동의 본 약관은 주식회사 케이티(이하
+                            회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의
+                            권리, 의무 및 기타 조건 등을 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련
+                            서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을
+                            동의</span
+                        >
+                    </div>
+                </div>
+                <div class="footer_bt_div">
+                    <button class="bt_type_8"><a href="join_03.html">동의</a></button>
+                </div>
             </div>
-            <div class="login_span-1">
-                <span>전체동의는 필수 및 선택정보에 대한 동의도 포함되어 있으며, 개별적으로도 동 의를 선택하실 수 있습니다. 선택항목에 대한 동의를 거부하시는 경우에도 서비스는 이용이 가능합니다.</span>
-            </div>
-            <div class="login_content_div">
-                <div class="login_ckbox_1">
-                    <label class="cb_1">
-                        <input type="checkbox" class="check_box" checked>
-                        <span class="cb_1_text text_1">[필수] AIDU 이용약관 동의</span>
-                    </label> 
-                    <button class="agree_up_down_bt agree_up_bt"><i class="ambicon-003_arrow_down"></i></button>
-                </div>
-                <div class="close_div_1">
-                    <span>제 1 조 (목적)
-                        본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 동의 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 동의</span>
-                </div>
-            </div>
-            <div class="login_content_div">
-                <div class="login_ckbox_1">
-                    <label class="cb_1">
-                        <input type="checkbox"  class="check_box">
-                        <span class="cb_1_text text_1">[필수] 개인정보 수집 및 이용 동의</span>
-                    </label> 
-                    <button class="agree_up_down_bt agree_down_bt"><i class="ambicon-003_arrow_down"></i></button>
-                </div>
-                <div class="close_div_1 close">
-                    <span>제 1 조 (목적)
-                        본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 동의 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 동의</span>
-                </div>
-            </div>
-            <div class="login_content_div">
-                <div class="login_ckbox_1">
-                    <label class="cb_1">
-                        <input type="checkbox"  class="check_box">
-                        <span class="cb_1_text text_1">[필수] 개인정보 처리 위탁 동의</span>
-                    </label> 
-                    <button class="agree_up_down_bt agree_down_bt"><i class="ambicon-003_arrow_down"></i></button>
-                </div>
-                <div class="close_div_1 close">
-                    <span>제 1 조 (목적)
-                        본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 동의 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 동의</span>
-                </div>
-            </div>
-            <div class="login_content_div">
-                <div class="login_ckbox_1">
-                    <label class="cb_1">
-                        <input type="checkbox"  class="check_box">
-                        <span class="cb_1_text text_1">[선택] 이벤트·뉴스 정보 수신 동의</span>
-                    </label> 
-                    <button class="agree_up_down_bt agree_down_bt"><i class="ambicon-003_arrow_down"></i></button>
-                </div>
-                <div class="close_div_1 close">
-                    <span>제 1 조 (목적)
-                        본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 동의 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 본 약관은 주식회사 케이티(이하 회사)가 제공하는 인터넷 관련 서비스(이하 서비스라고 한다.)를 이용함에 있어 회사와 회원과의 권리, 의무 및 기타 조건 등을 동의</span>
-                </div>
-            </div>
-            <div class="footer_bt_div">
-                <button class="agree_bt"><a href="join_03.html">동의</a></button>
-            </div>    
-        </div>
-    </section>
-    <footer>
-    </footer>
-
-    
-</body>
+        </section>
+        <footer></footer>
+    </body>
 </html>

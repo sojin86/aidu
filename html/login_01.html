@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>로그인</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/common.css" />
+        <link rel="stylesheet" href="../css/styleCommon.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="../js/jquery-3.6.0.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <script>
+        $(document).ready(function () {
+            $('.login_op_bt').click(function () {
+                var close_div_box = $('.close_div_input_box');
+                if (close_div_box.hasClass('none')) {
+                    close_div_box.removeClass('none');
+                    close_div_box.addClass('open');
+                }
+            });
+        });
+    </script>
+    <body id="login01" style="background-color: #f5f5f5">
+        <header class="hd_type_01">
+            <div class="hd_main_logo">
+                <a href="main_pg.html" class="main_logo"></a>
+            </div>
+        </header>
+
+        <section>
+            <div class="login_white_box">
+                <div class="login_white_box_hd">
+                    <img src="../img/icon/login_logo_1.png" class="login_main_img" />
+                </div>
+                <div class="login_white_box_sc">
+                    <input type="text" placeholder="아이디를 입력하세요" class="input_type_01" />
+                    <input type="password" placeholder="비밀번호를 입력하세요." class="input_type_01" />
+                    <label class="cb_2">
+                        <input type="checkbox" checked />
+                        <span class="cb_2_text">이메일 저장</span>
+                    </label>
+                    <div class="login_bt_div">
+                        <button class="bt_type_8">로그인</button>
+                    </div>
+                </div>
+                <div class="login_white_box_ft">
+                    <div class="sns_icon_div">
+                        <button><i class="sns_icon_1"></i></button>
+                        <button><i class="sns_icon_2"></i></button>
+                        <button><i class="sns_icon_3"></i></button>
+                        <button><i class="sns_icon_4"></i></button>
+                    </div>
+                    <div class="link_div">
+                        <a href="">아이디 찾기</a>
+                        <span>|</span>
+                        <a href="login_02.html">비밀번호 재설정</a>
+                        <span>|</span>
+                        <a href="join_01.html">회원가입</a>
+                        <span>|</span>
+                        <button class="login_op_bt">로그인 옵션</button>
+                    </div>
+                    <div class="close_div_input_box none">
+                        <input type="text" placeholder="테넌트 아이디를 입력하세요." class="input_type_01" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer></footer>
+    </body>
+</html>

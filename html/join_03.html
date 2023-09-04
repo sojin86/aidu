@@ -1,95 +1,60 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원정보입력</title>
-    <link rel="stylesheet" href="../css/join_03.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../iconfont/iconfont.css">
-    <link rel="stylesheet" href="../iconfont/iconfont_gnb.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <script src="../js/jquery-3.6.0.js"></script>
-</head>
-<script>
-    $(document).ready(function(){
-        $('.sign_up_bt').click(function(){
-            var modal_1 = $('.modal_1')
-
-           if(modal_1.hasClass('close')){
-               modal_1.removeClass('close');
-               modal_1.addClass('open');
-               $('body').css("overflow", "hidden");
-           }
-        });
-    });
-
-</script>
-<body>
-    <header>
-        <div class="hd_main_logo">
-            <a href="main_pg.html" class="main_logo"></a>
-        </div>
-    </header>
-
-    <section>
-        <div class="login_white_box">
-            <div class="login_white_box_first">
-                <p>필수 입력</p>
-                <div class="div_box_1">
-                    <input type="text" class="input_type_3 mg_bt_10 mg_ri_5" placeholder="test@test.com" disabled>
-                    <button class="bt_type_2 mg_bt_10">인증메일 발송</button>
-                </div>
-                <input type="password" class="input_type_2 mg_ri_5 mg_bt_10" placeholder="비밀번호">
-                <input type="password" class="input_type_2 mg_bt_10" placeholder="비밀번호 확인">
-                <input type="text" class="input_type_1 mg_bt_10" placeholder="아이디">
-                <input type="text" class="input_type_1" placeholder="닉네임">
-
-            </div>
-            <div class="login_white_box_first">
-                <p>휴대폰 본인인증</p>
-                <button class="bt_type_1 mg_bt_10">인증메일 발송</button>
-                <input type="text" class="input_type_1 mg_bt_10" placeholder="이름">
-                <input type="tel" class="input_type_1" placeholder="휴대번호">
-                
-
-            </div>
-            <div class="login_white_box_first">
-                <p>선택 입력</p>
-                <input type="text" class="input_type_1 mg_bt_10" placeholder="회사코드">
-                <span>※ AI 교육 컨텐츠를 이용하기 위해서는 회사코드 입력이 필요합니다.</span>
-            </div>
-            <div class="login_ft">
-                <button class="bt_type_3 sign_up_bt">가입 완료</button>
-            </div>
-           
-        </div>
-    </section>
-    <footer>
-    </footer>
-
-    <!-- 팝업창 1 -->
-    <div class="modal_1 close" id="modla_1">
-        <div class="modal_1_maIn_hd">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>회원정보입력</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/common.css" />
+        <link rel="stylesheet" href="../css/styleCommon.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="../js/jquery-3.6.0.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <script></script>
+    <body id="join_03" style="background-color: #f5f5f5">
+        <header class="hd_type_01">
             <div class="hd_main_logo">
                 <a href="main_pg.html" class="main_logo"></a>
             </div>
-        </div>
-        <div class="modal_content_1">
-            <div class="modal_1_header">
-                <i class="alert_icon_1"></i>
+        </header>
+
+        <section>
+            <div class="login_white_box">
+                <div class="login_white_box_first">
+                    <p>필수 입력</p>
+                    <div class="div_box_1">
+                        <input type="text" class="input_type_01" placeholder="test@test.com" disabled />
+                        <button class="bt_type_9">인증메일 발송</button>
+                    </div>
+                    <input type="password" class="input_type_01" placeholder="비밀번호" />
+                    <input type="password" class="input_type_01" placeholder="비밀번호 확인" />
+                    <input type="text" class="input_type_01" placeholder="아이디" />
+                    <input type="text" class="input_type_01" placeholder="닉네임" />
+                </div>
+                <div class="login_white_box_first">
+                    <p>휴대폰 본인인증</p>
+                    <button class="bt_type_9">인증메일 발송</button>
+                    <input type="text" class="input_type_01" placeholder="이름" />
+                    <input type="tel" class="input_type_01" placeholder="휴대번호" />
+                </div>
+                <div class="login_white_box_first">
+                    <p>선택 입력</p>
+                    <input type="text" class="input_type_01" placeholder="회사코드" />
+                    <span>※ AI 교육 컨텐츠를 이용하기 위해서는 회사코드 입력이 필요합니다.</span>
+                </div>
+                <div class="footer_bt_div">
+                    <button class="bt_type_8"><a href="join_03.html">동의</a></button>
+                </div>
             </div>
-            <div class="modal_1_section"> 
-                <h2>감사합니다</h2>
-                <p>회원가입이 완료되었습니다.</p>
-            </div>
-            <div class="modal_1_footer">
-                <button class="bt_type_3"><a href="login_01.html">로그인</a></button>
-            </div>
-        </div>
-    </div>
-</body>
+        </section>
+        <footer></footer>
+    </body>
 </html>

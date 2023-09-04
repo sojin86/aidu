@@ -1283,6 +1283,9 @@ section {
 }
 
 /* ------------------------------join---------------------------- */
+#join_01 .login_white_box {
+    padding: 100px 130px 80px 130px;
+}
 #join_01 .login_box_1 {
     margin-bottom: 40px;
 }
@@ -1316,4 +1319,96 @@ section {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+}
+
+#join_02 .login_white_box {
+    padding: 100px 70px 70px 70px;
+}
+#join_02 .login_white_box .login_span-1 {
+    margin-top: 20px;
+    padding: 0px 10px;
+}
+#join_02 .login_white_box .login_white_box_hd {
+    border-bottom: 2px solid #a3acaf;
+    padding-bottom: 20px;
+}
+#join_02 .login_white_box .login_white_box_hd .cb_2_text {
+    font-size: 20px;
+}
+#join_02 .cb_2 .login_span-1 {
+    margin-top: 20px;
+    padding: 0px 10px 0px 10px;
+}
+#join_02 .login_span-1 > span {
+    font-size: 15px;
+    color: #667d85;
+}
+.footer_bt_div {
+    margin-top: 50px;
+}
+
+#join_03 .login_white_box {
+    padding: 100px 70px 70px 70px;
+}
+#join_03 .login_white_box input {
+    margin-top: 10px;
+}
+#join_03 .div_box_1 {
+    display: flex;
+}
+#join_03 .div_box_1 input {
+    margin-top: 0;
+    margin-right: 10px;
+}
+.login_white_box_first p {
+    font-size: 17px;
+    color: #0c323d;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.login_white_box_first span {
+    display: inline-block;
+    font-size: 14px;
+    color: #397fd4;
+    margin-top: 10px;
+}
+.login_white_box_first:nth-child(n + 2) {
+    margin-top: 40px;
+}
+
+/* ------------------------------login---------------------------- */
+#login01 .login_white_box {
+    padding: 100px 70px 70px 70px;
+}
+#login01 .login_white_box input {
+    margin-top: 10px;
+}
+#login01 .login_white_box .cb_2 {
+    margin-top: 10px;
+}
+#login01 .login_white_box .cb_2_text {
+    margin-left: 0px;
+}
+#login01 .login_bt_div {
+    margin-top: 40px;
+}
+#login02 .login_white_box {
+    padding: 100px 70px 70px 70px;
+}
+#login02 .login_white_box_first {
+    text-align: center;
+}
+#login02 .login_white_box_sc > p {
+    font-size: 20px;
+    color: #0c323d;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+#login02 .login_white_box_sc input {
+    margin-top: 10px;
+}
+#login02 .login_ft {
+    margin-top: 50px;
 }
