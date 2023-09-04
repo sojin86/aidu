@@ -1100,6 +1100,21 @@ input[type='file'] {
 .color_gray {
     color: #9cacb1;
 }
+.color_gray_01 {
+    color: #48656d;
+}
+.color_gray_02 {
+    color: #667d85;
+}
+.color_white {
+    color: #fff;
+}
+.color_white {
+    color: #fff;
+}
+.color_black {
+    color: #0c323d;
+}
 
 .border0 {
     border: 0 solid !important;

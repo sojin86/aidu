@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AIDU 메인</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/common.css" />
+        <link rel="stylesheet" href="../css/styleCommon.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="../js/jquery-3.6.0.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <script>
+        $(document).ready(function () {
+            // 기존 버튼형 슬라이더
+            $('.slider_1 > .page_btns > div').click(function () {
+                var PGBT_This = $(this);
+                var index = PGBT_This.index();
+
+                PGBT_This.addClass('active2');
+                PGBT_This.siblings('.active2').removeClass('active2');
+
+                var $slider_1 = PGBT_This.parent().parent();
+                var $current = $slider_1.find('.slides > div.active');
+                var $post = $slider_1.find('.slides > div').eq(index);
+
+                $current.removeClass('active');
+                $post.addClass('active');
+
+                $current.removeClass('fade');
+                $post.addClass('fade');
+            });
+
+            // 좌우 버튼 추가 슬라이드
+
+            $('.slider_1 > .side_btns > button').click(function () {
+                var $this = $(this);
+                var $slider = $this.closest('.slider_1');
+                var index = $this.index();
+                var isLeft = index == 0;
+
+                var $current = $slider.find(' > .page_btns > div.active2');
+                var $post;
+
+                if (isLeft) {
+                    $post = $current.prev();
+                } else {
+                    $post = $current.next();
+                }
+                if ($post.length == 0) {
+                    if (isLeft) {
+                        $post = $slider.find(' > .page_btns > div:last-child');
+                    } else {
+                        $post = $slider.find(' > .page_btns > div:first-child');
+                    }
+                }
+                $post.click();
+            });
+
+            setInterval(function () {
+                $('.slider_1 > .side_btns > button').eq(1).click();
+            }, 5000);
+        });
+    </script>
+    <body id="main">
+        <header class="close">
+            <div class="header_line"></div>
+            <div class="wrap">
+                <div class="header_wrap">
+                    <a href="main_pg.html" class="main_logo"></a>
+                    <div class="header_nav_wrap">
+                        <ul>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="explain_pg.html">AIDU 소개</a>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="my_project_01.html">나의 프로젝트</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="my_project_01.html">나의 프로젝트</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="ai_content_01_01.html" class="hd_click_green">AI 교육 컨텐츠</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="ai_content_01_02.html" class="hd_click_green">기업 사례 교육</a></li>
+                                    <li><a href="ai_content_01_05.html">기업 사례 실습</a></li>
+                                    <li><a href="ai_content_01_04.html">온라인 패키지</a></li>
+                                    <li><a href="ai_content_01_06.html">AI 문제집</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="confirm_01.html">AI 자격인증</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="confirm_01.html">AI 자격인증 소개</a></li>
+                                    <li><a href="confirm_02.html">시험 접수</a></li>
+                                    <li><a href="confirm_03.html">시험 응시</a></li>
+                                    <li><a href="confirm_04.html">시험결과 조회</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user_login">
+                        <a href="login_01.html">로그인</a>
+                        <span>|</span>
+                        <a href="join_01.html">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="border0">
+            <div class="slider_1">
+                <div class="slides">
+                    <div class="main_img_div active">
+                        <div class="main_img">
+                            <img src="../img/image/main_1.png" class="active" />
+                        </div>
+                        <div class="wrap">
+                            <div class="main_img_text">
+                                <h3 class="color_black">
+                                    AIDU는 KT가 제공하는 <br />
+                                    AI 교육 실습 플랫폼입니다.
+                                </h3>
+                                <p class="color_gray_01">
+                                    AI 교육 컨텐츠에서 AI 실무적용사례를 알아보고 <br />
+                                    나의 프로젝트에서 바로 실습해보세요. <br />
+                                    Web기반 간편한 환경에서 누구나 쉽게 AI를 시작할 수 있습니다.
+                                </p>
+                                <button><a href="join_01.html">AIDU 가입하고 시작하기</a></button>
+                                <span class="color_gray_02">
+                                    이미 가입하셨다면? <a href="login_01.html">로그인</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_img_div">
+                        <div class="main_img">
+                            <img src="../img/image/main_1-1.png" />
+                        </div>
+                        <div class="wrap">
+                            <div class="main_img_text">
+                                <h3 class="color_white">
+                                    AIDU는 KT가 제공하는 <br />
+                                    AI 교육 실습 플랫폼입니다.
+                                </h3>
+                                <p class="white_color_op_80">
+                                    AI 교육 컨텐츠에서 AI 실무적용사례를 알아보고 <br />
+                                    나의 프로젝트에서 바로 실습해보세요. <br />
+                                    Web기반 간편한 환경에서 누구나 쉽게 AI를 시작할 수 있습니다.
+                                </p>
+                                <button><a href="join_01.html">AIDU 가입하고 시작하기</a></button>
+                                <span class="white_color_op_50">
+                                    이미 가입하셨다면? <a href="login_01.html" class="white_color_op_50">로그인</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page_btns">
+                    <div class="active2"></div>
+                    <div></div>
+                </div>
+                <div class="side_btns">
+                    <button>
+                        <i class="ambicon-006_arrow_first"></i>
+                    </button>
+                    <button>
+                        <i class="ambicon-005_arrow_last"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="wrap">
+                <div class="main_1_box_div">
+                    <div class="main_1_box">
+                        <div class="img1"></div>
+                        <div class="img1_right">
+                            <span>01</span>
+                            <p>
+                                쉽고, 빠르고, 간편한 <br />
+                                AI 모델링 환경
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main_1_box">
+                        <div class="img1" id="img2"></div>
+                        <div class="img1_right">
+                            <span>02</span>
+                            <p>
+                                AI 기업 실무사례 기반 <br />
+                                교육콘텐츠
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main_1_box">
+                        <div class="img1" id="img3"></div>
+                        <div class="img1_right">
+                            <span>03</span>
+                            <p>
+                                실무형 AI인재 역량 <br />
+                                검정이 가능한 인증제
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <main>
+            <div class="main_2_div">
+                <div class="wrap">
+                    <div class="main_2">
+                        <h2>쉽고, 빠르고, 간편한 AI 모델링 환경</h2>
+                        <div class="main_check_span">
+                            <p>ㆍ설치가 필요 없는 web 기반 AI 모델링 환경</p>
+                            <p>ㆍ더 빠른 AI 모델링을 지원하는 GPU 제공</p>
+                            <p>ㆍ코딩 없이 클릭만으로 구현되는 AI 분석/ 모델링</p>
+                        </div>
+                        <button>
+                            <a href="#">더보기<i class="ambicon-007_arrow2_right"></i></a>
+                        </button>
+                        <div class="main_2_img"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section>
+            <div class="main_3_div">
+                <div class="wrap">
+                    <h3>AI 기업 실무사례 기반 교육 콘텐츠</h3>
+                    <div class="main_3_content-1">
+                        <div class="sc_type_01">
+                            <div class="section_header">
+                                <div class="section_tittle">
+                                    <h5>AI 기업사례 교육</h5>
+                                </div>
+                                <div class="section_bt">
+                                    <button>
+                                        <a href="ai_content_01_02.html">더보기</a>
+                                        <i class="ambicon-007_arrow2_right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="section_content">
+                                <div class="section_photo_box">
+                                    <div class="section_photo_1"></div>
+                                    <div class="section_letter_box">
+                                        <p>
+                                            강좌명 두줄일때 강좌명 두줄일때 강좌명 두줄일때 강좌명 두줄일때 강좌명
+                                            두줄일때
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="section_photo_box">
+                                    <div class="section_photo_1" id="big_photo_2"></div>
+                                    <div class="section_letter_box">
+                                        <p>강좌명 00000</p>
+                                    </div>
+                                </div>
+
+                                <div class="section_photo_box">
+                                    <div class="section_photo_1" id="big_photo_3"></div>
+                                    <div class="section_letter_box">
+                                        <p>강좌명 00000</p>
+                                    </div>
+                                </div>
+
+                                <div class="section_photo_box">
+                                    <div class="section_photo_1" id="big_photo_4"></div>
+                                    <div class="section_letter_box">
+                                        <p>강좌명 00000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sc_type_01">
+                            <div class="section_header">
+                                <div class="section_tittle">
+                                    <h5>AI 기업사례 교육</h5>
+                                </div>
+                                <div class="section_bt">
+                                    <button>
+                                        <a href="ai_content_01_02.html">더보기</a>
+                                        <i class="ambicon-007_arrow2_right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mian_3_photo-2_div">
+                                <div class="main_3_photo-2_content marin_3_right">
+                                    <p>60분</p>
+                                    <h3>AIDU 사용법</h3>
+                                    <div class="main_3_photo-2_right">
+                                        <div class="main_3_photo"></div>
+                                        <div class="maru_1"></div>
+                                    </div>
+                                </div>
+                                <div class="main_3_photo-2_content marin_3_right">
+                                    <p>60분</p>
+                                    <h3>A파이썬 기초</h3>
+                                    <div class="main_3_photo-2_right">
+                                        <div class="main_3_photo main_3_photo-2"></div>
+                                        <div class="maru_1 maru_2"></div>
+                                    </div>
+                                </div>
+                                <div class="main_3_photo-2_content">
+                                    <p>120분</p>
+                                    <h3>머신러닝과 딥러닝</h3>
+                                    <div class="main_3_photo-2_right">
+                                        <div class="main_3_photo main_3_photo-3"></div>
+                                        <div class="maru_1 maru_3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_4_wrap">
+                <div class="wrap">
+                    <div class="main_4_hd">
+                        <h3>AIFB 기업실무AI 자격인증</h3>
+                        <p>
+                            AIFB(AI Fundamentals for Business)는 기업실무에서 필요한 인공지능 모델링 역량을 평가하는
+                            자격인증입니다.
+                        </p>
+                        <p>실무AI 적용사례기반 100% 실기형 문항으로 실무역량을 평가해보세요.</p>
+                        <div class="main_4_hd_right">
+                            <button>
+                                <a href="#">더보기<i class="ambicon-007_arrow2_right"></i></a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="main_4_content_div">
+                        <div class="main_4_content main_4_right">
+                            <div class="l_logo_b"></div>
+                            <h5>AIFB Basic</h5>
+                            <p>AI 적용 프로세스를 이해하고</p>
+                            <p>특정 데이터형식(Tabular)에 대해</p>
+                            <p>GUI 기반으로 데이터분석과 AI모델링을</p>
+                            <p>할 수 있는 역량을 평가</p>
+                        </div>
+                        <div class="main_4_content main_4_right">
+                            <div class="l_logo_b l_logo_g"></div>
+                            <h5>AIFB Associate</h5>
+                            <p>특정 데이터형식(Tabular)에 대해</p>
+                            <p>일부 알고리즘을 활용하여</p>
+                            <p>AI 모델링 및 성능 평가할 수 있는 역량을 평가</p>
+                        </div>
+                        <div class="main_4_content">
+                            <div class="l_logo_b l_logo_r"></div>
+                            <h5>AIFB Professional</h5>
+                            <p>문제해결을 위해 다양한 데이터를 분석/처리하고,</p>
+                            <p>최적의 알고리즘을 적용하여</p>
+                            <p>AI 모델링 및 고도화할 수 있는 역량을 평가</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_5_div">
+                <div class="wrap">
+                    <dir class="main_5_hd">
+                        <h5>AI One Team Member</h5>
+                        <p>KT는 AI One Team 참여기업으로, 인재육성분야를 함께 이끌어가고 있습니다.</p>
+                        <div class="ribbon_1">
+                            <span>I One Team을 만들어가는 참여기관들</span>
+                        </div>
+                    </dir>
+                    <div class="company_maru">
+                        <div class="first_line">
+                            <div class="company_div main_5_right">
+                                <div class="company_img"></div>
+                            </div>
+                            <div class="company_div main_5_right">
+                                <div class="company_img cp_2 main_7_maru_img-2"></div>
+                            </div>
+                            <div class="company_div main_5_right">
+                                <div class="company_img cp_3 main_7_maru_img-3"></div>
+                            </div>
+                            <div class="company_div main_5_right">
+                                <div class="company_img cp_4 main_7_maru_img-4"></div>
+                            </div>
+                            <div class="company_div">
+                                <div class="company_img cp_5 main_7_maru_img-5"></div>
+                            </div>
+                        </div>
+                        <div class="second_line">
+                            <div class="company_div main_5_right">
+                                <div class="company_img cp_6 main_7_maru_img-6"></div>
+                            </div>
+                            <div class="company_div main_5_right">
+                                <div class="company_img cp_7 main_7_maru_img-7"></div>
+                            </div>
+                            <div class="company_div main_5_right">
+                                <div class="company_img cp_8 main_7_maru_img-8"></div>
+                            </div>
+                            <div class="company_div main_5_right">
+                                <div class="company_img cp_9 main_7_maru_img-9"></div>
+                            </div>
+                            <div class="company_div main_5_right">
+                                <div class="company_img cp_10 main_7_maru_img-10"></div>
+                            </div>
+                            <div class="company_div">
+                                <div class="company_img cp_11 main_7_maru_img-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="up_bt_div">
+                <button>
+                    <i class="ambicon-009_arrow2_up"></i>
+                </button>
+            </div>
+        </section>
+
+        <footer>
+            <div class="wrap">
+                <div class="footer_wrap" id="ft_line">
+                    <div class="ft_main_tittle">
+                        <a href="board_01.html">자유게시판</a>
+                        <span>|</span>
+                        <a href="Q&A_01.html">Q&A</a>
+                        <span>|</span>
+                        <a href="notice_01.html">공지사항/뉴스</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ft_line"></div>
+            <div class="wrap">
+                <div class="footer_wrap">
+                    <div class="ft_second_tittle">
+                        <a href="provision_01.html">플랫폼 이용약관</a>
+                        <span>|</span>
+                        <a href="provision_02.html">개인정보취급방침</a>
+                        <span>|</span>
+                        <a href="provision_03.html">청소년보호정책</a>
+                        <div class="footer_logo"></div>
+                    </div>
+                    <div class="ft_last_tittle">
+                        <p>㈜케이티 대표이사 구현모 사업자등록번호:102-81-42945 통신판매업신고: 2002-경기성남-0048</p>
+                        <p>경기도 성남시 분당구 불정로 90(정자동)</p>
+                        <p>Copyrightⓒkt corp.All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
