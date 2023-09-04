@@ -131,11 +131,11 @@ header {
     vertical-align: middle;
 }
 .user_login > span {
-    margin: 5px 5px;
+    margin: 8px 5px 5px;
     color: #667d85;
     vertical-align: middle;
     display: inline-block;
-    font-size: 15px;
+    font-size: 12px;
 }
 .header_nav_wrap > ul > li > button > a:hover {
     color: #2dbab2;
@@ -717,6 +717,24 @@ input[type='file'] {
 }
 
 /* ------------------------------icon---------------------------- */
+.arrow_left {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-image: url(../img/icon/arrow_left.png);
+    background-repeat: no-repeat;
+    background-size: 14px auto;
+    background-position: 6px 10px;
+}
+.arrow_right {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-image: url(../img/icon/arrow_right.png);
+    background-repeat: no-repeat;
+    background-size: 14px auto;
+    background-position: 6px 10px;
+}
 .icon_rightArrow_black {
     width: 30px;
     height: 30px;
