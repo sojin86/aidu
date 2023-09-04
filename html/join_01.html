@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>회원가입</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/common.css" />
+        <link rel="stylesheet" href="../css/styleCommon.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="../js/jquery-3.6.0.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <script>
+        $(document).ready(function () {
+            $('.login_op_bt').click(function () {
+                var close_div_box = $('.close_div_input_box');
+                if (close_div_box.hasClass('close')) {
+                    close_div_box.removeClass('close');
+                    close_div_box.addClass('open');
+                }
+            });
+        });
+    </script>
+    <body id="join_01" style="background-color: #f5f5f5">
+        <header class="hd_type_01">
+            <div class="hd_main_logo">
+                <a href="main_pg.html" class="main_logo"></a>
+            </div>
+        </header>
+
+        <section>
+            <div class="login_white_box">
+                <div class="login_white_box_hd">
+                    <img src="../img/icon/login_logo_1.png" class="login_main_img" />
+                </div>
+                <div class="login_white_box_sc">
+                    <div class="login_box_1">
+                        <span>일반 회원가입</span>
+                        <button><a href="join_02.html">회원가입</a></button>
+                    </div>
+                    <div class="login_box_2">
+                        <span>소셜 회원가입</span>
+                        <button class="sns_bt_1"><i></i> NAVER로 시작하기</button>
+                        <button class="sns_bt_2"><i></i> KaKao로 시작하기</button>
+                        <button class="sns_bt_3"><i></i> Google로 시작하기</button>
+                        <button class="sns_bt_4"><i></i>Facebook으로 시작하기</button>
+                    </div>
+                </div>
+                <div class="login_white_box_ft"></div>
+            </div>
+        </section>
+        <footer></footer>
+    </body>
+</html>

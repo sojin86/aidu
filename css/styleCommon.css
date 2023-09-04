@@ -1249,3 +1249,36 @@
     color: #0c323d;
     font-weight: bold;
 }
+/* ------------------------------join---------------------------- */
+.hd_type_01 {
+    height: auto;
+}
+.hd_main_logo {
+    display: flex;
+    justify-content: center;
+    padding: 26px 0px 26px 0px;
+}
+.main_logo {
+    width: 142px;
+    height: 36px;
+    background: url(../img/icon/logo_1.png);
+    display: inline-block;
+}
+.login_white_box {
+    background-color: #fff;
+    width: 620px;
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 775px;
+    padding: 100px 130px 80px 130px;
+    margin: 0 auto;
+    margin-top: 110px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.login_main_img {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}

@@ -1281,3 +1281,39 @@ section {
     margin-right: 50px;
     margin-top: 10px;
 }
+
+/* ------------------------------join---------------------------- */
+#join_01 .login_box_1 {
+    margin-bottom: 40px;
+}
+#join_01 .login_box_1 > span {
+    font-size: 20px;
+    color: #0c323d;
+    font-size: 500;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#join_01 .login_box_1 > button {
+    font-size: 20px;
+    color: #fff;
+    background-color: #2cbbb7;
+    width: 100%;
+    border-radius: 5px;
+    height: 60px;
+}
+#join_01 .login_box_1 > button > a {
+    color: #fff;
+    width: 100%;
+    display: inline-block;
+    padding: 15px 0px 15px 0px;
+}
+
+#join_01 .login_box_2 > span {
+    font-size: 20px;
+    color: #0c323d;
+    font-size: 500;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}

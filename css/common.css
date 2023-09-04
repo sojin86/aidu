@@ -922,6 +922,77 @@ input[type='file'] {
     display: inline-block;
     margin-right: 5px;
 }
+.sns_bt_1 {
+    font-size: 18px;
+    color: #fff;
+    background-color: #1ec800;
+    width: 100%;
+    border-radius: 5px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.sns_bt_1 > i {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url(../img/icon/naver_icon_1.png);
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.sns_bt_2 {
+    font-size: 18px;
+    color: #fff;
+    background-color: #f5d60b;
+    width: 100%;
+    border-radius: 5px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.sns_bt_2 > i {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url(../img/icon/talk_icon_1.png);
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.sns_bt_3 {
+    font-size: 18px;
+    color: #0c323d;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 5px;
+    height: 60px;
+    margin-bottom: 10px;
+    border: 1px solid #dddddd;
+}
+.sns_bt_3 > i {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url(../img/icon/google_icon_1.png);
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.sns_bt_4 {
+    font-size: 18px;
+    color: #fff;
+    background-color: #4767aa;
+    width: 100%;
+    border-radius: 5px;
+    height: 60px;
+}
+.sns_bt_4 > i {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url(../img/icon/facebook_icon_1.png);
+    vertical-align: top;
+    margin-right: 10px;
+}
 
 /* -----------------------------color----------------------------- */
 .bg_blue_01 {
