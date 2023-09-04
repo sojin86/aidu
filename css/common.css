@@ -282,6 +282,21 @@ main {
     background-color: #0c323d;
     color: #fff;
 }
+.gray_box {
+    padding: 20px 30px 20px 30px;
+    border: 1px solid #dddddd;
+    margin-right: -4px;
+    border-radius: 2px;
+    background-color: #f3f3f3;
+    margin-bottom: -1px;
+    color: #667d85;
+    font-size: 16px;
+}
+.white_box {
+    background-color: #fff;
+    color: #0c323d;
+    border-bottom: 1px solid #fff;
+}
 
 /* ------------------------------bt_type---------------------------- */
 .bt_type_1 {
@@ -348,6 +363,14 @@ main {
     display: inline-block;
     width: 100%;
     padding: 14px 0px 14px 0px;
+}
+.bt_type_7 {
+    padding: 5px 20px 5px 20px;
+    border: 1px solid #a7c1bc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #0c323d;
+    background-color: #fff;
 }
 .table_footer_bt {
     display: inline-block;
@@ -885,6 +908,20 @@ input[type='file'] {
 .l_logo_r {
     background-image: url(../img/icon/l_logo_r.png);
 }
+.file_down {
+    width: 15px;
+    height: 12px;
+    background: url(../img/icon/file_down.png);
+    display: inline-block;
+    margin-right: 5px;
+}
+.file_open {
+    width: 15px;
+    height: 12px;
+    background: url(../img/icon/file_open.png);
+    display: inline-block;
+    margin-right: 5px;
+}
 
 /* -----------------------------color----------------------------- */
 .bg_blue_01 {
@@ -924,12 +961,24 @@ input[type='file'] {
 .bd_green-4 {
     border-color: #34b772 !important;
 }
+.bd_green {
+    border: 2px solid #2cbbb7 !important;
+}
 
+.color_blue_01 {
+    color: #397fd4;
+}
 .color_green {
     color: #019677 !important;
 }
+.color_green_01 {
+    color: #2cbbb7;
+}
 .color_red {
     color: #d6394e !important;
+}
+.color_gray {
+    color: #9cacb1;
 }
 
 .border0 {

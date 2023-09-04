@@ -40,23 +40,6 @@
                 $('.section_content_2').removeClass('none');
                 $('.section_content_2').addClass('open');
             });
-            // 팝업 1
-            $('.made_bt > button').click(function () {
-                $('.modal_1').fadeIn();
-                $('body').css('overflow', 'hidden');
-            });
-            $('.pencil_icon').click(function () {
-                $('.modal_1').fadeIn();
-                $('body').css('overflow', 'hidden');
-            });
-            $('.modal_1_check_bt').click(function () {
-                $('.modal_1').fadeOut();
-                $('body').css('overflow', 'scroll');
-            });
-            $('.modal_1_cancel_bt').click(function () {
-                $('.modal_1').fadeOut();
-                $('body').css('overflow', 'scroll');
-            });
         });
     </script>
     <body id="myProject01">
@@ -288,34 +271,5 @@
                 </div>
             </div>
         </footer>
-
-        <!--팝업창 -->
-        <div class="modal_1" id="modla_1">
-            <div class="modal_content_1">
-                <div class="modal_1_header">
-                    <h2>프로젝트 생성/수정</h2>
-                </div>
-
-                <div class="modal_1_section">
-                    <p>프로젝트 명 <span>*</span></p>
-                    <input type="text" placeholder="프로젝트명을 입력해주세요." /> <br />
-                    <span>※ 프로젝트 명/설명을 정확히 입력해주세요.</span>
-                    <p>프로젝트 설명</p>
-                    <textarea
-                        name="modal_content"
-                        class="modal_textarea"
-                        placeholder="언제 어디서나 AIDU를 통해 AI 모델을 만들어보세요."
-                    ></textarea>
-                    <p>프로젝트 오너</p>
-                    <input type="text" disabled placeholder="홍길동" />
-                </div>
-                <div class="modal_1_footer">
-                    <div class="modal_1_ft_bt">
-                        <button class="modal_1_check_bt">확인</button>
-                        <button class="modal_1_cancel_bt">취소</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </body>
 </html>

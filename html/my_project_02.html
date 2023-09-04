@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>나의 프로젝트 상세_02</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/common.css" />
+        <link rel="stylesheet" href="../css/styleCommon.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="../js/jquery-3.6.0.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <script>
+        $(document).ready(function () {
+            // 별 버튼 클릭
+            var star_bt = $('.star_icon');
+            star_bt.click(function () {
+                var st_btn = $(this);
+                st_btn.toggleClass('green_star_icon');
+            });
+            // 하트 버튼 클릭
+            var heart_bt = $('.heart_icon');
+            heart_bt.click(function () {
+                var ht_btn = $(this);
+                ht_btn.toggleClass('pink_heart_icon');
+            });
+
+            // 검색 선택 버튼
+            var page_change = $('.sc_bt_div > button');
+            page_change.click(function () {
+                var page_change_this = $(this);
+
+                page_change_this.siblings('button').removeClass('white_box');
+                page_change_this.addClass('white_box');
+            });
+            // 클릭 박스
+            $('.sc_bt_div .gray_box').on('click', function () {
+                // console.log($(this).index());
+                var ind = $('.sc_bt_div .gray_box').index(this);
+
+                $('.click_box').siblings().removeClass('show');
+                $('.click_box').eq(ind).addClass('show');
+
+                if ($('.section_1').hasClass('open')) {
+                    $('.section_1').removeClass('open');
+                    $('.section_1').addClass('none');
+                }
+            });
+
+            // select_box_1
+            $(document).on('click', '.select1', function () {
+                var boxObj1 = $(this).parent().siblings('.options').children('ul');
+                boxObj1.show();
+                $(this).addClass('open');
+            });
+
+            $('body').click(function (e) {
+                if ($('.select1').hasClass('open')) {
+                    $('.select1_ul').hide();
+                    $('.select1').removeClass('open');
+                }
+            });
+
+            $('.options > ul > li > button').click(function () {
+                var changeText = $(this).html();
+                var Selected_1 = $(this).closest('.options').siblings('.selected_1');
+                var checkText = $(this).closest('.options').siblings('.selected_1').children('.select1');
+
+                Selected_1.find('.select1').html(changeText);
+                checkText.css('color', '#0c323d');
+                $(this).closest('ul').hide();
+            });
+
+            // select_box_7
+            $(document).on('click', '.select7', function () {
+                var boxObj7 = $(this).parent().siblings('.options').children('ul');
+                boxObj7.show();
+                $(this).addClass('open');
+            });
+
+            $('body').click(function (e) {
+                if ($('.select7').hasClass('open')) {
+                    $('.select7_ul').hide();
+                    $('.select7').removeClass('open');
+                }
+            });
+
+            $('.options > ul > li > button').click(function () {
+                var changeText = $(this).html();
+                var Selected_7 = $(this).closest('.options').siblings('.selected_7');
+                var checkText_7 = $(this).closest('.options').siblings('.selected_7').children('.select7');
+
+                Selected_7.find('.select7').html(changeText);
+                checkText_7.css('color', '#0c323d');
+                $(this).closest('ul').hide();
+            });
+
+            // select_box_3
+            $(document).on('click', '.select3', function () {
+                var boxObj3 = $(this).parent().siblings('.options').children('ul');
+                boxObj3.show();
+                $(this).addClass('open');
+            });
+
+            $('body').click(function (e) {
+                if ($('.select3').hasClass('open')) {
+                    $('.select3_ul').hide();
+                    $('.select3').removeClass('open');
+                }
+            });
+
+            $('.options > ul > li > button').click(function () {
+                var changeText = $(this).html();
+                var Selected_3 = $(this).closest('.options').siblings('.selected_3');
+                var checkText_3 = $(this).closest('.options').siblings('.selected_3').children('.select3');
+
+                Selected_3.find('.select3').html(changeText);
+                checkText_3.css('color', '#0c323d');
+                $(this).closest('ul').hide();
+            });
+
+            // 데이터관리 checkbox 클릭하면 색상 변경
+            var cb_click = $('.cb_2_text');
+            cb_click.click(function () {
+                var cb_click_this = $(this);
+                $(this).closest('tr').toggleClass('gray_back_color');
+            });
+
+            // table background color 변경
+            $('.modal_3_nm_bt').click(function () {
+                var modal_3_nm_bt_this = $(this);
+                modal_3_nm_bt_this.css('color', '#0c323d');
+                modal_3_nm_bt_this.siblings().css('color', '#a0b0b6');
+            });
+
+            // 파일 선택시 해당 부분 open
+            $('.modal_3_tb_bt').click(function () {
+                var modal_3_tb_file = $(this);
+
+                modal_3_tb_file.click(function () {
+                    var modal_3_tb_file_under = $(this).siblings('.modal_3_tb_under_div').find('.modal_3_tb_bt_under');
+
+                    var modal_3_tb_file_down = $(this).find('.file_down');
+
+                    if (modal_3_tb_file_under.hasClass('none')) {
+                        modal_3_tb_file_under.removeClass('none');
+                        modal_3_tb_file_under.addClass('open');
+                    }
+                    if (modal_3_tb_file_down.hasClass('file_down')) {
+                        modal_3_tb_file_down.removeClass('file_down');
+                        modal_3_tb_file_down.addClass('file_open');
+                    }
+                });
+            });
+
+            $('.modal_3_tb_bt_under').click(function () {
+                var modal_3_tb_under2_this = $(this);
+
+                modal_3_tb_under2_this.click(function () {
+                    var modal_3_tb_under2 = $(this).siblings('.modal_3_tb_bt_under-2_div');
+
+                    if (modal_3_tb_under2.hasClass('none')) {
+                        modal_3_tb_under2.removeClass('none');
+                        modal_3_tb_under2.addClass('open');
+                    }
+                });
+            });
+            // section_5 분석 ide 클릭시 border 색 변경
+            $('.section_5_line-one').click(function () {
+                var section_5_line1_this = $(this);
+                if ($('.sc_5_line-1_p_color').hasClass('section_5_line-1_span')) {
+                    $('.sc_5_line-1_p_color').removeClass('section_5_line-1_span');
+                    $('.sc_5_line-1_p_color').addClass('section_5_line-1_span_color');
+                }
+                $('.sc_5_line-1_2img_color').addClass('sc_5_line-1_img2');
+
+                $('.sc_5_line-1_p2_color').removeClass('section_5_line-1_span_color');
+                $('.sc_5_line-1_p2_color').addClass('section_5_line-1_span');
+            });
+
+            $('.section_5_line-two').click(function () {
+                var section_5_line1_this = $(this);
+
+                if ($('.sc_5_line-1_2img_color').hasClass('sc_5_line-1_img2')) {
+                    $('.sc_5_line-1_2img_color').removeClass('sc_5_line-1_img2');
+                }
+                if ($('.sc_5_line-1_p2_color').hasClass('section_5_line-1_span')) {
+                    $('.sc_5_line-1_p2_color').removeClass('section_5_line-1_span');
+                    $('.sc_5_line-1_p2_color').addClass('section_5_line-1_span_color');
+                }
+
+                $('.sc_5_line-1_p_color').removeClass('section_5_line-1_span_color');
+                $('.sc_5_line-1_p_color').addClass('section_5_line-1_span');
+            });
+
+            $('.section_5_line-1').click(function () {
+                var sc_5_oneBox = $(this);
+                sc_5_oneBox.siblings('.section_5_line-1').removeClass('bd_green');
+                sc_5_oneBox.addClass('bd_green');
+            });
+
+            // section_5 분석 ide  2 클릭시 border 색 변경
+            $('.section_5_line-2').click(function () {
+                var sc_5_twoBox = $(this);
+                sc_5_twoBox.siblings('.section_5_line-2').removeClass('bd_green');
+                sc_5_twoBox.addClass('bd_green');
+
+                sc_5_twoBox
+                    .siblings()
+                    .find('.section_5_line-2_bottom_p-1')
+                    .removeClass('section_5_line-2_bottom_p-1_color');
+                sc_5_twoBox.find('.section_5_line-2_bottom_p-1').addClass('section_5_line-2_bottom_p-1_color');
+
+                sc_5_twoBox
+                    .siblings()
+                    .find('.section_5_line-2_bottom_p-2')
+                    .removeClass('section_5_line-2_bottom_p-2_color');
+                sc_5_twoBox.find('.section_5_line-2_bottom_p-2').addClass('section_5_line-2_bottom_p-2_color');
+
+                sc_5_twoBox
+                    .siblings()
+                    .find('.section_5_line-2_bottom_span')
+                    .removeClass('section_5_line-2_bottom_span_color');
+                sc_5_twoBox.find('.section_5_line-2_bottom_span').addClass('section_5_line-2_bottom_span_color');
+
+                sc_5_twoBox
+                    .siblings()
+                    .find('.section_5_line-2_bottom_span2')
+                    .removeClass('section_5_line-2_bottom_span2_color');
+                sc_5_twoBox.find('.section_5_line-2_bottom_span2').addClass('section_5_line-2_bottom_span2_color');
+            });
+
+            // section_5 분석 ide  3 클릭시 border 색 변경
+            $('.section_5_line-3').click(function () {
+                var sc_5_threeBox = $(this);
+                sc_5_threeBox.addClass('bd_green');
+
+                if ($('.sc_5_line-3_img1_not').hasClass('sc_5_line-3_img1')) {
+                    $('.sc_5_line-3_img1_not').removeClass('sc_5_line-3_img1');
+                    $('.sc_5_line-3_img1_not').addClass('sc_5_line-3_img1_color');
+                }
+
+                $('.section_5_line-3_span').addClass('section_5_line-3_span_color');
+
+                $('.section_5_line-3_p2').addClass('section_5_line-3_p2_color');
+            });
+
+            // section_6 클릭시 화면 변경
+
+            $('.sc_6_content_2_bt2').click(function () {
+                $('.sc_6_content_2_bt1').removeClass('sc_6_content_2_black');
+                $('.sc_6_content_2_bt1').removeClass('sc_6_content_2_white');
+
+                $('.sc_6_content_2_bt2').addClass('sc_6_content_2_black');
+                $('.sc_6_content_2_bt2').addClass('sc_6_content_2_white');
+
+                $('.sc_6_content_2-1').addClass('none');
+
+                $('.sc_6_content_2-2').addClass('sc_6_content_2_black');
+                $('.sc_6_content_2-2').removeClass('none');
+                $('.sc_6_content_2-2').addClass('open');
+            });
+
+            $('.sc_6_content_2_bt1').click(function () {
+                $('.sc_6_content_2_bt2').removeClass('sc_6_content_2_black');
+                $('.sc_6_content_2_bt2').removeClass('sc_6_content_2_white');
+
+                $('.sc_6_content_2_bt1').addClass('sc_6_content_2_black');
+                $('.sc_6_content_2_bt1').addClass('sc_6_content_2_white');
+
+                $('.sc_6_content_2-1').removeClass('none');
+                $('.sc_6_content_2-1').addClass('open');
+
+                $('.sc_6_content_2-2').addClass('none');
+                $('.sc_6_content_2-2').addClass('sc_6_content_2_black');
+            });
+        });
+    </script>
+    <body id="myProject01">
+        <header class="close">
+            <div class="header_line"></div>
+            <div class="wrap">
+                <div class="header_wrap">
+                    <a href="main_pg.html" class="main_logo"></a>
+                    <div class="header_nav_wrap">
+                        <ul>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="explain_pg.html">AIDU 소개</a>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="my_project_01.html" class="hd_click_green">나의 프로젝트</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="my_project_01.html" class="hd_click_green">나의 프로젝트</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="ai_content_01_01.html">AI 교육 컨텐츠</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="ai_content_01_02.html">기업 사례 교육</a></li>
+                                    <li><a href="ai_content_01_05.html">기업 사례 실습</a></li>
+                                    <li><a href="ai_content_01_03.html">온라인 패키지</a></li>
+                                    <li><a href="ai_content_01_06.html">AI 문제집</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="hd_nav_bt">
+                                    <a href="confirm_01.html">AI 자격인증</a>
+                                </button>
+                                <ul class="togglebtn">
+                                    <li><a href="confirm_01.html">AI 자격인증 소개</a></li>
+                                    <li><a href="confirm_02.html">시험 접수</a></li>
+                                    <li><a href="confirm_03.html">시험 응시</a></li>
+                                    <li><a href="confirm_07.html">시험결과 조회</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user_login" , onclick="location.href='my_page_01.html';">
+                        <span>홍길동</span>
+                        <button class="under_bt">
+                            <i class="ambicon-003_arrow_down"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="border0">
+            <div class="wrap">
+                <div class="right_pg">
+                    <a href="#">나의 프로젝트</a>
+                    <span>></span>
+                    <a href="#">나의 프로젝트 기본정보</a>
+                </div>
+                <div class="main_tittle type01">
+                    <h2>내 프로젝트_ 파이썬 프로그래밍 분석</h2>
+                </div>
+                <div class="main_content_2">
+                    <div class="user_icon"></div>
+                    <span>프로젝트 오너 : 홍길동</span>
+                </div>
+                <div class="section_bt_box">
+                    <div class="selected_1">
+                        <span class="select1" id="select1">프로젝트 선택</span>
+                        <i class="ambicon-003_arrow_down" id="down_icon1"></i>
+                    </div>
+                    <div class="copy_div">
+                        <button>목록</button>
+                    </div>
+                    <div class="options">
+                        <ul class="select1_ul" id="select1_ul">
+                            <li>
+                                <button>선택해주세요</button>
+                            </li>
+                            <li>
+                                <button>1------</button>
+                            </li>
+                            <li>
+                                <button>2------</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section>
+            <div class="section_wrap">
+                <div class="wrap">
+                    <div class="sc_bt_div">
+                        <button class="gray_box white_box" id="bt_1">기본정보</button>
+                        <button class="gray_box" id="bt_2">프로젝트 멤버</button>
+                        <button class="gray_box" id="bt_3">데이터관리</button>
+                        <button class="gray_box" id="bt_4">소스Viewer</button>
+                        <button class="gray_box" id="bt_5">분석IDE</button>
+                        <button class="gray_box" id="bt_6">모델학습</button>
+                        <button class="gray_box" id="bt_7">공유모델</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrap">
+                <div class="section_1 click_box open">
+                    <div class="section_hd">
+                        <h3>기본정보</h3>
+                        <span>프로젝트의 기본적인 정보를 확인할 수 있습니다.</span>
+                    </div>
+                    <div class="section_table">
+                        <div class="table_cont">
+                            <table class="table_4">
+                                <colgroup>
+                                    <col width="15%" />
+                                    <col width="80%" />
+                                </colgroup>
+                                <thead class="t_h">
+                                    <tr>
+                                        <th>프로젝트 설명</th>
+                                        <td>
+                                            언제 어디서나 AIDU를 통해 AI 모델을 만들어보세요. 언제 어디서나 AIDU를 통해
+                                            AI 모델을 만들어보세요. 언제 어디서나 AIDU를 통해 AI 모델을 만들어보세요.
+                                            언제 어디서나 AIDU를 통해 AI 모델을 만들어보세요. 언제 어디서나 AIDU를 통해
+                                            AI 모델을 만들어보세요.
+                                        </td>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="t_b">
+                                    <tr>
+                                        <th>프로젝트 멤버</th>
+                                        <td>3명</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="section_1_content_1 section_1_content_right">
+                        <h5>프로젝트 사용현황</h5>
+                        <div class="section_1_contentbox_1">
+                            <div class="section_1_contentbox1">
+                                <div class="sc_1_icon"></div>
+                                <p class="color_green_01">3</p>
+                                <span>분석 IDE</span>
+                                <div class="gray_line"></div>
+                            </div>
+                            <div class="section_1_contentbox1">
+                                <div class="sc_1_icon sc_1_icon-2"></div>
+                                <p class="color_green_01">1</p>
+                                <span>모델학습</span>
+                            </div>
+                            <div class="green_line"></div>
+                        </div>
+                    </div>
+                    <div class="section_1_content_1">
+                        <h5>프로젝트 자원 사용현황</h5>
+                        <div class="section_1_contentbox_1">
+                            <div class="section_1_contentbox1">
+                                <div class="sc_1_icon sc_1_icon-3"></div>
+                                <p class="color_blue_01">16</p>
+                                <span>CPU<span class="color_gray">(Core)</span></span>
+                                <div class="gray_line"></div>
+                            </div>
+                            <div class="section_1_contentbox1">
+                                <div class="sc_1_icon sc_1_icon-4"></div>
+                                <p class="color_blue_01">48</p>
+                                <span>Memory<span class="color_gray">(GB)</span></span>
+                            </div>
+                            <div class="section_1_contentbox1">
+                                <div class="sc_1_icon sc_1_icon-5"></div>
+                                <p class="color_blue_01">0</p>
+                                <span>GPU<span class="color_gray">(EA)</span></span>
+                            </div>
+                            <div class="section_1_contentbox1">
+                                <div class="sc_1_icon sc_1_icon-6"></div>
+                                <p class="color_blue_01">120.5</p>
+                                <span>Disk<span class="color_gray">(MB)</span></span>
+                            </div>
+                            <div class="green_line bg_blue_01"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section_2 none click_box">
+                    <div class="section_hd">
+                        <h3>프로젝트 멤버</h3>
+                        <span>프로젝트에 참여한 멤버를 확인할 수 있습니다.</span>
+                    </div>
+                    <div class="section_2_table">
+                        <div class="table_cont">
+                            <table class="table_2">
+                                <colgroup>
+                                    <col width="4%" />
+                                    <col width="30%" />
+                                    <col width="15%" />
+                                    <col width="10%" />
+                                    <col width="10%" />
+                                </colgroup>
+                                <thead class="sc_2_t_h">
+                                    <tr>
+                                        <th>NO.</th>
+                                        <th>
+                                            이름
+                                            <div class="down_icon"></div>
+                                        </th>
+                                        <th>
+                                            이메일
+                                            <div class="up_icon"></div>
+                                        </th>
+                                        <th>
+                                            등록일
+                                            <div class="down_icon"></div>
+                                        </th>
+                                        <th>관리<i></i></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="sc_2_t_b">
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="text_left">
+                                            <div class="sc_2_user"></div>
+                                            홍길동
+                                        </td>
+                                        <td>honggildong@kt.com</td>
+                                        <td>2021-03-08</td>
+                                        <td>
+                                            <button class="bt_type_7">삭제</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="text_left">
+                                            <div class="sc_2_user sc_user_2"></div>
+                                            케이티
+                                        </td>
+                                        <td>kt@kt.com</td>
+                                        <td>2021-03-08</td>
+                                        <td>
+                                            <button class="bt_type_7">삭제</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="text_left">
+                                            <div class="sc_2_user"></div>
+                                            김에듀
+                                        </td>
+                                        <td>kimAIDU@kt.com</td>
+                                        <td>2021-03-08</td>
+                                        <td>
+                                            <button class="bt_type_7">삭제</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td class="text_left">
+                                            <div class="sc_2_user sc_user_3"></div>
+                                            박찬호
+                                        </td>
+                                        <td>park-chanho@kt.com</td>
+                                        <td>2021-03-08</td>
+                                        <td>
+                                            <button class="bt_type_7">삭제</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td class="text_left">
+                                            <div class="sc_2_user"></div>
+                                            강감찬
+                                        </td>
+                                        <td>kang0121@kt.com</td>
+                                        <td>2021-03-08</td>
+                                        <td>
+                                            <button class="bt_type_7">삭제</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section_3 none click_box">
+                    <div class="section_hd">
+                        <h3>데이터 관리</h3>
+                        <span>PC에 있는 데이터를 분석을 위해 업로드 할 수 있습니다.</span>
+                    </div>
+                    <div class="section_2_table">
+                        <div class="table_cont">
+                            <table class="table_2">
+                                <colgroup>
+                                    <col width="4%" />
+                                    <col width="30%" />
+                                    <col width="15%" />
+                                    <col width="10%" />
+                                    <col width="15%" />
+                                </colgroup>
+                                <thead class="sc_2_t_h">
+                                    <tr>
+                                        <th><div class="img_check_box"></div></th>
+                                        <th>디렉토리/파일명</th>
+                                        <th>관리</th>
+                                        <th>크기</th>
+                                        <th>수정일</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="sc_2_t_b">
+                                    <tr>
+                                        <td>
+                                            <label class="cb_2">
+                                                <input type="checkbox" />
+                                                <span class="cb_2_text"></span>
+                                            </label>
+                                        </td>
+                                        <td class="text_left">
+                                            my_project/data/제주도 공기질 데이터를 통한 미세먼지 예측모델.xlsx
+                                        </td>
+                                        <td>-</td>
+                                        <td>400 MB</td>
+                                        <td>2021-03-08 19:54:21</td>
+                                    </tr>
+                                    <tr class="check_gray_tr">
+                                        <td>
+                                            <label class="cb_2">
+                                                <input type="checkbox" checked />
+                                                <span class="cb_2_text"></span>
+                                            </label>
+                                        </td>
+                                        <td class="text_left">my_project/data/ITSM 인프라 변경작업 중.xlsx</td>
+                                        <td>-</td>
+                                        <td>16 KB</td>
+                                        <td>2021-03-08 19:54:21</td>
+                                    </tr>
+                                    <tr class="cb_2_disabled">
+                                        <td>
+                                            <label class="cb_2">
+                                                <input type="checkbox" disabled />
+                                                <span class="cb_2_text"></span>
+                                            </label>
+                                        </td>
+                                        <td class="text_left">my_project/data/머신러닝 및 KT 사례분석.xlsx</td>
+                                        <td>-</td>
+                                        <td>2 GB</td>
+                                        <td>2021-03-08 19:54:21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="cb_2">
+                                                <input type="checkbox" />
+                                                <span class="cb_2_text"></span>
+                                            </label>
+                                        </td>
+                                        <td class="text_left">my_project/data/딥러닝 및 KT 사례.xlsx</td>
+                                        <td>-</td>
+                                        <td>2365 MB</td>
+                                        <td>2021-03-08 19:54:21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="cb_2">
+                                                <input type="checkbox" />
+                                                <span class="cb_2_text"></span>
+                                            </label>
+                                        </td>
+                                        <td class="text_left">
+                                            my_project/data/제주도 공기질 데이터를 통한 미세먼지 예측모델.xlsx
+                                        </td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>2021-03-08 19:54:21</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section_4 none click_box">
+                    <div class="section_hd">
+                        <h3>소스Viewer</h3>
+                        <span>프로젝트 멤버가 작성한 소스를 확인 할 수 있습니다.</span>
+                    </div>
+                    <div class="section_4_table">
+                        <div class="table_4_cont">
+                            <table class="table_4">
+                                <colgroup>
+                                    <col width="40%" />
+                                    <col width=15%">
+                                    <col width="30%" />
+                                </colgroup>
+
+                                <div class="sc_4_table_hd">
+                                    <div class="sc_4_table_right">
+                                        <button><i class="ambicon-028_reflash"></i>새로고침</button>
+                                        <span>|</span>
+                                        <button><i class="ambicon-103_folder"></i> 새폴더</button>
+                                        <span>|</span>
+                                        <button><i class="ambicon-023_trash"></i> 삭제</button>
+                                    </div>
+                                </div>
+
+                                <thead class="sc_4_t_h">
+                                    <tr>
+                                        <th>디렉토리/파일명</th>
+                                        <th>크기</th>
+                                        <th>수정일</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="sc_4_t_b">
+                                    <tr>
+                                        <td class="text_left">
+                                            <div class="file_down"></div>
+                                            홍길*
+                                        </td>
+                                        <td></td>
+                                        <td>2021-03-08 19:54:21</td>
+                                    </tr>
+                                    <tr class="gray_back_color">
+                                        <td class="text_left">
+                                            <div class="file_down"></div>
+                                            박찬*
+                                        </td>
+                                        <td></td>
+                                        <td>2021-03-08 19:54:21</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text_left">
+                                            <div class="file_down"></div>
+                                            이순*
+                                        </td>
+                                        <td></td>
+                                        <td>2021-03-08 19:54:21</td>
+                                    </tr>
+                                    <tr class="gray_back_color">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="gray_back_color">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="gray_back_color">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="gray_back_color">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="section_4_coding"></div>
+                    </div>
+                </div>
+
+                <div class="section_5 none click_box">
+                    <div class="section_5_content_1">
+                        <div class="section_hd">
+                            <h3>개발 도구 선택</h3>
+                        </div>
+                        <div class="section_5_content">
+                            <div class="section_5_line-1">
+                                <div class="section_5_line-1_left">
+                                    <i class="sc_5_line-1_img1"></i>
+                                </div>
+                                <div class="section_5_line-1_right">
+                                    <p>Jupyrer hub</p>
+                                    <span>Python을 활용한 소스 코드 기반의 AI 모델링을 지원합니다.</span>
+                                </div>
+                            </div>
+                            <div class="section_5_line-1">
+                                <div class="section_5_line-1_left">
+                                    <i class="sc_5_line-1_img2 sc_5_line-1_2img_color"></i>
+                                </div>
+                                <div class="section_5_line-1_right">
+                                    <p class="section_5_line-1_p">AIDU ez</p>
+                                    <span class="section_5_line-1_span sc_5_line-1_p2_color"
+                                        >AI 개발 역량이 없어도 클릭 기반의 AI 모델링을 지원합니다.</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section_5_content_1">
+                        <div class="section_hd">
+                            <h3>시스템 자원 선택</h3>
+                            <span>(사용가능 시간 : 00h)</span>
+                        </div>
+                        <div class="section_5_content">
+                            <div class="section_5_line-1">
+                                <div class="section_5_line-1_left">
+                                    <i class="sc_5_line-1_img1"></i>
+                                </div>
+                                <div class="section_5_line-1_right">
+                                    <p class="section_5_line-1_p">Jupyrer hub</p>
+                                    <span class="section_5_line-1_span sc_5_line-1_p_color"
+                                        >Python을 활용한 소스 코드 기반의 AI 모델링을 지원합니다.</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="section_5_line-1">
+                                <div class="section_5_line-1_left">
+                                    <i class="sc_5_line-1_img2 sc_5_line-1_2img_color"></i>
+                                </div>
+                                <div class="section_5_line-1_right">
+                                    <p class="section_5_line-1_p">AIDU ez</p>
+                                    <span class="section_5_line-1_span sc_5_line-1_p2_color"
+                                        >AI 개발 역량이 없어도 클릭 기반의 AI 모델링을 지원합니다.</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section_5_content_1">
+                        <div class="section_hd">
+                            <h3>시스템 자원 선택</h3>
+                            <span>(사용가능 시간 : 00h)</span>
+                        </div>
+                        <div class="section_5_content">
+                            <div class="section_5_line-1" style="justify-content: center">
+                                <div class="section_5_line-1_left">
+                                    <i class="sc_5_line-1_img3"></i>
+                                </div>
+                                <div class="section_5_line-1_right">
+                                    <p class="section_5_line-1_p">
+                                        Jupyterlab을 이용해 tensorflow 기반의 학습코드 개발 환경
+                                    </p>
+                                    <span class="section_5_line-1_span sc_5_line-1_p_color"
+                                        >Jupyterlab을 이용해 tensorflow 기반의 학습코드 개발 환경</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section_footer">
+                        <button class="bt_type_1">IDE 생성하기</button>
+                    </div>
+                </div>
+
+                <div class="section_6 none">
+                    <div class="section_hd">
+                        <h3>모델학습</h3>
+                        <span>분석 IDE에서 생성한 AI모델을 학습시킬 수 있습니다.</span>
+                    </div>
+                    <div class="sc_6_table_top">
+                        <p>테스트-1</p>
+                        <span>(Started at : 2021-03-12 12:22:44)</span>
+
+                        <div class="sc_6_table_right">
+                            <button><i class="ambicon-017_list_default"></i>목록</button>
+                            <span>|</span>
+                            <button><i class="ambicon-028_reflash"></i>재실행</button>
+                        </div>
+                    </div>
+                    <div class="section_6_table">
+                        <div class="table_cont">
+                            <table class="table_6">
+                                <colgroup>
+                                    <col width="15%" />
+                                    <col width="10%" />
+                                    <col width="10%" />
+                                    <col width="10%" />
+                                    <col width="10%" />
+                                    <col width="10%" />
+                                    <col width="10%" />
+                                    <col width="10%" />
+                                </colgroup>
+                                <thead class="sc_6_t_h">
+                                    <tr>
+                                        <th>분석환경명3</th>
+                                        <th>Uptime</th>
+                                        <th>Status</th>
+                                        <th>GPUs</th>
+                                        <th>CPUs</th>
+                                        <th>Mems</th>
+                                        <th>Acc.</th>
+                                        <th>Loss</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="sc_6_t_b">
+                                    <tr>
+                                        <td>Tensorflow 2.0</td>
+                                        <td>2m55.221s</td>
+                                        <td>학습완료</td>
+                                        <td>0</td>
+                                        <td>4</td>
+                                        <td>16</td>
+                                        <td>0.864</td>
+                                        <td>2.156</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="sc_6_content_2">
+                        <div class="sc_6_content_2_bt">
+                            <button class="sc_6_content_2_bt1 sc_6_content_2_black sc_6_content_2_white">
+                                기본보기
+                            </button>
+                            <button class="sc_6_content_2_bt2">로그보기</button>
+                        </div>
+                        <div class="sc_6_content_2-1 sc_6_content_2_black"></div>
+                        <div class="sc_6_content_2-2 none"></div>
+                    </div>
+                </div>
+
+                <div class="section_8 none click_box">
+                    <div class="section_5_content_1">
+                        <div class="section_hd">
+                            <h3>기본 정보</h3>
+                        </div>
+                        <div class="section_5_content">
+                            <div class="section_5_line-1">
+                                <div class="section_5_line-1_left">
+                                    <i class="sc_5_line-1_img1"></i>
+                                </div>
+                                <div class="section_5_line-1_right">
+                                    <p>Jupyrer hub</p>
+                                    <span>Python을 활용한 소스 코드 기반의 AI 모델링을 지원합니다.</span>
+                                </div>
+                            </div>
+                            <div class="section_5_line-1">
+                                <div class="section_5_line-1_left">
+                                    <i class="sc_5_line-1_img2 sc_5_line-1_2img_color"></i>
+                                </div>
+                                <div class="section_5_line-1_right">
+                                    <p class="section_5_line-1_p">AIDU ez</p>
+                                    <span class="section_5_line-1_span sc_5_line-1_p2_color"
+                                        >AI 개발 역량이 없어도 클릭 기반의 AI 모델링을 지원합니다.</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section_5_content_1">
+                        <div class="section_hd">
+                            <h3>자원 설정</h3>
+                            <span>(사용가능 시간 : 00h)</span>
+                        </div>
+                        <div class="section_5_content">
+                            <div class="section_5_line-1">
+                                <div class="section_5_line-1_left">
+                                    <i class="sc_5_line-1_img1"></i>
+                                </div>
+                                <div class="section_5_line-1_right">
+                                    <p class="section_5_line-1_p">Jupyrer hub</p>
+                                    <span class="section_5_line-1_span sc_5_line-1_p_color"
+                                        >Python을 활용한 소스 코드 기반의 AI 모델링을 지원합니다.</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="section_5_line-1">
+                                <div class="section_5_line-1_left">
+                                    <i class="sc_5_line-1_img2 sc_5_line-1_2img_color"></i>
+                                </div>
+                                <div class="section_5_line-1_right">
+                                    <p class="section_5_line-1_p">AIDU ez</p>
+                                    <span class="section_5_line-1_span sc_5_line-1_p2_color"
+                                        >AI 개발 역량이 없어도 클릭 기반의 AI 모델링을 지원합니다.</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section_5_content_1">
+                        <div class="section_hd">
+                            <h3>학습 환경 선택</h3>
+                            <span>(사용가능 시간 : 00h)</span>
+                        </div>
+                        <div class="section_5_content">
+                            <div class="section_5_line-1" style="justify-content: center">
+                                <div class="section_5_line-1_left">
+                                    <i class="sc_5_line-1_img3"></i>
+                                </div>
+                                <div class="section_5_line-1_right">
+                                    <p class="section_5_line-1_p">
+                                        Jupyterlab을 이용해 tensorflow 기반의 학습코드 개발 환경
+                                    </p>
+                                    <span class="section_5_line-1_span sc_5_line-1_p_color"
+                                        >Jupyterlab을 이용해 tensorflow 기반의 학습코드 개발 환경</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section_footer">
+                        <button class="bt_type_1">모델학습 실행</button>
+                    </div>
+                </div>
+
+                <div class="section_7 none click_box">
+                    <div class="section_hd">
+                        <h3>공유 모델 등록</h3>
+                    </div>
+
+                    <div class="section_table">
+                        <div class="table_cont">
+                            <table class="table_4">
+                                <colgroup>
+                                    <col width="15%" />
+                                    <col width="80%" />
+                                </colgroup>
+                                <thead class="t_h">
+                                    <tr>
+                                        <th>등록 구분</th>
+                                        <td>
+                                            <label class="cb_2">
+                                                <label class="rd_1">
+                                                    <input type="radio" name="radio_2" checked />
+                                                    <span class="rd_1_text">신규</span>
+                                                </label>
+
+                                                <label class="rd_1">
+                                                    <input type="radio" name="radio_2" />
+                                                    <span class="rd_1_text">버전업</span>
+                                                </label>
+
+                                                <label class="rd_1">
+                                                    <input type="radio" name="radio_2" disabled />
+                                                    <span class="rd_1_text">checked - disable</span>
+                                                </label>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody class="t_b">
+                                    <tr>
+                                        <th>모델 버전</th>
+                                        <td>1.0</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="file_height">변경 이력</th>
+                                        <td>
+                                            <textarea class="text_type_1" placeholder="변경 이력 등록"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>모델명<span>*</span></th>
+                                        <td>
+                                            <input
+                                                type="text"
+                                                placeholder="모델명을 입력해주세요."
+                                                class="input_type_01"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>유형<span>*</span></th>
+                                        <td>
+                                            <div class="section_bt_box_7">
+                                                <div class="selected_7">
+                                                    <a class="select7" id="select7"><span>선택하세요</span></a>
+                                                    <i class="ambicon-003_arrow_down down_icon7"></i>
+                                                </div>
+                                                <div class="options">
+                                                    <ul class="select7_ul none" id="select7_ul">
+                                                        <li>
+                                                            <button>선택하세요</button>
+                                                        </li>
+                                                        <li>
+                                                            <button>유형1</button>
+                                                        </li>
+                                                        <li>
+                                                            <button>유형2</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>개발도구</th>
+                                        <td>
+                                            <div class="section_bt_box_7">
+                                                <div class="selected_7">
+                                                    <a class="select7" id="select7"><span>선택하세요</span></a>
+                                                    <i class="ambicon-003_arrow_down down_icon7"></i>
+                                                </div>
+                                                <div class="options">
+                                                    <ul class="select7_ul none" id="select7_ul">
+                                                        <li>
+                                                            <button>선택하세요</button>
+                                                        </li>
+                                                        <li>
+                                                            <button>Jupyterlab---1</button>
+                                                        </li>
+                                                        <li>
+                                                            <button>Jupyterlab---2</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>모델설명<span>*</span></th>
+                                        <td>
+                                            <input
+                                                type="text"
+                                                placeholder="모델 설명을 입력해주세요."
+                                                class="input_type_01"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>썸네일</th>
+                                        <td>
+                                            <span class="no_file3">파일을 선택해주세요</span>
+                                            <label class="file_3">
+                                                <input type="file" id="input-file" />
+                                                <span>파일 선택</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>해시 태그</th>
+                                        <td>
+                                            <input
+                                                type="text"
+                                                placeholder="#해시태그를 입력하세요"
+                                                class="input_type_01"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="file_height">모델 사용법<span>*</span></th>
+                                        <td>
+                                            <textarea class="text_type_1"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>게시 대상</th>
+                                        <td>
+                                            <div class="section_bt_box_7">
+                                                <div class="selected_7">
+                                                    <a class="select7" id="select7"><span>선택하세요</span></a>
+                                                    <i class="ambicon-003_arrow_down down_icon7"></i>
+                                                </div>
+                                                <div class="options">
+                                                    <ul class="select7_ul none" id="select7_ul">
+                                                        <li>
+                                                            <button>선택하세요</button>
+                                                        </li>
+                                                        <li>
+                                                            <button>전체 공개</button>
+                                                        </li>
+                                                        <li>
+                                                            <button>비공개</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>시뮬레이터 구성</th>
+                                        <td>
+                                            <span class="no_file4"></span>
+                                            <label class="file_4">
+                                                <input type="file" id="input-file" />
+                                                <span>등록</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>프로젝트 오너</th>
+                                        <td>
+                                            <input type="text" class="input_type_01" placeholder="홍길동" disabled />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="up_bt_div">
+                <button>
+                    <i class="icon_rightArrow_black"></i>
+                </button>
+            </div>
+        </section>
+
+        <footer>
+            <div class="wrap">
+                <div class="footer_wrap" id="ft_line">
+                    <div class="ft_main_tittle">
+                        <a href="board_01.html">자유게시판</a>
+                        <span>|</span>
+                        <a href="Q&A_01.html">Q&A</a>
+                        <span>|</span>
+                        <a href="notice_01.html">공지사항/뉴스</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ft_line"></div>
+            <div class="wrap">
+                <div class="footer_wrap">
+                    <div class="ft_second_tittle">
+                        <a href="provision_01.html">플랫폼 이용약관</a>
+                        <span>|</span>
+                        <a href="provision_02.html">개인정보취급방침</a>
+                        <span>|</span>
+                        <a href="provision_03.html">청소년보호정책</a>
+                        <div class="footer_logo"></div>
+                    </div>
+                    <div class="ft_last_tittle">
+                        <p>㈜케이티 대표이사 구현모 사업자등록번호:102-81-42945 통신판매업신고: 2002-경기성남-0048</p>
+                        <p>경기도 성남시 분당구 불정로 90(정자동)</p>
+                        <p>Copyrightⓒkt corp.All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
