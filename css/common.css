@@ -120,12 +120,19 @@ header {
 }
 .user_login {
     float: right;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     margin-top: -6px;
+}
+.user_login img {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
 }
 .user_login > a {
     display: inline-block;
-    font-size: 15px;
+    font-size: 16px;
     margin-top: 7px;
     color: #667d85;
     vertical-align: middle;
